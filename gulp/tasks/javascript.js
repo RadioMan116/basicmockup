@@ -6,6 +6,10 @@ module.exports = () => {
 		return app.gulp.src(`${app.template}/src/js/index.js`)
 			.pipe(app.gulpPlugins.plumber())
 			.pipe(app.gulpWebpack({
+				entry: {
+					lazyload: `./${app.template}/src/js/lazyload.js`,
+					main: `./${app.template}/src/js/index.js`
+				},
 				output: {
 					path: path.resolve(__dirname, `${app.template}/dist`),
 					filename: 'js/[name].bundle.js',

@@ -4,7 +4,6 @@ module.exports = () => {
 		server: {
 			baseDir: `${app.template}/dist/`
 		},
-		open: true,
 		host: 'localhost',
 		logPrefix: 'mockup'
 	};

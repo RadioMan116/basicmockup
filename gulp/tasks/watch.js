@@ -13,6 +13,7 @@ module.exports = () => {
 			[
 				`${app.template}/src/styles/**/*.scss`,
 				`${app.template}/src/components/**/*.scss`,
+				`${app.template}/src/ajax/**/*.scss`,
 				`${app.template}/src/js/**/*.scss`
 			], app.gulp.series('scss'));
 		app.gulp.watch(`${app.template}/src/js/**/*.js`, app.gulp.series('js'));

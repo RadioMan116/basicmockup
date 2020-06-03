@@ -4,6 +4,7 @@ module.exports = () => {
 	let cssnext = require('postcss-cssnext');
 	let mqPacker = require('css-mqpacker');
 	let cssnano = require('cssnano');
+	let autoprefixer = require('autoprefixer');
 
 	let processors = [
 		imageInliner(),
@@ -11,6 +12,7 @@ module.exports = () => {
 		mqPacker({
 			sort: sortMediaQueries
 		}),
+		autoprefixer(),
 		cssnano({
 			preset: [
 				'default',
