@@ -1,0 +1,43 @@
+.tabs-menu {
+	line-height: 1;
+	border-bottom: 1px solid #666;
+	display: flex;
+
+	&__link {
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		background: #ccc;
+		color: #000;
+		cursor: pointer;
+		transition: background 500ms, color 500ms;
+		margin: 0 1px 0 0;
+
+	 	@media (max-width: 767px) {
+	 		display: none;
+	 	}
+	}
+
+	&__link:hover,
+	&__link.active,
+	&__xslink:hover,
+	&__xslink.active {
+		background: #666;
+		color: #fff;
+	}
+
+	&__xslink {
+	 	display: none;
+		padding: 10px 30px;
+		text-decoration: none;
+		background: #ccc;
+		color: #000;
+		margin: 0 0 1px;
+		cursor: pointer;
+		transition: background 500ms, color 500ms;
+
+	 	@media (max-width: 767px) {
+	 		display: block;
+	 	}
+	}
+}

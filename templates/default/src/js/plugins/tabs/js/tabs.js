@@ -32,6 +32,7 @@
 
 				var triggerActive = false;
 				var tags = {};
+				var hasTabs = false;
 				tags.xsbuttons = [];
 				tags.tabs = [];
 
@@ -41,58 +42,66 @@
 
 					tags.tabs.push(document.querySelector(this.getAttribute('data-hash')));
 
-					tags.xsbuttons.push(obj.insert('div', { 'class': obj.options.classMain + '__xslink' }, this.innerHTML, tags.tabs[index]));
+					if (tags.tabs[index]) {
 
-					if (this.classList.contains('active')) {
-						tags.tabs[index].classList.add('active');
-						tags.xsbuttons[index].classList.add('active');
-						obj.triggerActive = true;
+						hasTabs = true;
+
+						tags.xsbuttons.push(obj.insert('div', { 'class': obj.options.classMain + '__xslink' }, this.innerHTML, tags.tabs[index]));
+
+						if (this.classList.contains('active')) {
+							tags.tabs[index].classList.add('active');
+							tags.xsbuttons[index].classList.add('active');
+							obj.triggerActive = true;
+						}
+
+						this.addEventListener(event, function () {
+
+							obj.each(tags.buttons, function (i) {
+
+								this.classList.remove('active');
+								tags.xsbuttons[i].classList.remove('active');
+								tags.tabs[i].classList.remove('active');
+
+							});
+
+							this.classList.add('active');
+							tags.xsbuttons[index].classList.add('active');
+							tags.tabs[index].classList.add('active');
+
+						}, false);
+
+						tags.xsbuttons[index].addEventListener(event, function () {
+
+							obj.each(tags.xsbuttons, function (i) {
+
+								this.classList.remove('active');
+								tags.buttons[i].classList.remove('active');
+								tags.tabs[i].classList.remove('active');
+
+							});
+
+							this.classList.add('active');
+							tags.buttons[index].classList.add('active');
+							tags.tabs[index].classList.add('active');
+
+							window.scrollTo(0, window.pageYOffset + this.getBoundingClientRect().top - obj.options.offsetMobile);
+
+						}, false);
+
+						this.addEventListener('click', function (e) {
+							e.preventDefault();
+						});
+
 					}
-
-					this.addEventListener(event, function () {
-
-						obj.each(tags.buttons, function (i) {
-
-							this.classList.remove('active');
-							tags.xsbuttons[i].classList.remove('active');
-							tags.tabs[i].classList.remove('active');
-
-						});
-
-						this.classList.add('active');
-						tags.xsbuttons[index].classList.add('active');
-						tags.tabs[index].classList.add('active');
-
-					}, false);
-
-					tags.xsbuttons[index].addEventListener(event, function () {
-
-						obj.each(tags.xsbuttons, function (i) {
-
-							this.classList.remove('active');
-							tags.buttons[i].classList.remove('active');
-							tags.tabs[i].classList.remove('active');
-
-						});
-
-						this.classList.add('active');
-						tags.buttons[index].classList.add('active');
-						tags.tabs[index].classList.add('active');
-
-						window.scrollTo(0, window.pageYOffset + this.getBoundingClientRect().top - obj.options.offsetMobile);
-
-					}, false);
-
-					this.addEventListener('click', function (e) {
-						e.preventDefault();
-					});
 
 				});
 
 				if (!obj.triggerActive) {
-					tags.buttons[0].classList.add('active');
-					tags.xsbuttons[0].classList.add('active');
-					tags.tabs[0].classList.add('active');
+					if (hasTabs) {
+						tags.buttons[0].classList.add('active');
+						tags.xsbuttons[0].classList.add('active');
+						tags.tabs[0].classList.add('active');
+					}
 				}
 
 			});

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="format-detection" content="telephone=yes">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/timeCounter.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body class="page">
+
+	<div class="section">
+
+		<div class="js-timer" data-time="2017/10/30 19:53:00 GMT+0300"></div>
+		<div class="js-timer" data-time="2017/11/02 10:30:00 GMT+0300"></div>
+		<div class="js-timer" data-time="2017/11/03 11:00:00 GMT+0300"></div>
+
+		<p>
+			<b>Структура HTML</b>
+		</p>
+
+		<pre>
+
+			&lt;div class="js-timer" data-time="2017/12/01 10:00:00 GMT+0300"&gt;
+
+		</pre>
+
+		<p>
+			<b>В скрипте</b>
+		</p>
+
+		<pre>
+			var timers = document.querySelectorAll('.js-timer');
+
+			Array.prototype.forEach.call(timers, function(node) {
+
+				new TimeCounter({
+					time: node.getAttribute('data-time'),
+					callback: function(day, hour, minutes, seconds) {
+						node.innerHTML = day + ' ' + hour + ' ' + minutes + ' ' + seconds;
+					},
+					timeEnd: function(day, hour, minutes, seconds) {
+						alert('End')
+					}
+				});
+
+			});
+		</pre>
+
+	</div>
+
+</body>
+</html>

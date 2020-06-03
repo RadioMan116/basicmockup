@@ -1,1 +1,1 @@
-new Tabs(); 
+new Tabs();

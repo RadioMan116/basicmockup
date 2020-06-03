@@ -1,23 +1,60 @@
-(function() {
+(function () {
 
-	var each = function(arr, callback) {
-		Array.prototype.forEach.call(arr, function(node, index) {
-			callback.call(node, index)
+	if (isProduction)
+		return;
+
+	var form = function () {
+		$('[data-form-label]').each(function () {
+
+			if (this.value) {
+				$(this).addClass('form__input_full');
+			}
+
+			$(this).blur(function () {
+				if (this.value) {
+					console.log(this.value)
+					$(this).addClass('form__input_full');
+				} else {
+					$(this).removeClass('form__input_full');
+				}
+			});
+
 		});
+
+		var phones = document.querySelectorAll('[type=tel]');
+
+		[].forEach.call(phones, (node) => {
+			Inputmask('+7(999) 999-9999', {
+				clearIncomplete: true
+			}).mask(node)
+		});
+
 	}
 
-	var inputs = document.querySelectorAll('[data-form-label]');
+	form();
 
-	each(inputs, function() {
+	mutationObserver('.popup__change', () => {
+		form();
+	});
 
-		this.addEventListener('focusout', function() {
-			if(this.value) {
-				this.classList.add('form__input_full');
-			} else {
-				this.classList.remove('form__input_full');
-			}
+	// $('[type=tel]').inputmask('+7 (999) 999-99-99');
+
+})();
+
+function mutationObserver(selectors, cb) {
+
+	[...document.querySelectorAll(selectors)].forEach((element) => {
+
+		var observer = new MutationObserver(function (mutations) {
+			cb();
 		});
+
+		var config = {
+			childList: true
+		};
+
+		observer.observe(element, config);
 
 	});
 
-})();
+}

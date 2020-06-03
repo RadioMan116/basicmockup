@@ -1,6 +1,8 @@
-@import "node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/bootstrap-grid.scss";
 @import "../../js/plugins/tabs/scss/tabs-menu.scss";
 @import "../../js/plugins/tabs/scss/tabs.scss";
-@import "../../js/plugins/mobile-menu/mobile-menu.scss";
-@import "../../js/plugins/mobile-menu/mobile-menu-utilities.scss";
-@import "node_modules/swiper/dist/css/swiper.min.scss";
+@import "swiper/dist/css/swiper.min.scss";
+@import "../../js/plugins/Ratings/less/ratings.scss";
+@import "nouislider/distribute/nouislider.min.scss";
+@import "../../js/plugins/Popup/scss/popup.scss";
+@import "node_modules/fancybox/dist/css/jquery.fancybox";
