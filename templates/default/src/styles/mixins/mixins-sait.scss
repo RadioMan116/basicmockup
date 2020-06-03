@@ -1,0 +1,132 @@
+@custom-media --phone (width <=768px);
+@custom-media --desk (width > 768px); //
+@mixin button($bgc:#2f5bea, $bgr:no-repeat, $bgi: none, $c:#fff, $bd:none, $bxsh:none, $fz:16px, $tt:inherit, $fw:300, $p:0 50px, $bdrs:27px, $h:55px, $lh:1, $d:inline-flex, $bgc-h:#2f5bea, $c-h:#fff, $w:auto, $ai:center, $jc:center, $bxsh-h:none, $m:0, $lts:0, $ff:'SFUIDisplay', $bgi-h: none) {
+	& {
+		background-color: $bgc;
+		background-repeat: $bgr;
+		background-image: $bgi;
+		color: $c;
+		box-shadow: $bxsh;
+		text-decoration: none;
+		font-size: $fz;
+		font-weight: $fw;
+		text-transform: $tt;
+		padding: $p;
+		margin: $m;
+		border-radius: $bdrs;
+		line-height: $lh;
+		height: $h;
+		display: $d;
+		align-items: $ai;
+		justify-content: $jc;
+		border: $bd;
+		cursor: pointer;
+		width: $w;
+		letter-spacing: $lts;
+		transition: all 400ms;
+
+		&:hover {
+			background-color: $bgc-h;
+			background-image: $bgi-h;
+			color: $c-h;
+			box-shadow: $bxsh-h;
+			text-decoration: none;
+		}
+	}
+	@media (--phone) {
+		height: 40px;
+		border-radius: 20px;
+		padding: 0 40px;
+	}
+}
+//
+@mixin link($c:rgba(221, 0, 22, 0.1)) {
+	text-decoration: none;
+	border-bottom: 1px solid $c;
+	transition: all 400ms;
+
+	&:hover {
+		text-decoration: none;
+		border-bottom-color: transparent;
+	}
+}
+//
+@mixin justify($margin-bottom:-25px) {
+	& {
+		text-align: justify;
+		margin-bottom: $margin-bottom;
+
+		&:after {
+			display: inline-block;
+			content: '';
+			width: 100%;
+		}
+	}
+}
+//
+@mixin posa() {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+//
+@mixin scrollCss() {
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+// CSS Triangles Mixin
+@mixin css-triangle($direction, $color, $height, $width) {
+	// Base styles for all triangles
+	border-style: solid;
+	height: 0;
+	width: 0;
+	// Cardinal Directions - can't be scalene this way
+	@if($direction=='top') {
+		border-color: transparent transparent $color transparent;
+		border-width: 0 ($width/2) $height ($width/2);
+	}
+	@if ($direction=='bottom') {
+		border-color: $color transparent transparent transparent;
+		border-width: $height ($width/2) 0 ($width/2);
+	}
+	@if ($direction=='right') {
+		border-color: transparent transparent transparent $color;
+		border-width: ($height/2) 0 ($height/2) $width;
+	}
+	@if ($direction=='left') {
+		border-color: transparent $color transparent transparent;
+		border-width: ($height/2) $width ($height/2) 0;
+	}
+	// Ordinal Directions - can be scalene this way!
+	@if ($direction=='top-left') {
+		border-color: $color transparent transparent transparent;
+		border-width: $height $width 0 0;
+	}
+	@if ($direction=='top-right') {
+		border-color: transparent $color transparent transparent;
+		border-width: 0 $width $height 0;
+	}
+	@if ($direction=='bottom-left') {
+		border-color: transparent transparent transparent $color;
+		border-width: $height 0 0 $width;
+	}
+	@if ($direction=='bottom-right') {
+		border-color: transparent transparent $color transparent;
+		border-width: 0 0 $height $width;
+	}
+}
+//
+//
+@mixin row($v) {
+	.row {
+		margin-left: $v * (-1);
+		margin-right: $v * (-1);
+
+		[class*=col-] {
+			padding-left: $v;
+			padding-right: $v;
+		}
+	}
+}

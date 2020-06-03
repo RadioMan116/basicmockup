@@ -1,0 +1,40 @@
+.catalog {
+	position: relative;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-top: 100px;
+
+	&:before {
+		position: absolute;
+		left: 50%;
+		top: 44%;
+		height: 705px;
+		width: 277px;
+		transform: translate(-50%, -50%);
+		background: url("../images/chilie_map.svg") no-repeat;
+		content: '';
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__inner {
+		position: relative;
+	}
+	@media (--phone) {
+		padding-top: 56px;
+
+		&__title {
+			margin-bottom: 24px;
+		}
+
+		&__row {
+			[class*=col-] {
+				&:last-child .catalog-item {
+					margin-bottom: 32px;
+				}
+			}
+		}
+	}
+}

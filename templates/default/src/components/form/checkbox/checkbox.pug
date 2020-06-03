@@ -1,0 +1,19 @@
+mixin checkbox(data)
+	
+	- var mod = data.mod || ''
+	- var type = data.type || 'checkbox'
+	- var checked = data.checked || false
+	- var disabled = data.disabled || false
+	- var text = data.text || 'Принимаю <a href="#">условия</a> предоставления данных'
+
+	label.checkbox(class="" + mod + "")
+		if checked
+			input.checkbox__input(type="" + type + "", checked)
+		else if disabled
+			input.checkbox__input(type="" + type + "", disabled)
+		else if disabled && checked
+			input.checkbox__input(type="" + type + "", checked, disabled)
+		else
+			input.checkbox__input(type="" + type + "")
+		span.checkbox__icon
+		span.checkbox__text !{text}

@@ -1,0 +1,27 @@
+<div class="contacts-footer">
+	<div class="contacts-footer__inner">
+		<div class="contacts-footer__title title">Свяжитесь с нами</div>
+		<!-- /.contacts-footer__title -->
+		<div class="contacts-footer__row">
+			<div class="contacts-footer__photo">
+				<img data-src="images/footer__pic.png" alt="" class="contacts-footer__pic lazyload">
+			</div>
+			<!-- /.contacts-footer__photo -->
+			<div class="contacts-footer__desc">
+				<div class="contacts-footer__name">Анна</div>
+				<!-- /.contacts-footer__name -->
+				<div class="contacts-footer__text">Менеджер Alma Tours </div>
+				<!-- /.contacts-footer__text -->
+				<a href="tel:+56971986711" class="contacts-footer__tel">+56971986711</a>
+				<a href="mailto: contacto@almatour.cl" class="contacts-footer__email"> contacto@almatour.cl</a>
+
+				{% from "social/social-items/social-items.njk" import socialItems %}
+				{{ socialItems() }}
+
+			</div>
+			<!-- /.contacts-footer__desc -->
+		</div>
+		<!-- /.contacts-footer__row -->
+	</div>
+</div>
+<!-- /.contacts-footer -->

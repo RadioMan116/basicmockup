@@ -1,0 +1,74 @@
+<div class="catalog">
+	<div class="catalog__shadow shadow">
+		ПУТЕШЕСТВИЯ 2019
+	</div>
+	<div class="catalog__inner">
+		<div class="catalog__title title">
+			Начните свое путешествие,<br> а мы позаботимся об остальном
+		</div>
+		<!-- /.catalog__title title -->
+		{% from "catalog/catalog-item/catalog-item.njk" import catalogItem %}
+		<div class="catalog__row row">
+			<div class="col-12">
+				{{ catalogItem() }}
+			</div>
+			<!-- /.col-12 -->
+			<div class="col-12">
+				{{ catalogItem(
+						src = 'images/catalog-item__pic2.png',
+						src768 = 'images/catalog-item__pic2_w768.png',
+						title = 'Винья-дель-мар и Вальпараисо',
+						text = 'Вальпараисо – райская долина на побережье Чили. Портовый город с мятежным духом. Вы ощутите всю прелесть его богемного шарма, прогуляетесь по лабиринтам цветных улочек. Мы с вами совершим поездку на самом старом фуникулере города, и побродим по красочными улицами самого красивого района Вальпараисо – Серро Консепсьон.  ',
+						mod = ' catalog-item_row'
+					)
+				}}
+			</div>
+			<!-- /.col-12 -->
+			<div class="col-12">
+				{{ catalogItem(
+						src = 'images/catalog-item__pic3.png',
+						src768 = 'images/catalog-item__pic3_w768.png',
+						title = 'Винные туры',
+						text = 'Прохладный средиземноморский климат, легкий океанский бриз, холодные ночи и утренний туман позволяют получить прекрасные свежие вина сортов Совиньон Блан, Шардоне и Пино Нуар. Долина Касабланка – главный производитель белого вина в Чили. Не упустите свой шанс отведать бокал лучшего, белого чилийского вина.',
+						mod = ' catalog-item_row catalog-item_row_reverse'
+					)
+				}}
+			</div>
+			<!-- /.col-12 -->
+			<div class="col-md-6">
+				{{ catalogItem(
+						src = 'images/catalog-item__pic4.png',
+						src768 = 'images/catalog-item__pic4_w768.png',
+						title = 'Трекинг',
+						text = 'Чили – идеальное место для любителей пеших походов, путешественников, которые ищут разнообразие пейзажей и единение с окружающей природой. ',
+						mod = 'catalog-item_small'
+					)
+				}}
+			</div>
+			<!-- /.col-md-6 -->
+			<div class="col-md-6">
+				{{ catalogItem(
+						src = 'images/catalog-item__pic5.png',
+						src768 = 'images/catalog-item__pic5_w768.png',
+						title = 'Сити-туры Саньтьяго',
+						text = 'Панорамный тур и пешая прогулка по главным достопримечательностям города',
+						mod = 'catalog-item_small'
+					)
+				}}
+			</div>
+			<!-- /.col-md-6 -->
+			<div class="col-12">
+				{{ catalogItem(
+						src = 'images/catalog-item__pic6.png',
+						src768 = 'images/catalog-item__pic6_w768.png',
+						title = 'Остров Пасхи',
+						text = 'Самый известный и загадочный остров в Тихом океане. Он имеет богатую историю полную тайн. Образованный тремя вулканами небольшой участок суши на расстоянии больше 3700 км от континентально части Чили. Что за люди тут живут, как они оказались на острове посреди океана? '
+					)
+				}}
+			</div>
+			<!-- /.col-12 -->
+		</div>
+		<!-- /.catalog__row -->
+	</div>
+</div>
+<!-- /.catalog -->

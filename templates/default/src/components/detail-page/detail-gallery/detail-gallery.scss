@@ -1,0 +1,53 @@
+.detail-gallery {
+	position: relative;
+	background: #0a0a0a;
+	padding-bottom: 1px;
+
+	&__inner {
+		padding-bottom: 110px;
+		padding-top: 80px;
+	}
+	@media (--desk) {
+		&:before {
+			position: absolute;
+			left: 50%;
+			bottom: 100px;
+			height: 705px;
+			width: 277px;
+			margin-left: -91px;
+			background: url("../images/chilie_map.svg") no-repeat;
+			content: '';
+		}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		position: relative;
+	}
+
+	&__item {}
+
+	&__pic {
+		display: block;
+		max-width: 100%;
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+	@media (--phone) {
+		margin: 0 -16px;
+		padding-bottom: 26px;
+
+		&__inner {
+			padding-bottom: 58px;
+			padding-top: 36px;
+		}
+
+		&__title {
+			margin-bottom: 16px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.contact-page {
+	height: calc(100vh - 80px - 67px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (--phone) {
+		display: block;
+		height: 100%;
+	}
+}

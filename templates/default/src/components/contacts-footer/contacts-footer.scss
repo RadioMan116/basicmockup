@@ -1,0 +1,122 @@
+.contacts-footer {
+	width: 440px;
+	margin: 0 auto 126px;
+	position: relative;
+	padding-top: 56px;
+
+	&:before {
+		position: absolute;
+		left: 50%;
+		top: -60px;
+		height: 464px;
+		width: 182px;
+		margin-left: -50px;
+		background: url("../images/wrapper.svg") no-repeat;
+		background-size: contain;
+		content: '';
+	}
+
+	&__inner {
+		position: relative;
+	}
+
+	.contact-page & {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__title {
+		margin-bottom: 75px;
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__photo {
+		width: 50%;
+	}
+
+	&__pic {
+		display: block;
+		margin: 0 0 0 -14px;
+	}
+
+	&__desc {
+		width: 50%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0 0;
+	}
+
+	&__name {
+		font-family: ForgottenNovember;
+		font-size: 36px;
+		line-height: 38px;
+		margin-bottom: 5px;
+	}
+
+	&__text {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.54;
+		margin-bottom: 15px;
+	}
+
+	&__tel {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.54;
+		color: #fff;
+	}
+
+	&__email {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.54;
+		color: #13cb65;
+		margin-bottom: 8px;
+	}
+	@media (--phone) {
+		padding-top: 32px;
+		margin-bottom: 70px;
+		width: auto;
+
+		&:before {
+			position: absolute;
+			left: 50%;
+			top: 65px;
+			height: 339px;
+			width: 133px;
+			margin-left: -60px;
+		}
+
+		.contact-page & {
+			padding-top: 32px;
+			margin-bottom: 32px;
+		}
+
+		&__title {
+			margin-bottom: 24px;
+		}
+
+		&__row {
+			flex-direction: column;
+		}
+
+		&__photo {
+			width: 100%;
+			margin-bottom: 16px;
+		}
+
+		&__pic {
+			width: 100px;
+			margin: 0 auto;
+		}
+
+		&__desc {
+			width: 100%;
+		}
+	}
+}

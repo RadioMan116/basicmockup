@@ -1,0 +1,17 @@
+.shadow {
+	opacity: 0.05;
+	font-size: 125px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	right: 0;
+	line-height: 125px;
+	text-transform: uppercase;
+	@media (--phone) {
+		font-size: 35px;
+		line-height: 35px;
+		top: 30px;
+	}
+}

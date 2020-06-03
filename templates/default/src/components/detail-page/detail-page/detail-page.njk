@@ -1,0 +1,46 @@
+<div class="detail-page">
+	<div class="detail-page__banner">
+		<picture class="detail-page__pic">
+			<source media="(max-width: 768px)" data-srcset="images/detail-page__pic_w768.png">
+			<img data-src="images/detail-page__pic.png" alt="" class="lazyload">
+		</picture>
+		<div class="detail-page__smtitle">Тур в долину Касабланка </div>
+		<!-- /.detail-page__smtitle -->
+	</div>
+	<!-- /.detail-page__banner -->
+
+	<div class="detail-page__section">
+		<div class="detail-page__title title">Долина Касабланка</div>
+		<div class="detail-page__text">
+			Прохладный средиземноморский климат, легкий океанский бриз, холодные ночи и утренний туман позволяют получить прекрасные свежие вина сортов Совиньон Блан, Шардоне и Пино Нуар. Долина Касабланка – главный производитель белого вина в Чили. Тут вы найдете десятки прекраснейших и живописных виноделен. Не упустите свой шанс отведать бокал лучшего, белого чилийского вина.
+		</div>
+	</div>
+
+	<div class="tabs-menu" data-tabs>
+
+		<a class="tabs-menu__link" data-hash="#js-tabs-1" data-tabs-children>
+			Тур на 5 часов (пол дня)
+		</a>
+		<a class="tabs-menu__link" data-hash="#js-tabs-2" data-tabs-children>
+			Тур на 9 часов (весь день)
+		</a>
+
+	</div>
+	<!-- /.tabs-menu -->
+
+	<div class="tabs">
+		<div class="tabs__inner" id="js-tabs-1">
+
+			{% include "detail-page/detail-info/detail-info.njk" %}
+
+		</div>
+		<div class="tabs__inner" id="js-tabs-2">
+
+			{% include "detail-page/detail-info/detail-info.njk" %}
+
+		</div>
+	</div>
+	<!-- /.tabs  -->
+
+</div>
+<!-- /.detail-page -->

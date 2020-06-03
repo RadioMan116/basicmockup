@@ -1,0 +1,23 @@
+<div class="contact">
+	<div class="contact__title title">Нравится? Бронируйте тур</div>
+	<!-- /.contact__title -->
+	<div class="contact__text">Заполните небольшую анкету, и мы свяжемся с вами и ответим на все вопросы.</div>
+	<!-- /.contact__text -->
+
+	{% import "form/form.njk" as form %}
+
+	<form action="#" class="form contact__form">
+
+		{{ form.input(text = 'hide', label = 'Введите ваше имя') }}
+		{{ form.input(type = 'email', text = 'hide', label = 'Введите ваш e-mail') }}
+		{{ form.textarea(text = 'hide', label = 'Может у вас остались вопросы?') }}
+
+		{{ form.oferta() }}
+
+		<div class="contact__footer">
+			{{ form.submit() }}
+		</div>
+
+	</form>
+</div>
+<!-- /.contact -->

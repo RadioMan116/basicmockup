@@ -1,0 +1,10 @@
+.title {
+	line-height: 60px;
+	font-size: 50px;
+	font-weight: 200;
+	text-align: center;
+	@media (--phone) {
+		font-size: 32px;
+		line-height: 37px;
+	}
+}

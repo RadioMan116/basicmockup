@@ -1,0 +1,26 @@
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 67px;
+	background-color: #0f0f0f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 4;
+
+	&__inner {}
+
+	&__copyright {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.54;
+		text-align: center;
+		opacity: 0.25;
+	}
+	@media (--phone) {
+		height: 72px;
+		padding: 0 16px;
+	}
+}

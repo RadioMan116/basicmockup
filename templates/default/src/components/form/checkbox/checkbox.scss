@@ -1,0 +1,95 @@
+.checkbox {
+	position: relative;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	padding: 0 0 0 24px;
+
+	&_filter {
+		color: #fff;
+	}
+
+	&__input {
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&__icon {
+		position: absolute;
+		left: 0;
+		top: -1px;
+		width: 16px;
+		height: 16px;
+		border-radius: 3px;
+		border: 1px solid rgb(215, 215, 215);
+		background-color: rgb(255, 255, 255);
+		transition: border 200ms;
+
+		&:before {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: scale(0);
+			top: 0;
+			left: 0;
+			transition: transform 200ms;
+			background: url("https://icongr.am/fontawesome/check.svg?size=10&color=dd0016") no-repeat center center;
+			content: '';
+		}
+	}
+
+	&_radio &__icon {
+		border-radius: 50%;
+
+		&:before {
+			width: 8px;
+			height: 8px;
+			background-color: #dd0016;
+			left: 50%;
+			top: 50%;
+			border-radius: 50%;
+			transform: translate(-50%, -50%) scale(0);
+		}
+	}
+
+	&__input:checked~&__icon {
+		&:before {
+			transform: scale(1);
+		}
+	}
+
+	&_radio &__input:checked~&__icon {
+		&:before {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&__input:disabled~&__icon,
+	&__input:disabled~&__text {
+		opacity: 0.2;
+	}
+
+	&__text {
+		a {
+			color: rgb(221, 0, 22);
+			@include link();
+		}
+	}
+
+	@media (--phone) {
+		font-size: 10px;
+
+		.form & {
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			padding-top: 2px;
+			display: block;
+		}
+	}
+}

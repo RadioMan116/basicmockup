@@ -1,0 +1,15 @@
+.middle {
+	margin: 0 auto;
+	width: 1156px;
+	@include clearfix;
+
+	&__container {
+		float: left;
+		width: 100%;
+	}
+	@media (--phone) {
+		min-width: 320px;
+		width: auto;
+		padding: 0 16px;
+	}
+}

@@ -1,0 +1,42 @@
+{% macro input(type = 'text', label = 'Фамилия', text = 'Обязательное поле') %}
+	<div class="form__field">
+		<input type="{{ type }}" data-form-label value="" class="form__input">
+		<label class="form__label">{{ label }}</label>
+		{% if text != 'hide' %}
+			<label class="form__requiredtext">{{ text }}</label>
+		{% endif %}
+	</div>
+	<!-- /.form__field -->
+{% endmacro %}
+
+{% macro textarea(label = 'Описание проекта', text = 'Обязательное поле') %}
+	<div class="form__field">
+		<textarea name="" cols="" rows="" data-form-label class="form__input form__input_msg"></textarea>
+		<label class="form__label">{{ label }}</label>
+		{% if text != 'hide' %}
+			<label class="form__requiredtext">{{ text }}</label>
+		{% endif %}
+	</div>
+	<!-- /.form__field -->
+{% endmacro %}
+
+{% macro checkbox(mod = '', type = 'checkbox', attrs = '', text = 'Принимаю <a href="#">условия</a> предоставления данных') %}
+	<label class="checkbox {{ mod }}">
+		<input type="{{ type }}" class="checkbox__input" {{ attrs }}>
+		<span class="checkbox__icon"></span>
+		<!-- /.checkbox__icon -->
+		<span class="checkbox__text">{{ text | safe }}</span>
+		<!-- /.checkbox__text -->
+	</label>
+	<!-- /.checkbox -->
+{% endmacro %}
+
+{% macro oferta(text = 'Нажимая «отправить» вы соглашаетесь с <a href="#" target="_blank">условиями</a> обработки персональных данных') %}
+	<div class="form__oferta">
+		{{ text | safe }}
+	</div>
+{% endmacro %}
+
+{% macro submit(value = 'ОТПРАВИТЬ') %}
+	<input type="submit" name="" value="{{ value }}" class="form__submit">
+{% endmacro %}

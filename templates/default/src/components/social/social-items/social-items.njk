@@ -1,0 +1,14 @@
+{% macro socialItems(arr = ['instagram']) %}
+	<div class="social-items">
+		<div class="social-items__row">
+			{% for item in arr %}
+			<div class="social-items__item">
+				<a href="#" class="social-items__icon social-items__icon_{{ item }}"></a>
+			</div>
+			<!-- /.social-items__item -->
+			{% endfor %}
+		</div>
+		<!-- /.social-items__row -->
+	</div>
+	<!-- /.social-items -->
+{% endmacro %}

@@ -1,0 +1,152 @@
+.form {
+	.row {
+		margin-left: -20px;
+		margin-right: -20px;
+
+		[class*=col-] {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	&__title {
+		color: rgb(0, 0, 0);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 24px;
+		margin-bottom: 15px;
+	}
+
+	&__field {
+		margin-bottom: 16px;
+		position: relative;
+	}
+
+	&__input {
+		width: 100%;
+		height: 55px;
+		border-radius: 27.5px;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+		background-color: #ffffff;
+		line-height: 1;
+		font-size: 16px;
+		font-weight: 300;
+		appearance: none;
+		display: block;
+		border: none;
+		text-align: center;
+		padding: 0 16px;
+
+		&_msg {
+			height: 160px;
+			padding-top: 15px;
+			padding-bottom: 10px;
+		}
+	}
+
+	&__input:focus,
+	&__input_full {
+		padding-top: 10px;
+	}
+
+	&__input_msg.form__input_full,
+	&__input_msg:focus {
+		padding-top: 20px;
+	}
+
+	&__input_full {
+		font-weight: bold;
+	}
+
+	&__label {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		font-weight: 300;
+		color: #afb2b9;
+		line-height: 1;
+		width: 100%;
+		padding: 0 16px;
+		pointer-events: none;
+		margin: 0;
+		transform: translate(0, 0);
+		transition: transform 400ms, font-size 400ms;
+	}
+
+	&__requiredtext {
+		position: absolute;
+		pointer-events: none;
+		color: rgb(215, 215, 215);
+		font-size: 11px;
+		font-weight: 400;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		padding: 0 16px 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		line-height: 1;
+		transform: translate(0, 0);
+		transition: transform 400ms;
+	}
+
+	&__input:focus~&__label,
+	&__input_full~&__label {
+		font-size: 11px;
+		transform: translate(0, -9px);
+	}
+
+	&__input:focus~&__requiredtext,
+	&__input_full~&__requiredtext {
+		transform: translate(0, -13px);
+	}
+
+	&__input_msg~&__label {
+		align-items: flex-start;
+		padding: 16px;
+	}
+
+	&__input_msg~&__requiredtext {
+		align-items: flex-start;
+		padding-top: 19px;
+	}
+
+	&__input_msg.form__input_full~&__label,
+	&__input_msg:focus~&__label {
+		transform: translate(0, -11px) !important;
+	}
+
+	&__oferta {
+		font-size: 12px;
+		line-height: 1.5;
+		letter-spacing: 0.4px;
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	&__submit {
+		@include button()
+	}
+	@media (--phone) {
+		&__input {
+			height: 40px;
+			border-radius: 20px;
+
+			&_msg {
+				height: 100px;
+			}
+		}
+
+		&__oferta {
+			margin-bottom: 16px;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+<div class="detail-gallery">
+	<div class="detail-gallery__inner">
+		<div class="detail-gallery__title title">Галерея</div>
+		<div class="swiper swiper_scale">
+			<div class="swiper-container" data-swiper data-options='{"slidesPerView": "3", "spaceBetween": 0, "centeredSlides": true, "breakpoints": { "768": { "slidesPerView": 1, "spaceBetween": 30, "centeredSlides": false}}}'>
+				<div class="swiper-wrapper">
+					{% for item in '111111' %}
+					<div class="swiper-slide">
+
+						<div class="detail-gallery__item">
+							<picture class="detail-gallery__pic">
+								<source media="(max-width: 768px)" data-srcset="images/detail-gallery__pic_w768.png">
+								<img data-src="images/detail-gallery__pic.png" alt="" class="lazyload">
+							</picture>
+						</div>
+
+
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="swiper__arrow">
+				<div class="swiper__prev js-swiper__prev"></div>
+				<div class="swiper__next js-swiper__next"></div>
+			</div>
+			<div class="js-swiper-pagination swiper__pagination"></div>
+		</div>
+		<!-- /.swiper -->
+	</div>
+	
+	{% include "social/social-like/social-like.njk" %}
+
+</div>
+<!-- /.detail-gallery -->

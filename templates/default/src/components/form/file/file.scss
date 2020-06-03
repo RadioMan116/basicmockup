@@ -1,0 +1,72 @@
+.file {
+	margin-bottom: 30px;
+
+	&__section {}
+
+	&__field {
+		color: rgb(0, 0, 0);
+		font-size: 14px;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 7px;
+	}
+
+	&__text {
+		padding: 0 0 0 30px;
+		background: url("../images/file__text.svg") no-repeat left center;
+	}
+
+	&__delete {
+		width: 20px;
+		height: 20px;
+		background: url("../images/file__delete.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	&__footer {}
+
+	&__button {
+		width: 206px;
+		height: 32px;
+		border-radius: 24px;
+		border: 1px solid rgb(215, 215, 215);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		margin: 0 auto;
+	}
+
+	&__input {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 200%;
+		height: 200%;
+		font-size: 200%;
+		opacity: 0;
+	}
+
+	@media (--phone) {
+		margin-bottom: 16px;
+
+		&__section {
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			font-size: 10px;
+			line-height: 15px;
+			min-height: 20px;
+			display: flex;
+			align-items: center;
+		}
+
+		&__button {
+			width: 100%;
+		}
+	}
+}

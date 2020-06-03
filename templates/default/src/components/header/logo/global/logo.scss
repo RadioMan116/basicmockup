@@ -1,0 +1,22 @@
+.logo {
+	&__link {
+		display: block;
+		height: 24px;
+		font-family: ForgottenNovember;
+		font-size: 30px;
+		line-height: 0.8;
+		color: #ffffff;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	@media (--phone) {
+		&__link {
+			font-size: 24px;
+			line-height: 26px;
+		}
+	}
+}

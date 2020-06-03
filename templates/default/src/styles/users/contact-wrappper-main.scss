@@ -1,0 +1,11 @@
+.contact-wrappper-main {
+	background: #0a0a0a;
+	padding-bottom: 1px;
+	overflow: hidden;
+
+	@media (--phone) {
+		margin: 0 -16px;
+		padding: 0 16px 1px;
+	}
+
+}

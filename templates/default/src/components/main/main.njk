@@ -1,0 +1,40 @@
+<div class="main">
+	<div class="main__inner">
+		<div class="swiper">
+			<div class="swiper-container" data-swiper data-options='{"slidesPerView": 1, "spaceBetween": 30}'>
+				<div class="swiper-wrapper">
+					{% for item in '12345' %}
+					<div class="swiper-slide">
+
+						<div class="main__item">
+							<picture class="main__pic">
+								<source media="(max-width: 768px)" data-srcset="images/main__pic_w768.png">
+								<img data-src="images/main__pic.png" alt="" class="lazyload">
+							</picture>
+							<div class="main__desc">
+								<div class="main__title">Путешествуйте по Чили с нами</div>
+								<!-- /.main__title -->
+								<div class="main__text">Мы покажем Вам лучшее, что есть в этой потрясающей стране!</div>
+								<!-- /.main__text -->
+							</div>
+							<!-- /.main__desc -->
+						</div>
+						<!-- /.main__item -->
+
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="swiper__arrow">
+				<div class="swiper__prev js-swiper__prev"></div>
+				<div class="swiper__next js-swiper__next"></div>
+			</div>
+			<div class="js-swiper-pagination swiper__pagination"></div>
+			<div class="main__arrow" data-hash="#map" data-scroll-smooth>
+				<span></span>
+			</div>
+		</div>
+		<!-- /.swiper -->
+	</div>
+</div>
+<!-- /.main -->

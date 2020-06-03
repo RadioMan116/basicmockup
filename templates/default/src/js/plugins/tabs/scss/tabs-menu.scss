@@ -1,0 +1,47 @@
+.tabs-menu {
+	line-height: 1;
+	display: flex;
+	margin-bottom: 32px;
+	justify-content: center;
+	position: relative;
+
+	&__link {
+		width: 246px;
+		height: 55px;
+		border-radius: 27.5px;
+		border: 1px solid #161616;
+		background-color: #161616;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		text-align: center;
+		color: #ffffff;
+		margin: 0 12px;
+		cursor: pointer;
+		transition: border 400ms;
+	}
+
+	&__link.active,
+	&__link:hover {
+		border: solid 1px #13cb65;
+		background-color: #161616;
+	}
+
+	&__xslink {
+		display: none;
+	}
+	@media (--phone) {
+		margin-bottom: 12px;
+		flex-direction: column;
+		align-items: center;
+
+		&__link {
+			height: 40px;
+			border-radius: 20px;
+			width: 240px;
+			margin-bottom: 12px;
+			font-size: 12px;
+		}
+	}
+}
