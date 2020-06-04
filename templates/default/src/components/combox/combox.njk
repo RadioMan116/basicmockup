@@ -1,0 +1,10 @@
+{% macro combox(data = ['Все бренды', 'Все бренды', 'Все бренды']) %}
+	<div class="combox">
+		<select name="" id="" class="combox__select">
+			{% for item in data %}
+				<option value="">{{ item }}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<!-- /.combox -->
+{% endmacro %}

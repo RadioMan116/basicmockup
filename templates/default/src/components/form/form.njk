@@ -1,6 +1,6 @@
-{% macro input(type = 'text', label = 'Фамилия', text = 'Обязательное поле') %}
+{% macro input(type = 'text', label = 'Фамилия', text = 'Обязательное поле', placeholder = '') %}
 	<div class="form__field">
-		<input type="{{ type }}" data-form-label value="" class="form__input">
+		<input type="{{ type }}" data-form-label value="" class="form__input" placeholder="{{ placeholder }}">
 		<label class="form__label">{{ label }}</label>
 		{% if text != 'hide' %}
 			<label class="form__requiredtext">{{ text }}</label>
@@ -9,9 +9,9 @@
 	<!-- /.form__field -->
 {% endmacro %}
 
-{% macro textarea(label = 'Описание проекта', text = 'Обязательное поле') %}
+{% macro textarea(label = 'Описание проекта', text = 'Обязательное поле', mClass = '') %}
 	<div class="form__field">
-		<textarea name="" cols="" rows="" data-form-label class="form__input form__input_msg"></textarea>
+		<textarea name="" cols="" rows="" data-form-label class="form__input form__input_msg {{ mClass }}"></textarea>
 		<label class="form__label">{{ label }}</label>
 		{% if text != 'hide' %}
 			<label class="form__requiredtext">{{ text }}</label>
@@ -37,6 +37,6 @@
 	</div>
 {% endmacro %}
 
-{% macro submit(value = 'ОТПРАВИТЬ') %}
+{% macro submit(value = 'Отправить') %}
 	<input type="submit" name="" value="{{ value }}" class="form__submit">
 {% endmacro %}

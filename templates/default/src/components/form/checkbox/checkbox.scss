@@ -7,9 +7,7 @@
 	margin: 0;
 	padding: 0 0 0 24px;
 
-	&_filter {
-		color: #fff;
-	}
+	&_filter {}
 
 	&__input {
 		opacity: 0;
@@ -21,7 +19,7 @@
 	&__icon {
 		position: absolute;
 		left: 0;
-		top: -1px;
+		top: -2px;
 		width: 16px;
 		height: 16px;
 		border-radius: 3px;
@@ -37,7 +35,7 @@
 			top: 0;
 			left: 0;
 			transition: transform 200ms;
-			background: url("https://icongr.am/fontawesome/check.svg?size=10&color=dd0016") no-repeat center center;
+			background: url(../images/checkbox.svg) no-repeat center center;
 			content: '';
 		}
 	}
@@ -56,32 +54,48 @@
 		}
 	}
 
-	&__input:checked~&__icon {
+	&__input[type=radio] ~ &__icon {
+		border-radius: 50%;
+
+		&:before {
+			width: 8px;
+			height: 8px;
+			background-color: #dd0016;
+			left: 50%;
+			top: 50%;
+			border-radius: 50%;
+			transform: translate(-50%, -50%) scale(0);
+		}
+	}
+
+	&__input:checked ~ &__icon {
 		&:before {
 			transform: scale(1);
 		}
 	}
 
-	&_radio &__input:checked~&__icon {
+	&_radio &__input:checked ~ &__icon,
+	&__input:checked[type=radio] ~ &__icon {
 		&:before {
 			transform: translate(-50%, -50%) scale(1);
 		}
 	}
 
-	&__input:disabled~&__icon,
-	&__input:disabled~&__text {
+	&__input:disabled ~ &__icon,
+	&__input:disabled ~ &__text {
 		opacity: 0.2;
 	}
 
 	&__text {
 		a {
 			color: rgb(221, 0, 22);
-			@include link();
+
+			@include link;
 		}
 	}
 
 	@media (--phone) {
-		font-size: 10px;
+		font-size: 12px;
 
 		.form & {
 			margin-bottom: 16px;

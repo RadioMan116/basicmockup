@@ -1,0 +1,17 @@
+{% macro checkbox(
+		mod = '',
+		type = 'checkbox',
+		attrs = '',
+		text = 'Принимаю <a href="#">условия</a> предоставления данных',
+		dataText
+	)
+%}
+	<label class="checkbox {{ mod }}">
+		<input class="checkbox__input" type="{{ type }}" {{ attrs | safe }} data-text="{{ dataText | safe }}" />
+		<span class="checkbox__icon"></span>
+		<span class="checkbox__text">
+			{{ text | safe }}
+		</span>
+	</label>
+	<!-- /.checkbox -->
+{% endmacro %}
