@@ -1,9 +1,109 @@
+{% macro login( come = '',subtitle='',name='',email='',caption='',text='',subname='',tel='',button='',oferta='',password='',subpassword='',restore='') %}
 <div class="login">
-	<div class="login__title">Онлайн-меню</div>
+	<div class="login__title title">Онлайн-меню</div>
 	<!-- /.login__title -->
 	<div class="login__form">
-		.login__header>.login__subtitle+
+		<div class="login__header">
+			{% if subtitle %}
+			<div class="login__subtitle">
+				{{subtitle}}
+			</div>
+			<!-- /.login__subtitle -->
+			{% endif %}
+			{% if come %}
+			<a href="#" class="login__come-in">
+				{{come}}
+			</a>
+			<!-- /.login__come-in -->
+			{% endif %}
+		</div>
+		<!-- /.login__header -->
+		<form action="">
+
+			{% if caption %}
+			<div class="login__row">
+				<div class="login__caption">
+					{{caption}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="text" class="login__input">
+			</div>
+			<!-- /.login__row -->
+			{% endif %}
+
+			{% if subname %}
+			<div class="login__row">
+				<div class="login__caption">
+					{{subname}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="text" class="login__input">
+			</div>
+			<!-- /.login__row -->
+
+			{% endif %}
+			{% if tel %}
+			<div class="login__row margin">
+				<div class="login__caption">
+					{{tel}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="email" class="login__input">
+			</div>
+			<!-- /.login__row -->
+			{% endif %}
+			{% if email %}
+			<div class="login__row">
+				<div class="login__caption">
+					{{email}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="email" class="login__input">
+			</div>
+			<!-- /.login__row -->
+			{% endif %}
+			{% if password %}
+			<div class="login__row">
+				<div class="login__caption">
+					{{password}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="password" class="login__input">
+			</div>
+			<!-- /.login__row -->
+			{% endif %}
+			{% if subpassword %}
+			<div class="login__row">
+				<div class="login__caption">
+					{{subpassword}}
+				</div>
+				<!-- /.login__caption -->
+				<input type="password" class="login__input">
+			</div>
+			<!-- /.login__row -->
+			{% endif %}
+			<div class="login__footer">
+				{% if button %}
+				<input type="submit" class="login__button" value="{{button}}">
+				<!-- /.login__button -->
+				{% endif %}
+				{% if restore %}
+				<a href="#" class="login__restore">
+					{{restore}}
+				</a>
+				<!-- /.login__restore -->
+				{% endif %}
+				{% if oferta %}
+				<div class="login__{{oferta}}">
+					Нажимая «Продолжить» вы подтверждаете своё согласие с
+					<a href="#" target="_blank">политикой обработки персональных данных</a>
+				</div>
+				{% endif %}
+			</div>
+			<!-- /.login__footer -->
+		</form>
 	</div>
 	<!-- /.login__form -->
 </div>
 <!-- /.login -->
+{% endmacro %}

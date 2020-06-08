@@ -10,14 +10,11 @@
 		{% from "login/login.njk" import login %}
 		{{
 			login(
-				subtitle = 'Регистрация',
-				come = 'Войти',
-				caption='имя',
-				subname='фамилия',
-				tel='Телефон',
-				email='E-mail',
-				button='Продолжить',
-				oferta='oferta'
+				subtitle = 'Авторизация',
+				email='Логин',
+				password='Пароль',
+				button='Войти',
+				restore='Восстановить пароль'
 			)
 		}}
 

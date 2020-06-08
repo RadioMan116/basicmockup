@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.Tooltip = require('tooltip.js');
 	require('./form');
 	window.noUiSlider = require('nouislider');
-	require('./filter');
+	// require('./filter');
 	require('./scrolling-section');
 	require('./compare');
 	require('./rating');
