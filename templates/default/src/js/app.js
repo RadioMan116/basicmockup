@@ -38,3 +38,17 @@ $('[data-ajax]').click(function (e) {
 
 		});
 });
+
+$(document).on('click', 'a.share', function (e) {
+	event.preventDefault();
+	var copytext = $(this).attr('href');
+	var $temp = $("<input>");
+	$("body").append($temp);
+	$temp.val(copytext).select();
+	document.execCommand("copy");
+	$temp.remove();
+	$(this).append('<span class="tooltip">Ссылка скопирована</span>');
+	setTimeout(function () {
+		$('.tooltip').remove()
+	}, 1500);
+});
