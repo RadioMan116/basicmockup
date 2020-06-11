@@ -1,18 +1,100 @@
-<div class="main">
-	<div class="main__inner">
-		{% macro profileInput ( person = '',management='') %}
-		<div class="main__data">
-			<div class="main__title">
-				Данные
-			</div>
-			<!-- /.main__title -->
-		</div>
-		<!-- /.main__data -->
-		{% endmacro %}
-		{% macro profile ( ) %}
-
-		<!-- /.main__menu -->
-		{% endmacro %}
-	</div>
+{% macro profileInput ( person='' ,management='') %}
+<div class="profile__title main__title">
+	<a href="#" class="profile__link">
+		<img src="images/goto-button.svg" alt="">
+	</a>
+	<!-- /.profile__link -->
+	Управление профилем
 </div>
-<!-- /.main -->
+<!-- /.profile__title -->
+<div class="profile">
+	<div class="profile__sidebar">
+		<div class="profile__control">
+			<a href="#" class="profile__control-link">
+				Мой профиль
+			</a>
+			<!-- /.profile__control-link -->
+			<a href="#" class="profile__control-link active">
+				Мои заведения
+			</a>
+			<!-- /.profile__control-link -->
+		</div>
+		<!-- /.profile__control -->
+		<div class="profile__institution">
+			Добавить заведение
+		</div>
+		<!-- /.profile__institution -->
+	</div>
+	<!-- /.profile__sidebar -->
+
+	<div class="profile__aside">
+		{% if person %}
+		<div class="profile__items">
+			{% for i in range(0, 5) %}
+			<div class="profile__item">
+				<div class="profile__pic"></div>
+				<!-- /.profile__pic -->
+				<div class="profile__desc">
+					<div class="profile__caption">
+						{{person}}
+					</div>
+					<!-- /.profile__caption -->
+					<div class="profile__row">
+						<div class="profile__subtitle">
+							Адрес
+						</div>
+						<!-- /.profile__subtitle -->
+						<div class="profile__information">
+							Москва, ул. Центральная, д.6, кв. 57
+						</div>
+						<!-- /.profile__information -->
+					</div>
+					<!-- /.profile__row -->
+					<div class="profile__row">
+						<div class="profile__subtitle">
+							Телефон
+						</div>
+						<!-- /.profile__subtitle -->
+						<div class="profile__information">
+							+7 495 111 97 57
+						</div>
+						<!-- /.profile__information -->
+					</div>
+					<!-- /.profile__row -->
+					<div class="profile__row">
+						<div class="profile__subtitle">
+							Время работы
+						</div>
+						<!-- /.profile__subtitle -->
+						<div class="profile__information">
+							Пн-Пт: 11:00 – 23:00
+						</div>
+						<!-- /.profile__information -->
+						<div class="profile__information">
+							Сб-Вс: 14:00 – 02:00
+						</div>
+						<!-- /.profile__information -->
+					</div>
+					<!-- /.profile__row -->
+					<a href="" class="profile__qr">
+						QR-Код
+					</a>
+					<!-- /.profile__qr -->
+					<a href="" class="profile__edit">
+						Изменить
+					</a>
+					<!-- /.profile__edit -->
+				</div>
+				<!-- /.profile__desc -->
+			</div>
+			<!-- /.profile__item -->
+			{% endfor %}
+		</div>
+		<!-- /.profile__items -->
+		{% endif %}
+	</div>
+	<!-- /.profile__aside -->
+</div>
+<!-- /.profile__section -->
+
+{% endmacro %}
