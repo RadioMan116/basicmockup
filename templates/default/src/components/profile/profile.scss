@@ -110,25 +110,75 @@
 		box-shadow: 0px 4px 12px rgba(23, 29, 41, 0.08);
 		width: 100%;
 		margin-bottom: 16px;
+		padding: 24px;
+		display: flex;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 
-	&__pic {}
+	&__pic {
+		img {
+			max-width: 298px;
+			max-height: 228px;
+		}
+	}
 
-	&__desc {}
+	&__desc {
+		flex-grow: 1;
+		padding-left: 30px;
+		position: relative;
+	}
 
-	&__caption {}
+	&__caption {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 27px;
+		margin-bottom: 24px;
+	}
 
-	&__row {}
+	&__row {
+		margin-bottom: 18px;
+		display: flex;
+		flex-wrap: wrap;
 
-	&__subtitle {}
+		.profile__block & {
+			width: calc(100%/3 - 14px);
+		}
+	}
 
-	&__information {}
+	&__subtitle {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16px;
+		margin-bottom: 5px;
+		width: 100%;
+	}
+
+	&__information {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		margin-right: 14px;
+	}
 
 	&__qr {
+		width: 105px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 21px;
+		color: $link-color;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		svg {
+			margin-right: 8px;
+		}
+
 		&:hover {}
 
 		&:active {}
@@ -137,10 +187,76 @@
 	}
 
 	&__edit {
+		width: 105px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 21px;
+		color: $link-color;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		top: 24px;
+
+		svg {
+			margin-right: 8px;
+		}
+
 		&:hover {}
 
 		&:active {}
 
 		&:focus {}
+	}
+
+	&__input {
+		width: 100%;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		padding: 10px 12px;
+		color: $black;
+		position: relative;
+		border-radius: 4px;
+		border: solid 1px #c8c9cc;
+
+
+		&[type="date"] {
+			&::-webkit-calendar-picker-indicator {
+				display: none;
+			}
+
+			&:after {
+				background: url("../images/Iconscalendar.svg");
+				width: 24px;
+				height: 24px;
+				content: '';
+			}
+		}
+	}
+
+	textarea {
+		min-height: 88px;
+	}
+
+	&__block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__submit {
+		width: 137px;
+		height: 40px;
+		border-radius: 4px;
+		background: $blue;
+		-webkit-appearance: none;
+		color: #ffffff;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: center;
+		border: 0;
+		cursor: pointer;
 	}
 }

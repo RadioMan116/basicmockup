@@ -10,13 +10,11 @@
 		{% include "header/global/header.njk" %}
 
 		{% from "profile/profile.njk" import profileInput%}
-
 		<div class="main">
 			<div class="main__inner">
 				{{
 					profileInput(
-						button='Добавить заведение',
-						profile='Ресторан Ёрш'
+						info='Данные Организации'
 					)
 				}}
 			</div>
