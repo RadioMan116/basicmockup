@@ -45,6 +45,8 @@
 		&:focus {}
 	}
 
+	&__restore {}
+
 	&__row {
 		margin-bottom: 16px;
 		display: flex;
@@ -113,6 +115,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 }

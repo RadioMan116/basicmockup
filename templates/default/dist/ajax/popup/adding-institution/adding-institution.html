@@ -1,34 +1,41 @@
-<div class="popup-callback">
-	<div class="popup__title">
-		Заказать звонок
-	</div>
+<div class="popup__content">
+	<div class="popup__title">Добавление заведения</div>
 	<!-- /.popup__title -->
-	<div class="popup-callback__text">
-		Наши менеджеры ответят вам<br>в течениии 30 мин
+	<div class="popup__content">
+		<div class="popup__left">
+			<div class="popup__pic">
+				<div id="drop-area">
+					<form class="my-form">
+						<p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region
+						</p>
+						<input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+						<label class="button" for="fileElem">Select some files</label>
+					</form>
+					<progress id="progress-bar" max=100 value=0></progress>
+					<div id="gallery" />
+				</div>
+			</div>
+		</div>
+		<!-- /#drop-area -->
+
+		<!-- /.popup__pic -->
+		<div class="popup__logo">
+			<input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+			<label class="button" for="fileElem">Select some files</label>
+		</div>
+		<!-- /.popup__logo -->
+		<a href="" class="popup__copy__link"></a>
+		<!-- /.popup__copy__link -->
+		<a href="" class="popup__qrcode"></a>
+		<!-- /.popup__qrcode -->
 	</div>
-	<!-- /.popup-callback__text -->
-
-
-	<form action="#" class="form form_popup">
-		<div class="form__field popup-callback__field">
-			<input type="text" class="form__input" data-form-label value="" />
-			<label class="form__label">
-				Ваше имя
-			</label>
-		</div>
-		<!-- /.form__field -->
-		<div class="form__field popup-callback__field">
-			<input type="tel" class="form__input" data-form-label value="" />
-			<label class="form__label">
-				Телефон
-			</label>
-		</div>
-		<!-- /.form__field -->
-
-		<input type="submit" value="отправить" class="form__submit form__submit_border" />
-	</form>
-	<!-- /.form -->
-
-
+	<!-- /.popup__left -->
+	<div class="popup__right"></div>
+	<!-- /.popup__right -->
 </div>
-<!-- /.popup-callback -->
+<!-- /.popup__content -->
+
+<script>
+</script>
+</div>
+<!-- /.popup -->
