@@ -4,16 +4,16 @@
 	z-index: 1;
 
 	&__inner {
-		width: 1360px;
+		width: 1240px;
 		margin: 0 auto;
-		height: 80px;
+		height: 64px;
 	}
 
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 80px;
+		height: 64px;
 	}
 
 	&__col {
@@ -25,6 +25,7 @@
 			align-items: center;
 		}
 	}
+
 	@media (--phone) {
 		padding: 0 56px 0 16px;
 		position: fixed;

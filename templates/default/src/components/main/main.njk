@@ -1,40 +1,157 @@
 <div class="main">
 	<div class="main__inner">
-		<div class="swiper">
-			<div class="swiper-container" data-swiper data-options='{"slidesPerView": 1, "spaceBetween": 30}'>
-				<div class="swiper-wrapper">
-					{% for item in '12345' %}
-					<div class="swiper-slide">
+		{% macro name ( person = '',management='') %}
+		<div class="main__data">
+			<div class="main__title">
+				Данные
+			</div>
+			<!-- /.main__title -->
 
+			<div class="main__header">
+				{% if person %}
+				<a href="#" class="main__link">
+					{{person}}
+				</a>
+				<!-- /.main__link -->
+				{% endif %}
+				{% if management %}
+				<a href="#" class="main__link">
+					{{management}}
+				</a>
+				<!-- /.main__link -->
+				{% endif %}
+			</div>
+			<!-- /.main__header -->
+
+		</div>
+		<!-- /.main__data -->
+		{% endmacro %}
+		{% macro menu ( restaurant='',add_item='',not__restaurant='',not__dishes='',menu='') %}
+		<div class="main__menu">
+			<div class="main__middle">
+				<div class="main__title">
+					Меню
+				</div>
+				<!-- /.main__title -->
+				{% if restaurant %}
+				<div class="main__restaurant">
+					<div class="main__dropdown js-main__dropdown">
+						<svg width="12px" height="7px" viewBox="0 0 12 7">
+							<g id="chevron-down">
+								<path
+									d="M9.4625 0.2925L5.5825 4.1725L1.7025 0.2925C1.3125 -0.0975 0.6825 -0.0975 0.2925 0.2925C-0.0975 0.6825 -0.0975 1.3125 0.2925 1.7025L4.8825 6.2925C5.2725 6.6825 5.9025 6.6825 6.2925 6.2925L10.8825 1.7025C11.2725 1.3125 11.2725 0.6825 10.8825 0.2925C10.4925 -0.0875 9.8525 -0.0975 9.4625 0.2925L9.4625 0.2925Z"
+									transform="translate(0.4175 -0.0025)" id="chevron-down" fill="#73C9FF"
+									stroke="none" />
+							</g>
+						</svg>
+						<div class="main__dropdown-link active">
+							{{restaurant}}1
+						</div>
+						<!-- /.main__dropdown-link -->
+						<div class="main__dropdown-link">
+							{{restaurant}}2
+						</div>
+						<!-- /.main__dropdown-link -->
+						<div class="main__dropdown-link">
+							{{restaurant}}3
+						</div>
+						<!-- /.main__dropdown-link -->
+						<div class="main__dropdown-link">
+							{{restaurant}}4
+						</div>
+						<!-- /.main__dropdown-link -->
+						<div class="main__dropdown-link">
+							{{restaurant}}5
+						</div>
+						<!-- /.main__dropdown-link -->
+						<div class="main__dropdown-link">
+							{{restaurant}}6
+						</div>
+						<!-- /.main__dropdown-link -->
+					</div>
+					<!-- /.main__dropdown -->
+				</div>
+				<!-- /.main__restaurant -->
+				{% endif %}
+				{% if add_item %}
+				<a href="#" class="main__add-item">
+					{{add_item}}
+				</a>
+				<!-- /.main__add-item -->
+				{% endif %}
+			</div>
+			<!-- /.main__middle -->
+			<div class="main__content">
+				{% if not__dishes %}
+				<div class="main__info">
+					<div class="main__info-text">
+						Вы пока не добавили ни одного ресторана.<br>
+						Сделать это можно в панели <a href="#">{{not__dishes}}</a>
+					</div>
+					<!-- /.main__info-text -->
+				</div>
+				<!-- /.main__info -->
+
+				{% endif %}
+				{% if not__restaurant %}
+				<div class="main__info">
+					<div class="main__info-text">
+						Вы пока не добавили не добавили ни одного блюда.<br>
+						Сделать это можно нажав на кнопку <a href="#">+ {{not__restaurant}}</a>
+					</div>
+					<!-- /.main__info-text -->
+				</div>
+				<!-- /.main__info -->
+				{% endif %}
+				{% if menu %}
+
+				<div class="tabs">
+					<div class="tabs-menu" data-tabs>
+						{% for i in range(0, 5) %}
+						<a href="#" class="tabs-menu__link" data-hash="#js-tabs-{{i}}" data-tabs-children>
+							{{menu + i}}
+						</a>
+						<!-- /.main__caption -->
+						{% endfor %}
+					</div>
+					{% for i in range(0, 5) %}
+
+					<div class="main__items tabs__inner" id="js-tabs-{{i}}">
+						{% for i in range(0, 18) %}
 						<div class="main__item">
-							<picture class="main__pic">
-								<source media="(max-width: 768px)" data-srcset="images/main__pic_w768.png">
-								<img data-src="images/main__pic.png" alt="" class="lazyload">
-							</picture>
+							<div class="main__pic">
+								<img src="images/item-pic.png" alt="">
+							</div>
+							<!-- /.main__pic -->
 							<div class="main__desc">
-								<div class="main__title">Путешествуйте по Чили с нами</div>
-								<!-- /.main__title -->
-								<div class="main__text">Мы покажем Вам лучшее, что есть в этой потрясающей стране!</div>
+								<div class="main__caption">Гуйнику Лемонграсс</div>
+								<!-- /.main__caption -->
+								<div class="main__text">
+									<div class="main__price">
+										390 ₽
+									</div>
+									<!-- /.main__price -->
+									<div class="main__weight"> 260 гр.</div>
+									<!-- /.main__weight -->
+									<a href="#" class="main__card"></a>
+									<!-- /.main__card -->
+								</div>
 								<!-- /.main__text -->
 							</div>
 							<!-- /.main__desc -->
 						</div>
 						<!-- /.main__item -->
-
+						{% endfor %}
 					</div>
+					<!-- /.main__items -->
 					{% endfor %}
 				</div>
-			</div>
-			<div class="swiper__arrow">
-				<div class="swiper__prev js-swiper__prev"></div>
-				<div class="swiper__next js-swiper__next"></div>
-			</div>
-			<div class="js-swiper-pagination swiper__pagination"></div>
-			<div class="main__arrow" data-hash="#map" data-scroll-smooth>
-				<span></span>
+
+				{% endif %}
 			</div>
 		</div>
-		<!-- /.swiper -->
+		<!-- /.main__menu -->
+		{% endmacro %}
 	</div>
 </div>
 <!-- /.main -->

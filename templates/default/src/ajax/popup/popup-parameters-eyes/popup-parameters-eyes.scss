@@ -22,7 +22,7 @@
 		align-items: center;
 		position: relative;
 		border: none;
-		color: #ffffff;
+		color: $white;
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 1;
@@ -32,12 +32,13 @@
 			width: 20px;
 			height: 20px;
 			display: block;
-			background: svg-load('button-buy.svg', fill='#ffffff') no-repeat;
+			background: svg-load('button-buy.svg', fill='$white') no-repeat;
 			background-size: contain;
 			content: '';
 			margin-right: 18px;
 		}
 	}
+
 	@media (--phone) {
 		width: 100%;
 

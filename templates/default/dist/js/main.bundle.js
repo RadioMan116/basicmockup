@@ -19978,7 +19978,30 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-new Tabs();
+new Tabs(); // DropdownMenu
+
+(function () {
+  var drop = document.querySelector('.js-main__dropdown');
+
+  if (drop) {
+    drop.addEventListener('click', function () {
+      drop.classList.toggle('active');
+    }, false);
+    drop.querySelectorAll('.main__dropdown-link').forEach(function (el) {
+      el.addEventListener('click', function () {
+        drop.querySelector('.main__dropdown-link.active').classList.remove('active');
+        el.classList.add('active');
+      }, false);
+    });
+  }
+})(); // ��������� �����
+
+
+function changeThemeColor() {
+  var metaThemeColor = document.querySelector("body[name=theme-color]");
+}
+
+changeThemeColor();
 
 /***/ }),
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "head/head.njk" %}
+
+<body name="theme-color" content="#84db94">
+
+	<div class="wrapper">
+
+		{% include "header/global/header.njk" %}
+
+		{% from "main/main.njk" import name,menu%}
+		<div class="main">
+			<div class="main__inner">
+				{{
+					name(
+						person='Юридическое лицо',
+						management='Управление заведениями'
+					)
+				}}
+				{{
+					menu(
+						restaurant='заведения-№-',
+						add_item='Добавить позицию',
+					 	menu='Категория блюда - '
+					 )
+				}}
+			</div>
+		</div>
+		<!-- /.main -->
+		{% include "footer/global/footer.njk" %}
+
+	</div>
+	<!-- /.wrapper -->
+
+	{% include "connect/script.njk" %}
+
+</body>
+</html>

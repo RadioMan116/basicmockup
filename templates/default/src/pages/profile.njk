@@ -3,14 +3,21 @@
 
 {% include "head/head.njk" %}
 
-<body>
+<body name="theme-color" content="#84db94">
 
 	<div class="wrapper">
 
 		{% include "header/global/header.njk" %}
 
-		{% include "main/main.njk" %}
-
+		{% from "profile/profile.njk" import profileInput%}
+		<div class="main">
+			<div class="main__inner">
+				{{
+					profileInput()
+				}}
+			</div>
+		</div>
+		<!-- /.main -->
 		{% include "footer/global/footer.njk" %}
 
 	</div>

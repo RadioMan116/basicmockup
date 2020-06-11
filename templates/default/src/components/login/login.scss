@@ -10,7 +10,7 @@
 	&__form {
 		width: 408px;
 		border-radius: 8px;
-		background: #ffffff;
+		background: $white;
 		box-shadow: 0px 4px 12px rgba(23, 29, 41, 0.08);
 		padding: 32px 40px 40px;
 	}
@@ -78,7 +78,7 @@
 	&__input {
 		border-radius: 4px;
 		border: solid 1px #c8c9cc;
-		background: #ffffff;
+		background: $white;
 		height: 40px;
 		font-size: 16px;
 		font-weight: 400;

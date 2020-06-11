@@ -1,0 +1,17 @@
+.log-out {
+	padding-left: 33px;
+	background: url('../images/icon-log_out.svg') no-repeat 0 center;
+
+	&__link {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+		color: $white;
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+}
