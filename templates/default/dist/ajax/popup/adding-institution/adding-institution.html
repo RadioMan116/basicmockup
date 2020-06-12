@@ -5,17 +5,35 @@
 		<form class="popup__form">
 			<div class="popup__left">
 				<div class="popup__pic">
-					<label class="label">
-						<span class="add">Добавить заглавное фото</span>
-						<input type="file" accept="image/*">
-					</label>
+					<div class="file">
+						<div class="file__section">
+							<div class="file__field">
+								<div class="file__text">DSC_182112.jpg</div>
+								<div class="file__delete js-file__delete"></div>
+							</div>
+						</div>
+						<div class="file__footer">
+							<span class="file__button">Добавить заглавное фото
+								<input class="file__input" type="file" accept="image/*" />
+							</span>
+						</div>
+					</div>
 				</div>
 				<!-- /.popup__pic -->
 				<div class="popup__logo">
-					<label class="label">
-						<span class="add">Добавить логотип</span>
-						<input type="file" accept="image/*">
-					</label>
+					<div class="file">
+						<div class="file__section">
+							<div class="file__field">
+								<div class="file__text">DSC_182112.jpg</div>
+								<div class="file__delete js-file__delete"></div>
+							</div>
+						</div>
+						<div class="file__footer">
+							<span class="file__button">Добавить логотип
+								<input class="file__input" type="file" accept="image/*" />
+							</span>
+						</div>
+					</div>
 				</div>
 				<!-- /.popup__logo -->
 				<div class="popup__row">
@@ -70,7 +88,7 @@
 						Название заведения
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" class="popup__input" value="QSushi на ул Коммунистическая">
+					<input type="text" data-form-label class="popup__input" value="QSushi на ул Коммунистическая">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -78,7 +96,7 @@
 						Адрес
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" class="popup__input" value="Москва, ">
+					<input type="text" data-form-label class="popup__input" value="Москва, ">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__items">
@@ -87,7 +105,7 @@
 							Телефон
 						</div>
 						<!-- /.popup__subtitle -->
-						<input type="text" class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
+						<input type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
 					</div>
 					<!-- /.popup__row -->
 					<div class="popup__row">
@@ -95,7 +113,7 @@
 							Дополнительный телефон
 						</div>
 						<!-- /.popup__subtitle -->
-						<input type="text" class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
+						<input type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
 					</div>
 					<!-- /.popup__row -->
 					<a href="" class="popup__add-tel">
