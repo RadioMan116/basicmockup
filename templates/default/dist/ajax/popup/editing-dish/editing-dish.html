@@ -1,93 +1,132 @@
-<div class="popup-parameters-eyes">
-	<div class="popup__title">
-		Заполните обязательные поля
-	</div>
-	<!-- /.popup__title -->
+<div class="popup__title">Добавление блюда</div>
+<!-- /.popup__title -->
+<div class="popup__content">
+	<form class="popup__form">
+		<div class="popup__left">
+			<div class="popup__images">
+				<div class="popup__images-main">
+					<img src="images/swiper.png" alt="">
+					<a href="#" class="popup__images-link">
+							Изменить заглавное фото
+						</a>
+					<!-- /.popup__images-link -->
+				</div>
+				<!-- /.popup__images-main -->
+				<div class="popup__images-choice">
+					<div class="popup__images-item">
+						<div class="popup__images-pic">
+							<img src="images/swiper.png" alt="">
+						</div>
+						<!-- /.popup__images-pic -->
+						<div class="popup__images-delete"></div>
+						<!-- /.popup__images-delete -->
+					</div>
+					<!-- /.popup__images-item -->
+					<div class="popup__images-item">
+						<div class="popup__images-pic">
+							<img src="images/swiper.png" alt="">
+						</div>
+						<!-- /.popup__images-pic -->
+						<div class="popup__images-delete"></div>
+						<!-- /.popup__images-delete -->
+					</div>
+					<!-- /.popup__images-item -->
+					<div class="popup__images-item">
+						<div class="popup__images-pic">
+							<img src="images/swiper.png" alt="">
+						</div>
+						<!-- /.popup__images-pic -->
+						<div class="popup__images-delete"></div>
+						<!-- /.popup__images-delete -->
+					</div>
+					<!-- /.popup__images-item -->
+					<div class="popup__images-item">
+						<div class="popup__images-pic">
+							<img src="images/swiper.png" alt="">
+						</div>
+						<!-- /.popup__images-pic -->
+						<div class="popup__images-delete"></div>
+						<!-- /.popup__images-delete -->
+					</div>
+					<!-- /.popup__images-item -->
+				</div>
+				<!-- /.popup__images-choice -->
+				<a href="" class="popup__images-add">
+						Добавить фото
+					</a>
+				<!-- /.popup__images-add -->
 
-	<form action="#">
-
-
-		<div class="detail-parameters__checkbox popup-parameters-eyes__checkbox">
-
+			</div>
+			<!-- /.popup__images -->
 		</div>
-		<!-- /.detail-parameters__checkbox -->
-
-		<div class="detail-parameters__section popup-parameters-eyes__section">
-			<div class="detail-parameters__field">
-				<div class="detail-parameters__text">Сила (D)</div>
-				<!-- /.detail-parameters__text -->
-				<div class="detail-parameters__combox">
-
+		<!-- /.popup__left -->
+		<div class="popup__right">
+			<div class="popup__row">
+				<div class="popup__subtitle">
+					Название блюда
 				</div>
-				<!-- /.detail-parameters__combox -->
-				<div class="detail-parameters__combox">
-
-				</div>
-				<!-- /.detail-parameters__combox -->
+				<!-- /.popup__subtitle -->
+				<input type="text" data-form-label class="popup__input" placeholder="Гуйнику Лемонграсс">
 			</div>
-			<!-- /.detail-parameters__field -->
-			<div class="detail-parameters__field">
-				<div class="detail-parameters__text">Кривизна (BC)</div>
-				<!-- /.detail-parameters__text -->
-				<div class="detail-parameters__combox">
-
+			<!-- /.popup__row -->
+			<div class="popup__row">
+				<div class="popup__subtitle">
+					Название блюда
 				</div>
-				<!-- /.detail-parameters__combox -->
-				<div class="detail-parameters__combox">
-
-				</div>
-				<!-- /.detail-parameters__combox -->
+				<!-- /.popup__subtitle -->
+				<select class='popup__select'>
+					<option value="Первые блюда" selected="">Первые блюда</option>
+					<option value="Вторые блюда">Вторые блюда</option>
+					<option value="Напитки">Напитки</option>
+				</select>
 			</div>
-			<!-- /.detail-parameters__field -->
-			<div class="detail-parameters__field">
-				<div class="detail-parameters__text">Цилиндр (CYL)</div>
-				<!-- /.detail-parameters__text -->
-				<div class="detail-parameters__combox">
-
+			<!-- /.popup__row -->
+			<div class="popup__row">
+				<div class="profile__subtitle">
+					Описание блюда
 				</div>
-				<!-- /.detail-parameters__combox -->
-				<div class="detail-parameters__combox">
-
-				</div>
-				<!-- /.detail-parameters__combox -->
+				<!-- /.profile__subtitle -->
+				<textarea class="profile__input" placeholder="Введите описание..."></textarea>
 			</div>
-			<!-- /.detail-parameters__field -->
-			<div class="detail-parameters__field">
-				<div class="detail-parameters__text">Ось (AXIS)</div>
-				<!-- /.detail-parameters__text -->
-				<div class="detail-parameters__combox">
-
+			<!-- /.popup__row -->
+			<div class="popup__row">
+				<div class="profile__subtitle">
+					Состав блюда
 				</div>
-				<!-- /.detail-parameters__combox -->
-				<div class="detail-parameters__combox">
-
-				</div>
-				<!-- /.detail-parameters__combox -->
+				<!-- /.profile__subtitle -->
+				<textarea class="profile__input" placeholder="Введите описание..."></textarea>
 			</div>
-			<!-- /.detail-parameters__field -->
-			<div class="detail-parameters__field">
-				<div class="detail-parameters__text">Цвет</div>
-				<!-- /.detail-parameters__text -->
-				<div class="detail-parameters__combox">
-
+			<!-- /.popup__row -->
+			<div class="popup__box">
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Цена, ₽
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
 				</div>
-				<!-- /.detail-parameters__combox -->
-				<div class="detail-parameters__combox">
-
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Вес блюда, гр.
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
 				</div>
-				<!-- /.detail-parameters__combox -->
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Кол-во калорий на 100 гр.
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
 			</div>
-			<!-- /.detail-parameters__field -->
+			<!-- /.popup__block -->
+			<input type="submit" class="popup__submit" value="Сохранить блюдо">
 		</div>
-		<!-- /.detail-parameters__section -->
-
-		<div class="popup-parameters-eyes__footer">
-			<button type="submit" class="popup-parameters-eyes__submit">Перейти в корзину</button>
-		</div>
-		<!-- /.popup-parameters-eyes__footer -->
-
+		<!-- /.popup__right -->
 	</form>
-
-
 </div>
-<!-- /.popup-callback -->
+<!-- /.popup__content -->

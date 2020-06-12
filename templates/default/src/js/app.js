@@ -16,8 +16,20 @@ window.globalPopup = new Popup();
 	}
 })();
 
-// Изменение цвета
+// Lang
+(() => {
+	const lang = document.querySelector('.js-lang__list');
+	if (lang) {
+		lang.querySelectorAll(".js-lang__item").forEach(el => {
+			el.addEventListener('click', (() => {
+				lang.querySelector(".js-lang__item.active").classList.remove("active");
+				el.classList.add("active");
+				lang.classList.toggle('active');
+			}), false);
+		})
 
+	}
+})();
 
 $('[data-ajax]').click(function (e) {
 	e.preventDefault();
@@ -37,7 +49,9 @@ $('[data-ajax]').click(function (e) {
 			});
 
 		});
+
 });
+
 
 $(document).on('click', 'a.share', function (e) {
 	event.preventDefault();

@@ -3,12 +3,33 @@
 	padding-right: 14px;
 	background: url('../images/icon-down.svg') no-repeat 35px 8px;
 	cursor: pointer;
+	height: 40px;
 
 	&__list {
 		display: flex;
+
+		&.active {
+			flex-direction: column;
+			position: relative;
+			top: 0px;
+			background: #0a0a0a;
+
+			.lang__item,
+			.lang__link {
+				display: flex;
+
+			}
+		}
 	}
 
-	&__item {}
+	&__item {
+		display: none;
+
+		&.active {
+			order: -1;
+			display: flex;
+		}
+	}
 
 	&__link {
 		width: 40px;
