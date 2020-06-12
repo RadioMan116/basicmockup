@@ -20012,6 +20012,26 @@ window.globalPopup = new Popup(); // DropdownMenu
   }
 })();
 
+(function () {
+  $(document).on('click', '.popup__list', function (e) {
+    var lang = document.querySelector('.popup__list');
+    lang.querySelectorAll("li").forEach(function (el) {
+      el.addEventListener('click', function () {
+        lang.querySelector("li.active").classList.remove("active");
+        el.classList.add("active");
+      }, false);
+
+      if (lang.classList.contains('active')) {
+        console.log('1');
+        lang.classList.remove('active');
+      } else {
+        console.log('2');
+        lang.classList.add('active');
+      }
+    });
+  });
+})();
+
 $('[data-ajax]').click(function (e) {
   e.preventDefault();
   globalPopup.preloader(true);
