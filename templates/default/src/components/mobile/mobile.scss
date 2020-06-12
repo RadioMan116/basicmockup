@@ -1,0 +1,76 @@
+.mobile-app {
+	margin-top: 16px;
+
+	img {
+		max-width: 100%;
+	}
+
+	&__banner {
+		margin-bottom: 24px;
+	}
+
+	&__content {
+		.tabs-menu {
+			overflow-x: auto;
+		}
+
+		.tabs-menu__link {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 21px;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			padding-bottom: 4px;
+
+			&.active {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+			}
+		}
+
+		.main__item {
+			width: 100%;
+		}
+	}
+
+	.swiper {
+		max-width: 100%;
+		position: relative;
+		margin-bottom: 56px;
+
+
+
+		&-slide {
+			border-radius: 16px;
+			border: solid 1px #f4f4f4;
+		}
+
+		.swiper-pagination {
+			width: 100%;
+			margin-top: 16px;
+
+			&-bullet {
+				width: 7px;
+				height: 7px;
+				background: rgba(0, 0, 0, 0.387);
+
+				&-active {
+					background: #000;
+				}
+			}
+		}
+
+
+	}
+
+	.popup__dish-info {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.popup__dish-caption {
+		margin-bottom: 0;
+	}
+
+}

@@ -1,9 +1,11 @@
 .lang {
 	margin-right: 37px;
-	padding-right: 14px;
-	background: url('../images/icon-down.svg') no-repeat 35px 8px;
+	// padding-right: 14px;
+	// background: url('../images/icon-down.svg') no-repeat 35px 8px;
 	cursor: pointer;
 	height: 40px;
+	display: flex;
+	align-items: center;
 
 	&__list {
 		display: flex;
@@ -11,7 +13,7 @@
 		&.active {
 			flex-direction: column;
 			position: relative;
-			top: 0px;
+			top: 40px;
 			background: #0a0a0a;
 
 			.lang__item,
@@ -53,6 +55,27 @@
 
 	@media (--phone) {
 		margin-left: 0;
+
+		.mobile & {
+			margin-right: 0;
+
+			#chevron-down {
+				fill: #73c9ff;
+			}
+
+			&__link {
+				color: black;
+			}
+
+			&__list {
+				&.active {
+					top: 32px;
+					background: white;
+					box-shadow: 0 4px 12px rgba(23, 29, 41, .08);
+				}
+			}
+
+		}
 
 		&__link {
 			width: 32px;

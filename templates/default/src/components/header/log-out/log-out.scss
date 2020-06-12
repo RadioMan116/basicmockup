@@ -14,4 +14,10 @@
 
 		&:focus {}
 	}
+
+	@media (--phone) {
+		.mobile & {
+			display: none;
+		}
+	}
 }

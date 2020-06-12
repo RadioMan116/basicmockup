@@ -27,13 +27,13 @@
 	}
 
 	@media (--phone) {
-		padding: 0 56px 0 16px;
+		padding: 0 16px 0 16px;
 		position: fixed;
 		left: 0;
 		width: 100%;
 		top: 0;
 		z-index: 10;
-		background-color: #0a0a0a;
+		background-color: white;
 
 		&__inner {
 			width: 100%;

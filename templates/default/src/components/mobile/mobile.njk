@@ -1,0 +1,60 @@
+{% macro mobile( ) %}
+<div class="mobile-app">
+	<div class="mobile-app__banner">
+		<img src="images/institution.png" alt="">
+	</div>
+	<!-- /.mobile-app__banner -->
+	<div class="mobile-app__content">
+		<div class="tabs">
+			<div class="tabs-menu" data-tabs>
+				{% for i in range(0, 5) %}
+				<a href="#" class="tabs-menu__link" data-hash="#js-tabs-{{i}}" data-tabs-children>
+					Первые блюда-{{i}}
+				</a>
+				<!-- /.main__caption -->
+				{% endfor %}
+			</div>
+			{% for i in range(0, 5) %}
+
+			<div class="main__items tabs__inner" id="js-tabs-{{i}}">
+				{% for i in range(0, 18) %}
+				<div class="main__item">
+					<div class="main__pic">
+						<img src="images/item-pic.png" alt="">
+					</div>
+					<!-- /.main__pic -->
+					<div class="main__desc">
+						<div class="main__caption">Гуйнику Лемонграсс</div>
+						<!-- /.main__caption -->
+						<div class="main__consist">
+							Говядина, репчатый лук, чеснок, рис, ростки сои, "битые" огурцы, лемонграсс, перец чили,
+							соус "Устричный", кунжут
+						</div>
+						<!-- /.main__consist-->
+						<div class="main__text">
+
+							<div class="main__price">
+								390 ₽
+							</div>
+							<!-- /.main__price -->
+							<div class="main__weight"> 260 гр.</div>
+							<!-- /.main__weight -->
+							<a href="#" class="main__card"></a>
+							<!-- /.main__card -->
+						</div>
+						<!-- /.main__text -->
+					</div>
+					<!-- /.main__desc -->
+				</div>
+				<!-- /.main__item -->
+				{% endfor %}
+			</div>
+			<!-- /.main__items -->
+			{% endfor %}
+		</div>
+
+	</div>
+	<!-- /.mobile-app__content -->
+</div>
+<!-- /.mobile-app -->
+{% endmacro %}
