@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	require('jquery-match-height');
 	require('./plugins/tabs/js/tabs');
 	require('./swiper');
-	require('./swiper-large');
-	require('./swiper-vertical');
-	require('./swiper-detail');
 	window.Inputmask = require('inputmask');
 	window.Tooltip = require('tooltip.js');
 	require('./form');
@@ -18,6 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	require('./scrolling-section');
 	require('./compare');
 	require('./rating');
-	require('./map');
 	require('./app');
 });

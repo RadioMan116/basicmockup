@@ -58,7 +58,23 @@
 
 			$(document).ajaxSuccess(function () {
 				swiperInit();
+				console.log("1")
 			});
+			let dataAjax = document.querySelectorAll("[data-ajax]");
+
+			if (dataAjax) {
+				dataAjax.forEach(el => {
+					console.log(el)
+					document.on('click', el(() => {
+						console.log("1")
+					}))
+					document.addEventListener("click", el, (() => {
+						console.log("2")
+					}))
+
+				})
+			}
+
 
 		});
 	}
