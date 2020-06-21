@@ -20305,6 +20305,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   __webpack_require__(/*! ./swiper */ "./templates/default/src/js/swiper.js");
 
+  __webpack_require__(/*! ./swiper-large */ "./templates/default/src/js/swiper-large.js");
+
   window.Inputmask = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
   window.Tooltip = __webpack_require__(/*! tooltip.js */ "./node_modules/tooltip.js/dist/esm/tooltip.js");
 
@@ -20845,6 +20847,52 @@ window.rating = rating;
       }
     });
   });
+})();
+
+/***/ }),
+
+/***/ "./templates/default/src/js/swiper-large.js":
+/*!**************************************************!*\
+  !*** ./templates/default/src/js/swiper-large.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function () {
+  if (document.querySelector('[data-swiper-large]')) {
+    __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! swiper */ "./node_modules/swiper/dist/js/swiper.esm.bundle.js")).then(function (Swiper) {
+      var swiperInit = function swiperInit() {
+        var swiperElements = document.querySelectorAll('[data-swiper-large-thumb]');
+        swiperElements.forEach(function (node) {
+          if (node.classList.contains('swiper-container-horizontal') || node.classList.contains('swiper-container-vertical')) {
+            return false;
+          }
+
+          var options = JSON.parse(node.getAttribute('data-options'));
+          var length = node.querySelectorAll('.swiper-slide').length;
+          var swiperThumbs = new Swiper["default"](node, options); // if (document.body.offsetWidth < 768) {
+          // 	swiperThumbs = null;
+          // }
+
+          var swiperLarge = new Swiper["default"](node.parentNode.parentNode.querySelector('[data-swiper-large]'), {
+            spaceBetween: 10,
+            navigation: {
+              nextEl: node.parentNode.querySelector('.js-swiper__next'),
+              prevEl: node.parentNode.querySelector('.js-swiper__prev')
+            },
+            thumbs: {
+              swiper: swiperThumbs
+            }
+          });
+        });
+      };
+
+      swiperInit();
+      $(document).ajaxSuccess(function () {
+        swiperInit();
+      });
+    });
+  }
 })();
 
 /***/ }),

@@ -164,31 +164,39 @@
 			</div>
 			<!-- /.popup__items -->
 			<div class="popup__time">
-				<div class="popup__row">
-					<div class="popup__subtitle">
-						Режим работы
+				<div class="popup__field">
+					<div class="popup__row">
+						<div class="popup__subtitle">
+							Режим работы
+						</div>
+						<!-- /.popup__subtitle -->
+						<select class='popup__select'>
+							<option value="По будням" selected="">По будням</option>
+							<option value="По выходным">По выходным</option>
+							<option value="Ежедневно">Ежедневно</option>
+						</select>
 					</div>
-					<!-- /.popup__subtitle -->
-					<select class='popup__select'>
-						<option value="По  будням" selected="">По будням</option>
-						<option value="По  выходным">По выходным</option>
-					</select>
-				</div>
-				<div class="popup__row">
-					<div class="popup__subtitle">
-						Начало
+					<div class="popup__row">
+						<div class="popup__subtitle">
+							Начало
+						</div>
+						<!-- /.popup__subtitle -->
+						<input type="time" class="popup__input">
 					</div>
-					<!-- /.popup__subtitle -->
-					<input type="time" class="popup__input">
-				</div>
-				<div class="popup__row">
-					<div class="popup__subtitle">
-						Завершение
+					<div class="popup__row">
+						<div class="popup__subtitle">
+							Завершение
+						</div>
+						<!-- /.popup__subtitle -->
+						<input type="time" class="popup__input">
 					</div>
-					<!-- /.popup__subtitle -->
-					<input type="time" class="popup__input">
+					<!-- /.popup__row -->
+					<a href="#" class="popup__add-time">
+						+
+					</a>
+					<!-- /.popup__add-time -->
 				</div>
-				<!-- /.popup__row -->
+				<!-- /.popup__field -->
 			</div>
 			<!-- /.popup__time -->
 			<a href="#" class="popup__remove">

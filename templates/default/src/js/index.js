@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	require('jquery-match-height');
 	require('./plugins/tabs/js/tabs');
 	require('./swiper');
+	require('./swiper-large');
 	window.Inputmask = require('inputmask');
 	window.Tooltip = require('tooltip.js');
 	require('./form');
