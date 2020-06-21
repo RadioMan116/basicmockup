@@ -24,6 +24,7 @@
 		background: url(https://icongr.am/clarity/trash.svg?size=20&) no-repeat;
 		cursor: pointer;
 		transition: .4s;
+		z-index: 2;
 
 		&:hover {
 			background: url(https://icongr.am/clarity/trash.svg?size=20&color=007aff) no-repeat;
@@ -42,7 +43,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		position: relative;
+		// position: relative;
 		cursor: pointer;
 		margin: 0 auto;
 		overflow: hidden;
@@ -55,8 +56,8 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 200%;
-		height: 200%;
+		width: 100%;
+		height: 100%;
 		font-size: 200%;
 		opacity: 0;
 		cursor: pointer;

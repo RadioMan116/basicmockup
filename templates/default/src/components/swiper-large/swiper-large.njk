@@ -1,0 +1,46 @@
+<div class="swiper-large">
+	<div class="swiper-large__top">
+		<div class="swiper-container" data-swiper-large>
+			<div class="swiper-wrapper">
+				{% for item in [1, 2, 3, 4, 5, 6] %}
+					<div class="swiper-slide">
+						<div class="swiper-large__item swiper-large__item_large">
+							<a href="#" class="swiper-large__fancybox">
+								<img data-src="images/swiper-large__pic_big.jpg" alt="" class="swiper-large__pic swiper-large__pic_big lazyload" />
+							</a>
+						</div>
+						<!-- /.swiper-large__item swiper-large__item_large -->
+					</div>
+					<!-- /.swiper-slide -->
+				{% endfor %}
+			</div>
+			<!-- /.swiper-wrapper -->
+		</div>
+		<!-- /.swiper-container -->
+	</div>
+	<!-- /.swiper-large__top -->
+	<div class="swiper-large__bottom">
+		<div class="swiper-container" data-swiper-large-thumb data-options='{ "slidesPerView": 4, "watchSlidesVisibility": true, "watchSlidesProgress": true, "breakpoints": {"768": { "slidesPerView": 4, "spaceBetween": 0 }} }'>
+			<div class="swiper-wrapper">
+				{% for item in [1, 2, 3, 4, 5, 6] %}
+					<div class="swiper-slide">
+						<div class="swiper-large__item swiper-large__item_small">
+							<img data-src="images/swiper-large__pic_small.jpg" alt="" class="swiper-large__pic swiper-large__pic_small lazyload" />
+						</div>
+						<!-- /.swiper-large__item swiper-large__item_small -->
+					</div>
+					<!-- /.swiper-slide -->
+				{% endfor %}
+			</div>
+			<!-- /.swiper-wrapper -->
+		</div>
+		<!-- /.swiper-container -->
+		<div class="swiper__arrow swiper__arrow_large">
+			<div class="swiper__prev swiper__prev_banner js-swiper__prev"></div>
+			<div class="swiper__next swiper__next_banner js-swiper__next"></div>
+		</div>
+		<!-- /.swiper__arrow swiper__arrow_large -->
+	</div>
+	<!-- /.swiper-large__bottom -->
+</div>
+<!-- /.swiper-large -->

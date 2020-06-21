@@ -16,7 +16,6 @@ window.globalPopup = new Popup();
 		});
 	}
 })();
-
 // Lang
 (() => {
 	const lang = document.querySelector('.js-lang__list');
@@ -53,7 +52,6 @@ window.globalPopup = new Popup();
 
 
 })();
-
 $('[data-ajax]').click(function (e) {
 	e.preventDefault();
 	globalPopup.preloader(true);
@@ -74,8 +72,6 @@ $('[data-ajax]').click(function (e) {
 		});
 
 });
-
-
 $(document).on('click', 'a.share', function (e) {
 	event.preventDefault();
 	var copytext = $(this).attr('href');
