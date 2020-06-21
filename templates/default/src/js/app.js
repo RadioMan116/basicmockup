@@ -1,5 +1,6 @@
 new Tabs();
 window.globalPopup = new Popup();
+
 // DropdownMenu
 (() => {
 	const drop = document.querySelector('.js-main__dropdown');
@@ -43,10 +44,8 @@ window.globalPopup = new Popup();
 
 			}), false);
 			if (lang.classList.contains('active')) {
-				console.log('1')
 				lang.classList.remove('active');
 			} else {
-				console.log('2')
 				lang.classList.add('active');
 			}
 		})
@@ -69,7 +68,7 @@ $('[data-ajax]').click(function (e) {
 				globalPopup
 					.html(data)
 					.show()
-					.preloader(false)
+					.preloader(false);
 			});
 
 		});
