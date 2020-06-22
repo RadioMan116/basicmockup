@@ -1,6 +1,5 @@
 (function () {
 
-	if (document.querySelector('[data-swiper-large]')) {
 
 		import('swiper').then((Swiper) => {
 
@@ -37,6 +36,8 @@
 				});
 			}
 
+			window.swiperInitLarge = swiperInit;
+
 			swiperInit();
 
 			$(document).ajaxSuccess(function () {
@@ -44,6 +45,6 @@
 			});
 
 		});
-	}
+
 
 })();

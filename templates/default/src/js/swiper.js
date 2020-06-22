@@ -1,6 +1,6 @@
 (function () {
 
-	if (document.querySelector('[data-swiper]')) {
+
 
 		import('swiper').then((Swiper) => {
 
@@ -61,6 +61,6 @@
 			});
 
 		});
-	}
+
 
 })();
