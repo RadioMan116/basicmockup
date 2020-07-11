@@ -85,3 +85,97 @@ $(document).on('click', 'a.share', function (e) {
 		$('.tooltip').remove()
 	}, 1500);
 });
+
+(() => {
+	let sortable = document.getElementById('sortable');
+	if (sortable) {
+		new Sortable.default(sortable, {
+			handle: '.sort__button', // handle's class
+			animation: 150,
+			multiDrag: true,
+		});
+	}
+})();
+window.initTooltipApp = function () {
+
+	// tooltip
+	[...document.querySelectorAll('[data-tooltip]')].forEach($node => {
+
+		if ($node.getAttribute('aria-describedby')) {
+			return false;
+		}
+
+		var isContentHtml = $node.getAttribute('data-tooltip');
+		var htmlContent = '';
+
+		if (isContentHtml == 'html') {
+
+			htmlContent = $node.querySelector('[data-tooltip-content]').outerHTML;
+
+		} else {
+
+			var data = JSON.parse($node.getAttribute('data-tooltip'));
+			var html = [];
+			var target = '';
+
+			if (data.title) {
+				html.push(`<div class="tooltip-popper__title">${data.title}</div>`);
+			}
+
+			if (data.text) {
+				html.push(`<div class="tooltip-popper__text">${data.text}</div>`);
+			}
+
+			if (data.linkName) {
+				if (data.linkTarget) {
+					target = `target="${data.linkTarget}"`;
+				}
+				html.push(`<a href="${data.linkHref}" ${target} class="">${data.linkName}</a>`);
+			}
+
+			htmlContent = `
+					<div class="tooltip-popper">
+						${html.join('')}
+					</div>
+				`;
+
+		}
+
+		var setPosition = function (left, top) {
+			return {
+				left: left % 2 == 0 ? left : left + 1,
+				top: top % 2 == 0 ? top : top + 1
+			}
+		}
+
+		var tooltip = new Tooltip.default($node, {
+			placement: 'top', // or bottom, left, right, and variations
+			title: htmlContent,
+			template: `<div class="tooltip" role="tooltip"><div class="tooltip-close"></div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>`,
+			html: true,
+			popperOptions: {
+				positionFixed: true,
+				onCreate(_constructor, s, d) {
+					_constructor.instance.popper.querySelector('.tooltip-close').addEventListener('click', function () {
+						tooltip.hide()
+						_constructor.instance.reference.setAttribute('data-init', false);
+					});
+					let coords = setPosition(_constructor.offsets.popper.left, _constructor.offsets.popper.top);
+					_constructor.instance.popper.style.transform = '';
+					_constructor.instance.popper.style.left = `${coords.left}px`;
+					_constructor.instance.popper.style.top = `${coords.top}px`;
+				},
+				onUpdate(_constructor) {
+					let coords = setPosition(_constructor.offsets.popper.left, _constructor.offsets.popper.top);
+					_constructor.instance.popper.style.transform = '';
+					_constructor.instance.popper.style.left = `${coords.left}px`;
+					_constructor.instance.popper.style.top = `${coords.top}px`;
+				}
+			}
+		});
+
+	});
+
+};
+
+initTooltipApp();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <desc>Created with Lunacy</desc>
+
   <g id="Icons/briefcase">
     <path d="M14 4L17 4C18.654 4 20 5.346 20 7L20 15C20 16.654 18.654 18 17 18L3 18C1.346 18 0 16.654 0 15L0 7C0 5.346 1.346 4 3 4L6 4L6 2.5C6 1.122 7.122 0 8.5 0L11.5 0C12.878 0 14 1.122 14 2.5L14 4ZM8.5 2C8.224 2 8 2.224 8 2.5L8 4L12 4L12 2.5C12 2.224 11.776 2 11.5 2L8.5 2ZM2 15L2 7C2 6.449 2.449 6 3 6L5 6L5 16L3 16C2.449 16 2 15.551 2 15ZM7 16L13 16L13 6L7 6L7 16ZM17 16C17.551 16 18 15.551 18 15L18 7C18 6.449 17.551 6 17 6L15 6L15 16L17 16Z" transform="translate(2 3)" id="🎨-Icon-Сolor" fill="#007AFF" fill-rule="evenodd" stroke="none" />
   </g>

@@ -30,7 +30,7 @@
 		});
 
 	}
-
+	window.form = form;
 	form();
 
 	mutationObserver('.popup__change', () => {

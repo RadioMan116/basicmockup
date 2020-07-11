@@ -290,7 +290,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #007aff;
+  background: var(--blue);
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
@@ -347,7 +347,7 @@ button.swiper-pagination-bullet {
   position: absolute;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #007aff;
+  background: var(--blue);
   position: absolute;
   left: 0;
   top: 0;

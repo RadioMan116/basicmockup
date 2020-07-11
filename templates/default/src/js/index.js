@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	require('./swiper');
 	require('./swiper-large');
 	window.Inputmask = require('inputmask');
+	window.Sortable = require('sortablejs');
 	window.Tooltip = require('tooltip.js');
 	require('./form');
 	window.noUiSlider = require('nouislider');

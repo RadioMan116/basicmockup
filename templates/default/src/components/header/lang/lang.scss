@@ -60,7 +60,7 @@
 			margin-right: 0;
 
 			#chevron-down {
-				fill: #73c9ff;
+				// fill: #73c9ff;
 			}
 
 			&__link {
@@ -72,6 +72,7 @@
 					top: 32px;
 					background: white;
 					box-shadow: 0 4px 12px rgba(23, 29, 41, .08);
+					border-radius: 8px;
 				}
 			}
 

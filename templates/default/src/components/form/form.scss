@@ -124,8 +124,8 @@
 	}
 
 	&__field:hover &__label:before,
-	&__input:focus + &__label:before,
-	&__input_full + &__label:before {
+	&__input:focus+&__label:before,
+	&__input_full+&__label:before {
 		opacity: 0;
 	}
 
@@ -149,31 +149,31 @@
 	}
 
 	&__field:hover &__label,
-	&__input:focus ~ &__label,
-	&__input_full ~ &__label {
+	&__input:focus~&__label,
+	&__input_full~&__label {
 		font-size: 11px;
 		transform: translate(0, -13px);
 	}
 
 	&__field:hover &__requiredtext,
-	&__input:focus ~ &__requiredtext,
-	&__input_full ~ &__requiredtext {
+	&__input:focus~&__requiredtext,
+	&__input_full~&__requiredtext {
 		transform: translate(0, -13px);
 	}
 
-	&__input_msg ~ &__label {
+	&__input_msg~&__label {
 		align-items: flex-start;
 		padding: 16px;
 	}
 
-	&__input_msg ~ &__requiredtext {
+	&__input_msg~&__requiredtext {
 		align-items: flex-start;
 		padding-top: 19px;
 	}
 
-	&__field:hover &__input_msg + &__label,
-	&__input_msg.form__input_full ~ &__label,
-	&__input_msg:focus ~ &__label {
+	&__field:hover &__input_msg+&__label,
+	&__input_msg.form__input_full~&__label,
+	&__input_msg:focus~&__label {
 		transform: translate(0, -11px) !important;
 	}
 
@@ -192,6 +192,79 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__elem {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		flex-shrink: 0;
+		white-space: nowrap;
+		align-items: center;
+
+		&-input {
+			position: absolute;
+			top: -150%;
+			left: -150%;
+			width: 1px;
+			height: 1px;
+			transform: translate(0, -50%);
+			z-index: 1;
+
+			&:checked+.form__elem-label:before {
+				border-color: $blue;
+				background: $blue;
+			}
+
+			&:checked+.form__elem-label:after {
+				opacity: 1;
+			}
+		}
+
+		&-label {
+			position: relative;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			min-height: 20px;
+			font-size: 14px;
+			line-height: 16px;
+			padding: 2px 0 0 27px;
+			margin-bottom: 0;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				display: block;
+				width: 20px;
+				height: 20px;
+				border-radius: 2px;
+				border: solid 1px #c8c9cc;
+				background: #ffffff;
+				transition: all 0.3s ease;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 7px;
+				transform: translate(0, -60%) rotate(45deg);
+				display: block;
+				width: 6px;
+				height: 13px;
+				opacity: 0;
+				border-right: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				transition: all 0.3s ease;
+			}
+
+		}
+	}
+
+
 
 	@media (--phone) {
 		&__title {

@@ -148,14 +148,14 @@
 					<!-- /.swiper-large__bottom -->
 				</div>
 				<!-- /.swiper-large -->
-				<script>
-				</script>
-				<!-- /.popup__images-main -->
 
-				<a href="" class="popup__images-add">
-						Добавить фото
-					</a>
-				<!-- /.popup__images-add -->
+				<div class="popup__add-file">
+					<div class="file__footer">
+						<a href="#" class="file__button"> добавить ещё фото
+								<input class="file__input" type="file" accept="image/*">
+							</a>
+					</div>
+				</div>
 
 			</div>
 			<!-- /.popup__images -->
@@ -170,18 +170,40 @@
 				<input type="text" data-form-label class="popup__input" placeholder="Гуйнику Лемонграсс">
 			</div>
 			<!-- /.popup__row -->
-			<div class="popup__row">
-				<div class="popup__subtitle">
-					Название блюда
+			<div class="popup__col">
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Категория
+					</div>
+					<!-- /.popup__subtitle -->
+					<select class='popup__select'>
+						<option value="Первые блюда" selected="">Первые блюда</option>
+						<option value="Вторые блюда">Вторые блюда</option>
+						<option value="Напитки">Напитки</option>
+					</select>
 				</div>
-				<!-- /.popup__subtitle -->
-				<select class='popup__select'>
-					<option value="Первые блюда" selected="">Первые блюда</option>
-					<option value="Вторые блюда">Вторые блюда</option>
-					<option value="Напитки">Напитки</option>
-				</select>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Отображение
+						<span class="tooltip-icon" data-tooltip='html'>
+								<div class="tooltip-popper" data-tooltip-content>
+									Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
+									является стандартной
+									"рыбой" для текстов на латинице с начала XVI века.
+								</div>
+							</span>
+					</div>
+					<!-- /.popup__subtitle -->
+					<div class="form__elem">
+						<input type="checkbox" name="" id="0" class="form__elem-input">
+						<label for="0" class="form__elem-label">На витрине</label>
+					</div>
+				</div>
+				<!-- /.popup__row -->
 			</div>
-			<!-- /.popup__row -->
+			<!-- /.popup__col -->
+
 			<div class="popup__row">
 				<div class="profile__subtitle">
 					Описание блюда
@@ -196,6 +218,69 @@
 				</div>
 				<!-- /.profile__subtitle -->
 				<textarea class="profile__input" placeholder="Введите описание..."></textarea>
+			</div>
+			<!-- /.popup__row -->
+			<div class="popup__row">
+				<div class="popup__checkbox">
+
+					<div class="form__elem">
+						<input type="checkbox" name="" id="1" class="form__elem-input">
+						<label for="1" class="form__elem-label">Морепродукты</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="2" class="form__elem-input">
+						<label for="2" class="form__elem-label">Вегетерианское</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="3" class="form__elem-input">
+						<label for="3" class="form__elem-label">Острое</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="4" class="form__elem-input">
+						<label for="4" class="form__elem-label">Рекомендуем</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="5" class="form__elem-input">
+						<label for="5" class="form__elem-label">Мясо</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="6" class="form__elem-input">
+						<label for="6" class="form__elem-label">Без глютена</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="7" class="form__elem-input">
+						<label for="7" class="form__elem-label">Мало калорий</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="8" class="form__elem-input">
+						<label for="8" class="form__elem-label">Спецпредложение</label>
+					</div>
+
+					<div class="popup__caption">Аллергены</div>
+					<!-- /.popup__caption -->
+					<div class="form__elem">
+						<input type="checkbox" name="" id="9" class="form__elem-input">
+						<label for="9" class="form__elem-label">Ракообразные</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="10" class="form__elem-input">
+						<label for="10" class="form__elem-label">Яйца</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="11" class="form__elem-input">
+						<label for="11" class="form__elem-label">Молоко</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="12" class="form__elem-input">
+						<label for="12" class="form__elem-label">Клубника</label>
+					</div>
+					<div class="form__elem">
+						<input type="checkbox" name="" id="13" class="form__elem-input">
+						<label for="13" class="form__elem-label">Орехи</label>
+					</div>
+
+				</div>
+				<!-- /.popup__checkbox -->
 			</div>
 			<!-- /.popup__row -->
 			<div class="popup__box">
@@ -224,13 +309,67 @@
 				</div>
 				<!-- /.popup__row -->
 			</div>
-			<!-- /.popup__block -->
+			<!-- /.popup__box -->
+			<div class="popup__more">
+				<div class="popup__caption">Пищевая ценность порции</div>
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Жиры, г.
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Углеводы, г.
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Белки, г.
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Жиры, % Ri
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Углеводы, % Ri
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Белки, % Ri
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="1 390">
+				</div>
+				<!-- /.popup__row -->
+			</div>
+			<!-- /.popup__more -->
 			<input type="submit" class="popup__submit" value="Сохранить блюдо">
 		</div>
 		<!-- /.popup__right -->
 	</form>
 	<script>
 		swiperInitLarge();
+			initTooltipApp();
+			form();
 	</script>
 </div>
 <!-- /.popup__content -->

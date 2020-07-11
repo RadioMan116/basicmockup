@@ -2,10 +2,21 @@
 <div class="mobile-app">
 	<div class="popup__row">
 		<a href="#" class="profile__link">
-			<img src="images/goto-button.svg" alt="">
+			<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+				xmlns="http://www.w3.org/2000/svg">
+
+				<g id="goto-button">
+					<path
+						d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+						id="Oval" fill="#007aff" fill-opacity="0.09803922" stroke="none" />
+					<path
+						d="M15 5.99991L3.135 5.99991L6.768 1.63991C7.122 1.21591 7.064 0.584909 6.64 0.231909C6.215 -0.122091 5.585 -0.0640909 5.232 0.359909L0.232 6.35991C0.193 6.40691 0.173 6.46191 0.144 6.51391C0.12 6.55591 0.091 6.59191 0.073 6.63791C0.028 6.75291 0.001 6.87391 0.001 6.99591C0.001 6.99691 0 6.99891 0 6.99991C0 7.00091 0.001 7.00291 0.001 7.00391C0.001 7.12591 0.028 7.24691 0.073 7.36191C0.091 7.40791 0.12 7.44391 0.144 7.48591C0.173 7.53791 0.193 7.59291 0.232 7.63991L5.232 13.6399C5.43 13.8769 5.714 13.9999 6 13.9999C6.226 13.9999 6.453 13.9239 6.64 13.7679C7.064 13.4149 7.122 12.7839 6.768 12.3599L3.135 7.99991L15 7.99991C15.552 7.99991 16 7.55191 16 6.99991C16 6.44791 15.552 5.99991 15 5.99991"
+						transform="matrix(-1 0 0 1 24 9.000091)" id="Icon-color" fill="#007aff" stroke="none" />
+				</g>
+			</svg>
 		</a>
 		<div class="popup__dish-caption">
-			Гуйнику Лемонграсс
+			В меню
 		</div>
 		<!-- /.popup__caption -->
 	</div>
@@ -33,6 +44,12 @@
 	<div class="mobile-app__content">
 
 		<div class="popup__row">
+			<div class="popup__dish-caption">
+				Гуйнику Лемонграсс
+			</div>
+		</div>
+		<!-- /.popup__row -->
+		<div class="popup__row">
 			<div class="popup__dish-desc">
 				Лимонная трава нормализует работу желудочно-кишечного тракта, улучшает пищеварение, используется
 				при
@@ -41,6 +58,40 @@
 				повышенного потоотделения.
 			</div>
 			<!-- /.popup__dish-desc -->
+		</div>
+		<!-- /.popup__row -->
+		<div class="popup__row">
+			<div class="icons">
+				<div class="icons__item">
+					<img src="images/iconsseafood.svg" alt="">
+					<span>
+						Морепродукты
+					</span>
+				</div>
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/iconshotfood.svg" alt="">
+					<span>
+						Острое
+					</span>
+				</div>
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/iconsvegenfood.svg" alt="">
+					<span>
+						Вегетарианское
+					</span>
+				</div>
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/iconsrecom.svg" alt="">
+					<span>
+						Рекомендуем
+					</span>
+				</div>
+				<!-- /.icons__item -->
+			</div>
+			<!-- /.icons -->
 		</div>
 		<!-- /.popup__row -->
 		<div class="popup__row">
@@ -56,19 +107,76 @@
 		</div>
 		<!-- /.popup__row -->
 		<div class="popup__row">
-			<div class="popup__dish-info">
-				<div class="popup__dish-subtitle">
-					Энергетическая ценность
+			<div class="popup__dish-table">
+				<table>
+					<tr>
+						<th>Параметр</th>
+						<th>В порции</th>
+						<th>% Ri</th>
+					</tr>
+					<tr>
+						<td>Жиры</td>
+						<td>19,9 г.</td>
+						<td>28,43</td>
+					</tr>
+					<tr>
+						<td>Углеводы</td>
+						<td> 18,4 г.</td>
+						<td> 9,2</td>
+					</tr>
+					<tr>
+						<td>Белки</td>
+						<td>4,2 г.</td>
+						<td>1,6</td>
+					</tr>
+				</table>
+				<div class="popup__dish-text">
+					RI – это средние значения суточных физиологических потребностей взрослого человека в энергии и
+					пищевых веществах.
 				</div>
-				<div class="popup__dish-more">
-					240 кал
+				<!-- /.popup__dish-desc -->
+			</div>
+			<!-- /.popup__dish-table -->
+		</div>
+		<!-- /.popup__row -->
+		<div class="popup__row">
+			<div class="popup__dish-subtitle">
+				Аллергены
+			</div>
+			<div class="icons allergy">
+				<div class="icons__item">
+					<img src="images/IconsAllergyMilk.svg" alt="">
 					<span>
-						100 гр.
+						Молоко
 					</span>
 				</div>
-				<!-- /.popup__dish-more -->
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/IconsAllergyEggs.svg" alt="">
+					<span>
+						Яйца
+					</span>
+				</div>
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/IconsAllergyNuts.svg" alt="">
+					<span>
+						Орехи
+					</span>
+				</div>
+				<!-- /.icons__item -->
+				<div class="icons__item">
+					<img src="images/IconsAllergystrawberry.svg" alt="">
+					<span>
+						Клубника
+					</span>
+				</div>
+				<!-- /.icons__item -->
 			</div>
-			<!-- /.popup__dish-info -->
+			<!-- /.icons -->
+		</div>
+		<!-- /.popup__row -->
+		<div class="popup__row">
 			<div class="popup__dish-info">
 				<div class="popup__dish-subtitle">
 					Цена
@@ -78,11 +186,18 @@
 					<span>
 						260 гр.
 					</span>
+					<span>
+						240 кал
+					</span>
 				</div>
 				<!-- /.popup__dish-more -->
 			</div>
 			<!-- /.popup__dish-info -->
 		</div>
+		<a href="" class="mobile-app__order">
+			Добавить в заказ
+		</a>
+		<!-- /.mobile__add -->
 	</div>
 	<!-- /.mobile-app__content -->
 </div>

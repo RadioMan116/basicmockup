@@ -14,7 +14,7 @@
 		color: $black;
 		cursor: pointer;
 		font-size: 20px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 27px;
 		margin-right: 42px;
 		@include link($c: rgba(88, 88, 90, 0.1));
@@ -23,12 +23,12 @@
 
 	&__link.active,
 	&__link:hover {
-		color: var(--link-color);
+		color: var(--blue);
 		// font-size: 18px;
 		// font-weight: 500;
 		// line-height: 28px;
 		text-decoration: none;
-		border-bottom: 2px solid var(--link-color);
+		border-bottom: 2px solid var(--blue);
 	}
 
 	&__link.active,
@@ -50,9 +50,9 @@
 
 		&__link.active,
 		&__link:hover {
-			font-size: 14px;
-			display: block;
-			line-height: 18px;
+			// font-size: 14px;
+			// display: block;
+			// line-height: 18px;
 		}
 
 		&__link {

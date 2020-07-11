@@ -63,6 +63,7 @@
 		"lazysizes": "^4.1.8",
 		"nouislider": "^13.1.5",
 		"popper.js": "^1.16.0",
+		"sortablejs": "^1.10.2",
 		"sticky-events": "^3.1.1",
 		"swiper": "^4.5.1",
 		"tooltip.js": "^1.3.3"
