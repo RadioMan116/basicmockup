@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+
+  <g id="Icons/dragndrop-sorting">
+    <path d="M10 0L19 0C19.552 0 20 0.448 20 1C20 1.552 19.552 2 19 2L10 2C10.552 2 11 1.552 11 1C11 0.448 10.552 0 10 0ZM10 0C9.448 0 9 0.448 9 1C9 1.552 9.448 2 10 2L1 2C0.448 2 0 1.552 0 1C0 0.448 0.448 0 1 0L10 0ZM19 7L1 7C0.448 7 0 6.552 0 6C0 5.448 0.448 5 1 5L19 5C19.552 5 20 5.448 20 6C20 6.552 19.552 7 19 7ZM1 10L19 10C19.552 10 20 10.448 20 11C20 11.552 19.552 12 19 12L1 12C0.448 12 0 11.552 0 11C0 10.448 0.448 10 1 10Z" transform="translate(6 10)" id="Combined-Shape" fill="#81858B" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

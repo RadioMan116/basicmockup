@@ -1,0 +1,89 @@
+.sort {
+	width: 100%;
+
+	.main {
+		&__middle {}
+
+		&__restaurant {
+			margin-left: 0;
+		}
+
+		&__dropdown {
+			left: -24px;
+			margin-left: 0;
+
+		}
+
+
+
+		&__dropdown-link {}
+
+		&__pic {
+			width: 47px;
+			height: 48px;
+		}
+
+		&__desc {
+			flex-direction: row;
+			justify-content: unset;
+			align-items: center;
+		}
+
+
+
+		&__caption {
+			flex-grow: 1;
+			max-width: unset;
+			margin-bottom: 0;
+			padding-right: 24px;
+		}
+
+		&__price {}
+
+		&__weight {}
+
+		&__calories {}
+
+
+
+		&__text {
+			margin-bottom: 0;
+			margin-right: 44px;
+			align-items: flex-end;
+		}
+
+
+
+		&__item {
+			width: 928px;
+			max-width: 100%;
+			flex-wrap: nowrap;
+			align-items: center;
+
+			&.sortable-ghost {
+				opacity: 0.5;
+			}
+
+			&.sortable-drag {
+				opacity: 1;
+			}
+
+
+			svg {}
+
+			img {}
+
+			.sort__button {
+				margin-left: 8px;
+				margin-right: 24px;
+				cursor: pointer;
+			}
+
+			.form__elem {
+				position: static;
+			}
+		}
+	}
+
+	&__list {}
+}

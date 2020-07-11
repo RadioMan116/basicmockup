@@ -1,0 +1,8 @@
+.tooltip-popper[data-tooltip-content] {
+	position: fixed;
+	left: -200%;
+
+	.tooltip & {
+		position: static;
+	}
+}
