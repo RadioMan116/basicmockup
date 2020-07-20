@@ -46,7 +46,9 @@
 
 						hasTabs = true;
 
-						tags.xsbuttons.push(obj.insert('div', { 'class': obj.options.classMain + '__xslink' }, this.innerHTML, tags.tabs[index]));
+						tags.xsbuttons.push(obj.insert('div', {
+							'class': obj.options.classMain + '__xslink'
+						}, this.innerHTML, tags.tabs[index]));
 
 						if (this.classList.contains('active')) {
 							tags.tabs[index].classList.add('active');

@@ -188,7 +188,7 @@
 		}
 
 		&__pic {
-			width: auto;
+			width: 120px;
 			height: auto;
 			margin-right: 11px;
 			// max-width: 140px;
@@ -258,17 +258,16 @@
 		}
 	}
 
-	@media (max-width: 320px) {
+	@media (min-width: 375px) {
 		.main {
 
 			&__pic {
-				// width: 70px;
-				// height: 70px;
-				// margin-right: 11px;
+				flex-shrink: 0;
 			}
 
 			&__desc {
 				// width: calc(100% - 86px);
+				width: 60%;
 			}
 
 			&__calories,

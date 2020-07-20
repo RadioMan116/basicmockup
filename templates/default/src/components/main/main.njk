@@ -149,7 +149,7 @@
 						<!-- /.main__caption -->
 						{% endfor %}
 					</div>
-					<div class="main__change-sort">
+					{# <div class="main__change-sort">
 
 						<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 							<g id="Icons/briefcase">
@@ -174,15 +174,26 @@
 								</g>
 							</svg>
 						</a>
+					</div> #}
+					<!-- /.main__change-sort -->
+					<div class="main__change-sort ">
+						<div class="form__elem js-sort">
+							<input type="checkbox" name="" id="9991" class="form__elem-input">
+							<label for="9991" class="form__elem-label">Сортировать блюда</label>
+						</div>
 					</div>
 					<!-- /.main__change-sort -->
 					{% for i in range(0, 5) %}
 
-					<div class="main__items tabs__inner" id="js-tabs-{{i}}">
+					<div class="main__items tabs__inner sortable" id="js-tabs-{{i}}">
 						{% for i in range(0, 18) %}
 						<div class="main__item">
 							<div class="main__pic">
 								<img src="images/item-pic.png" alt="">
+								<div class="sort__button">
+
+								</div>
+								<!-- /.sort__button -->
 							</div>
 							<!-- /.main__pic -->
 							<div class="main__desc">
@@ -199,6 +210,21 @@
 										624 кал.
 									</div>
 									<!-- /.main__calories -->
+									<a href="#" class="main__edit">
+
+										<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1">
+											<g id="Icons/edit-2" transform="translate(6 6)">
+												<path
+													d="M0.00324668 12.4237C-0.01842 12.6707 0.06908 12.9144 0.24408 13.0897C0.40158 13.2465 0.61408 13.3333 0.833247 13.3333C0.85908 13.3333 0.88408 13.3325 0.90908 13.3308L4.38408 13.0146C4.76575 12.9795 5.12491 12.8109 5.39575 12.5397L12.8932 5.03176C13.4999 4.42258 13.4741 3.40617 12.8366 2.76694L12.8357 2.76611L10.5541 0.481256C9.93658 -0.135437 8.87575 -0.164644 8.29075 0.423675L0.79408 7.9308C0.522413 8.20285 0.35408 8.56252 0.31908 8.94388L0.00324668 12.4237ZM7.76991 3.30603L10.0157 5.55499L11.6382 3.92773L9.39325 1.67959L7.76991 3.30603ZM4.23325 11.3514L1.75241 11.5776L1.97241 9.11078L6.65325 4.42342L8.89991 6.67405L4.23325 11.3514Z"
+													transform="translate(3.333333 3.333333)" id="Edit" fill="#007aff"
+													fill-rule="evenodd" stroke="none" />
+											</g>
+											<path
+												d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+												id="Oval" fill="#007aff" fill-opacity="0.09803922" stroke="none" />
+										</svg>
+									</a>
+									<!-- /.main__edit -->
 									<a href="#" class="main__card">
 										<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1"
 											xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -215,6 +241,7 @@
 											</g>
 										</svg></a>
 									<!-- /.main__card -->
+
 								</div>
 								<!-- /.main__text -->
 								<div class="form__elem">
@@ -223,6 +250,7 @@
 								</div>
 							</div>
 							<!-- /.main__desc -->
+
 						</div>
 						<!-- /.main__item -->
 						{% endfor %}
