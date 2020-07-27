@@ -221,6 +221,10 @@
 	&__content {
 		width: 100%;
 		display: flex;
+
+		&.free-call {
+			max-width: 420px;
+		}
 	}
 
 	&__left,

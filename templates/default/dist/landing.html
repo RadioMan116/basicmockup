@@ -49,10 +49,10 @@
 
 				<div class="landing-head__link">
 					<a href="#" class="active">Для ресторанов</a>
-					<a href="#">Для клиентов</a>
+
 				</div>
 				<!-- /.landing-head__link -->
-				<a href="#" class="landing-head__registration">
+				<a href="#" data-ajax data-url="ajax/popup/free-call/free-call.html" class="landing-head__registration">
 			Зарегистрировать заведение
 		</a>
 				<!-- /.landing-head__registration -->
@@ -92,7 +92,7 @@
 						Это простое, гигиеничное и актуальное решение для ресторанов нового времени.
 					</div>
 					<!-- /.landing-text -->
-					<a href="#" class="landing-link">
+					<a href="#" data-ajax data-url="ajax/popup/free-call/free-call.html" class="landing-link">
 				Это бесплатно, попробуйте!
 			</a>
 					<!-- /.landing-link -->
@@ -393,7 +393,7 @@
 						<img src="images/help-3.svg" alt="">Подключить эквайринг
 					</div>
 					<!-- /.landing-text -->
-					<a href="#" class="landing-link">
+					<a href="#" data-ajax data-url="ajax/popup/free-call/free-call.html" class="landing-link">
 				Зарегистрировать заведение
 			</a>
 					<!-- /.landing-link -->
@@ -435,7 +435,7 @@
 						После этого Вам достаточно их просто распечатать и наклеить или разместить на столы в ресторане.
 					</div>
 					<!-- /.landing-desc -->
-					<a href="#" class="landing-link">
+					<a href="#" data-ajax data-url="ajax/popup/free-call/free-call.html" class="landing-link">
 				Попробовать бесплатно
 			</a>
 					<!-- /.landing-link -->
@@ -479,9 +479,16 @@
 						Введите телефон
 					</div>
 					<!-- /.landing-call__name -->
-					<input type="tel" data-form-label class="landing-call__input" placeholder="+7 (***)***–**–**">
+					<form action="">
+						<input type="tel" data-form-label class="landing-call__input" placeholder="+7 (***)***–**–**">
+						<input type="submit" href="" value="Жду звонка" class="landing-call__submit">
+					</form>
+
+					<!-- /.landing-link -->
+
 				</div>
 				<!-- /.landing-call -->
+
 			</div>
 			<!-- /.landing-number -->
 			<div class="footer landing-footer">
