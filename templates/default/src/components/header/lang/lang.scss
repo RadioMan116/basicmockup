@@ -21,7 +21,16 @@
 				display: flex;
 
 			}
+
+			+svg {
+				transform: rotate(180deg);
+
+			}
 		}
+	}
+
+	svg {
+		transition: 0.3s;
 	}
 
 	&__item {

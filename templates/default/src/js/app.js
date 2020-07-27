@@ -96,6 +96,21 @@ $(document).on('click', 'a.share', function (e) {
 		});
 	}
 })();
+
+
+$(window).on("load", function () {
+	let paginationHover = $('.js-pagination-hover .swiper-pagination-bullet')
+	$(paginationHover).hover(function () {
+		$(this).trigger("click");
+	});
+})
+
+
+
+
+
+
+
 window.initTooltipApp = function () {
 
 	// tooltip

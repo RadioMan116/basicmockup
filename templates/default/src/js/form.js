@@ -24,7 +24,7 @@
 		var phones = document.querySelectorAll('[type=tel]');
 
 		[].forEach.call(phones, (node) => {
-			Inputmask('+7(999) 999-9999', {
+			Inputmask('+7(999) 999-99-99', {
 				clearIncomplete: true
 			}).mask(node)
 		});
