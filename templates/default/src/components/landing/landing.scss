@@ -129,7 +129,7 @@
 		}
 
 		.landing-left {
-			// text-align: center;
+			text-align: center;
 			// padding-left: 40px;
 
 			img {
@@ -1032,6 +1032,15 @@
 
 			.landing-link {
 				width: 100%;
+			}
+
+			.landing-left {
+				img {
+					width: auto;
+					height: auto;
+					max-width: 100%;
+					max-height: 100%;
+				}
 			}
 		}
 
