@@ -239,6 +239,7 @@
 					top: 0;
 					display: flex;
 					height: calc(100% - 20px);
+					width: 100%;
 
 					&-bullet {
 						display: flex;
@@ -248,6 +249,7 @@
 						position: relative;
 						border-radius: unset;
 						margin-right: 3px;
+						flex-grow: 1;
 
 						&:before {
 							content: '';
