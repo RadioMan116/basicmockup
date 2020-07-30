@@ -955,13 +955,13 @@
 
 				&-slide {
 					padding-top: 50px;
-					max-height: 0;
-					opacity: 0;
-					transition: max-height .300ms, opacity .300ms;
+					// max-height: 0;
+					// opacity: 0;
+					// transition: max-height .300ms, opacity .300ms;
 
 					&-active {
-						max-height: unset;
-						opacity: 1;
+						// max-height: unset;
+						// opacity: 1;
 					}
 				}
 
@@ -1111,5 +1111,9 @@
 				opacity: 1;
 			}
 		}
+	}
+
+	&~.footer {
+		display: none;
 	}
 }
