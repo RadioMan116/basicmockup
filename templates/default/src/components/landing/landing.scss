@@ -369,9 +369,11 @@
 			flex-direction: column;
 			align-items: center;
 			position: relative;
+			transition: 0.3s;
 
 			&:hover {
 				box-shadow: 0 20px 60px 0 rgba(25, 104, 252, 0.10);
+				transform: scale(1.08);
 			}
 
 			&:nth-last-child(-n+2) {
