@@ -162,8 +162,10 @@
 			<!-- /.popup__images -->
 			<div class="popup__row">
 				<div class="popup__logo">
-					<img src="images/Slice.png" alt="">
-
+					<picture>
+						<source media="(max-width: 767px)" srcset="images/Slice.png">
+							<img alt="" class="lazyload" data-src="images/Slice.png">
+					</picture>
 				</div>
 				<!-- /.popup__logo -->
 				<a href="#" class="popup__delete-foto">
@@ -196,7 +198,6 @@
 					<a href="	online-menu.ru/example/qsushi-kom" class=" share">
 						online-menu.ru/example/qsushi-kom
 					</a>
-
 
 					<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 						<defs>

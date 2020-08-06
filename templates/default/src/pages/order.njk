@@ -14,11 +14,14 @@
 
 						<div class="logo">
 							{# <a href="/" class="logo__link">QSushi</a> #}
-							<a href="/" class="logo__link"><img src="images/Slice.png" alt=""></a>
-
+							<a href="/" class="logo__link">
+								<picture>
+									<source media="(max-width: 767px)" srcset="images/Slice.png">
+									<img alt="" class="lazyload" data-src="images/Slice.png">
+								</picture>
+							</a>
 						</div>
 						<!-- /.logo -->
-
 					</div>
 					<!-- /.header__col -->
 					<div class="header__col header__col_center">
@@ -38,7 +41,6 @@
 					</div>
 					<!-- /.header__col -->
 					<div class="header__col header__col_right">
-
 						<div class="lang">
 							<div class="lang__list js-lang__list">
 								<div class="lang__item js-lang__item active">

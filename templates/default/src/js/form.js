@@ -25,7 +25,8 @@
 
 		[].forEach.call(phones, (node) => {
 			Inputmask('+7(999) 999-99-99', {
-				clearIncomplete: true
+				clearIncomplete: true,
+				numericInput: true
 			}).mask(node)
 		});
 

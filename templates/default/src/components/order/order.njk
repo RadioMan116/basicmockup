@@ -105,13 +105,14 @@
 				<!-- /.main__desc -->
 			</div>
 			<!-- /.main__item -->
+
 			{% endfor %}
 		</div>
 		<!-- /.main__items -->
 	</div>
 	<!-- /.mobile-app__content -->
 
-	<div class="popup__row">
+	<div class="popup__row total">
 		<div class="popup__dish-caption">
 			Итого:
 
@@ -129,6 +130,15 @@
 		</div>
 		<!-- /.mobile-app__composition -->
 	</div>
-
+	<div class="mobile-app__qr-code">
+		<div class="popup__dish-caption">
+			Покажите этот код официанту
+		</div>
+		<picture class="qr__img">
+			<source media="(max-width: 767px)" srcset="images/qr-code-3.svg">
+			<img alt="" class="lazyload" data-src="images/qr-code-3.svg">
+		</picture>
+	</div>
+	<!-- /.mobile-app__qr-code -->
 </div>
 <!-- /.mobile-app -->
