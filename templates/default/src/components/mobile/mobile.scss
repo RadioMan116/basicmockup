@@ -5,11 +5,6 @@
 		max-width: 100%;
 	}
 
-	&__banner {
-		margin-bottom: 24px;
-		display: flex;
-		align-items: baseline;
-	}
 
 	&__content {
 		margin-bottom: 16px;
@@ -94,6 +89,18 @@
 				.popup__dish-caption {
 					font-size: 24px;
 				}
+			}
+		}
+	}
+
+	&__banner {
+		margin-bottom: 0px;
+		display: flex;
+		align-items: baseline;
+
+		.swiper {
+			.swiper-pagination {
+				margin-top: 8px;
 			}
 		}
 	}

@@ -1,7 +1,28 @@
 {% macro mobile( ) %}
 <div class="mobile-app">
 	<div class="mobile-app__banner">
-		<img src="images/institution.png" alt="">
+
+		<div class="swiper">
+			<div class="swiper-container" data-swiper="data-swiper"
+				data-options='{"slidesPerView": 1, "spaceBetween": 30 ,"observer": true}'>
+				<div class="swiper-wrapper">
+					{% for i in range(0, 5) %}
+					<div class="swiper-slide">
+						<img src="images/institution.png" alt="">
+					</div>
+					<!-- /.swiper-slide -->
+					{% endfor %}
+				</div>
+				<!-- /.swiper-wrapper -->
+			</div>
+			<!-- /.swiper-container -->
+			{# <div class="swiper__arrow swiper__arrow_right">
+			<div class="swiper__prev swiper__prev_round js-swiper__prev"></div>
+			<div class="swiper__next swiper__next_round js-swiper__next"></div>
+		</div> #}
+			<div class="swiper-pagination js-swiper-pagination"></div>
+		</div>
+		<!-- /.swiper -->
 	</div>
 	<!-- /.mobile-app__banner -->
 	<div class="mobile-app__info">
