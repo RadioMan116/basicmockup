@@ -1,5 +1,5 @@
-@custom-media --phone (width <=768px);
-@custom-media --desk (width > 768px); //
+@custom-media --phone (width <=812px);
+@custom-media --desk (width > 812px); //
 
 @mixin button($bgc:#007aff, $bgr:no-repeat, $bgi: none, $c:#fff, $bd:none, $bxsh:none, $fz:17px, $tt:inherit, $fw:400,
 	$p:0 27px, $bdrs:4px, $h:40px, $lh:20px, $d:inline-flex, $bgc-h:#2f5bea, $c-h:#fff, $w:fit-content, $ai:center, $jc:center, $bxsh-h:none,
