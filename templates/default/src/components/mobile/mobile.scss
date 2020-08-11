@@ -1,5 +1,6 @@
 .mobile-app {
 	margin-top: 16px;
+	width: 100px;
 
 	img {
 		max-width: 100%;
@@ -33,16 +34,13 @@
 				line-height: 21px;
 			}
 		}
-
-
 	}
 
 	.swiper {
 		max-width: 100%;
 		position: relative;
 		margin-bottom: 56px;
-
-
+		width: 100%;
 
 		&-slide {
 			border-radius: 16px;
@@ -65,8 +63,6 @@
 				}
 			}
 		}
-
-
 	}
 
 	.popup {
@@ -86,7 +82,6 @@
 
 			&-reset {
 				margin-left: auto;
-
 			}
 		}
 
@@ -103,6 +98,7 @@
 		margin-bottom: 0px;
 		display: flex;
 		align-items: baseline;
+		width: 100%;
 
 		.swiper {
 			.swiper-pagination {
@@ -110,7 +106,6 @@
 			}
 		}
 	}
-
 
 	&__info {
 		margin-bottom: 40px;
@@ -151,12 +146,9 @@
 	&__wifi {
 		// padding-left: 0;
 		flex-wrap: wrap;
-
-
 	}
 
 	&__wifi {
-
 		span {
 			color: #81858b;
 		}
@@ -239,7 +231,6 @@
 	}
 
 	&__order {
-
 		padding: 10px 16px;
 		width: 100%;
 		height: 40px;
@@ -311,7 +302,6 @@
 
 	@media (min-width: 375px) {
 		.main {
-
 			&__pic {
 				flex-shrink: 0;
 			}
