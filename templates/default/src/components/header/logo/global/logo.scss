@@ -24,25 +24,30 @@
 		font-weight: 500;
 		line-height: 27px;
 		color: var(--blue);
+		display: flex;
+
+		&__link {
+			font-size: 24px;
+			line-height: 26px;
+			color: #007aff;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 21px;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			max-width: 150px;
+			max-height: 48px;
+			height: 100%;
+			align-items: baseline;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
 
 		.mobile & {
-			&__link {
-				font-size: 24px;
-				line-height: 26px;
-				color: #007aff;
-				font-size: 16px;
-				font-weight: 300;
-				line-height: 21px;
-				text-transform: uppercase;
-				letter-spacing: 0.6px;
-				width: 108px;
-				height: 48px;
 
-				img {
-					max-width: 100%;
-					max-height: 100%;
-				}
-			}
 		}
 
 	}
