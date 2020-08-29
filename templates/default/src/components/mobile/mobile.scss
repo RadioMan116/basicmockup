@@ -1,6 +1,6 @@
 .mobile-app {
 	margin-top: 16px;
-	width: 100px;
+	width: 100%;
 
 	img {
 		max-width: 100%;
@@ -198,7 +198,7 @@
 
 		&__text {
 			flex-wrap: wrap;
-			padding-right: 70px;
+			// padding-right: 70px;
 		}
 
 		&__price {
@@ -222,17 +222,30 @@
 		&__desc {
 			width: auto;
 			flex-grow: 1;
+			min-width: 180px;
 		}
 
 		&__card,
 		&__order {
 			// position: static;
 		}
+
+		&__order.active {
+			svg {
+				display: none;
+			}
+
+			background: url('../images/order-button-trash.svg') no-repeat 50%;
+		}
+
+		&__card {
+			bottom: unset;
+		}
 	}
 
 	&__order {
-		padding: 10px 16px;
-		width: 100%;
+		padding: 10px 14px;
+		width: calc(100% - 142px);
 		height: 40px;
 		border-radius: 4px;
 		background: var(--blue);
@@ -251,6 +264,26 @@
 			content: "";
 			background: url('../images/iconsadd-to-order.svg') no-repeat 50%;
 			margin-right: 6px;
+		}
+
+		&.active {
+			border-radius: 4px;
+			background: #ff3b30;
+			font-size: 0;
+
+			&:before {
+				width: 24px;
+				height: 24px;
+				content: "";
+				background: url('../images/trash.svg') no-repeat 50%;
+				margin-right: 6px;
+			}
+
+			&:after {
+				content: 'Удалить';
+				font-size: 17px;
+				// order: -1;
+			}
 		}
 	}
 
@@ -280,10 +313,6 @@
 		}
 	}
 
-	.main__card {
-		bottom: unset;
-	}
-
 	&__qr-code {
 		display: flex;
 		flex-direction: column;
@@ -297,6 +326,107 @@
 		.popup__dish-caption {
 			text-align: center;
 			margin-bottom: 16px;
+		}
+	}
+
+	.order {
+		&-counter {
+			display: flex;
+			align-items: center;
+			width: 96px;
+			height: 40px;
+			border-radius: 8px;
+			// border: 1px solid #ebebeb;
+			background-color: #ffffff;
+			justify-content: space-between;
+			margin-right: auto;
+
+			&__minus {
+				width: 40px;
+				height: 30px;
+				background: url(../images/minus.svg) no-repeat center;
+				display: block;
+			}
+
+			&__input {
+				line-height: 1;
+				border: none;
+				width: 32px;
+				height: 30px;
+				text-align: center;
+				display: block;
+				font-size: 20px;
+				font-weight: 500;
+				line-height: 27px;
+				text-align: center;
+			}
+
+			&__plus {
+				width: 40px;
+				height: 30px;
+				background: url(../images/plus.svg) no-repeat center;
+				display: block;
+			}
+		}
+
+		&__submit {
+			height: 40px;
+			border-radius: 4px;
+			background: #007aff;
+			width: 100%;
+			color: #ffffff;
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 20px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			cursor: pointer;
+			margin-top: 24px;
+		}
+	}
+
+	&__out {
+		display: flex;
+		justify-content: center;
+		margin: 24px 0;
+
+		&:before {
+			content: url("../images/IconsOrder.svg");
+		}
+	}
+
+	&__back {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 27px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-text {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			margin: 13px 0 24px;
+		}
+
+		&-link {
+			width: 169px;
+			height: 40px;
+			border-radius: 4px;
+			background: #f5a623;
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 20px;
+			text-align: center;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 

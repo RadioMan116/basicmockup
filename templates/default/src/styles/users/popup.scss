@@ -1,5 +1,4 @@
 // main: style.less
-
 .popup {
 	position: fixed;
 	overflow-x: hidden;
@@ -212,7 +211,6 @@
 			width: 96px;
 
 			&:last-child {
-
 				width: 152px;
 			}
 		}
@@ -371,7 +369,6 @@
 		justify-content: center;
 		font-size: 22px;
 	}
-
 
 	&__items {
 		display: flex;
@@ -582,14 +579,11 @@
 				}
 			}
 
-
-
 			&:hover {
 				background: rgba(0, 0, 0, 0.29);
 				transition: 0.3s;
 				opacity: 1;
 			}
-
 		}
 
 		.stub {
@@ -613,8 +607,6 @@
 		justify-content: center;
 
 		img {}
-
-
 	}
 
 	&__add-file {
@@ -629,8 +621,6 @@
 		justify-content: center;
 		min-height: 32px;
 		margin-bottom: 16px;
-
-
 
 		.file {
 			&__button {
@@ -669,8 +659,8 @@
 		display: flex;
 		align-items: center;
 		margin-left: auto;
-		// margin-top: 16px;
 
+		// margin-top: 16px;
 		a {
 			display: flex;
 			align-items: center;
@@ -710,8 +700,6 @@
 		max-width: 100%;
 		position: relative;
 
-
-
 		&-slide {
 			border-radius: 16px;
 			border: solid 1px #f4f4f4;
@@ -734,8 +722,6 @@
 				}
 			}
 		}
-
-
 	}
 
 	&__dish {
@@ -869,7 +855,6 @@
 			}
 
 			&:hover {
-
 				.popup__images-link {
 					display: block;
 				}
@@ -969,8 +954,6 @@
 		.swiper-large {
 			margin-bottom: 24px;
 		}
-
-
 	}
 
 	&__glad {
@@ -1018,9 +1001,7 @@
 		display: flex;
 		flex-direction: column;
 
-
 		// max-height: 40px;
-
 		li {
 			display: none;
 			font-size: 16px;
@@ -1047,8 +1028,6 @@
 				display: flex;
 			}
 		}
-
-
 	}
 
 	&__category {
@@ -1082,10 +1061,7 @@
 				display: flex;
 				margin-top: auto;
 
-
 				svg {}
-
-
 
 				&:hover {}
 
@@ -1160,7 +1136,6 @@
 				align-items: center;
 			}
 		}
-
 	}
 
 	&__col {
@@ -1267,5 +1242,11 @@
 			width: auto;
 			padding: 24px;
 		}
+
+		// &__row {
+		// 	&:last-child {
+		// 		margin-bottom: 0;
+		// 	}
+		// }
 	}
 }

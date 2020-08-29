@@ -197,7 +197,6 @@
 		font-weight: 400;
 		line-height: 20px;
 		text-align: center;
-
 		border-radius: 4px;
 		border: solid 1px var(--blue);
 		background: #ffffff;
@@ -265,8 +264,6 @@
 			right: 0;
 			top: 0;
 		}
-
-
 	}
 
 	&__caption {
@@ -292,8 +289,6 @@
 		font-weight: 500;
 		line-height: 16px;
 		color: #868686;
-
-
 		// &:before {
 		// 	content: '/';
 		// 	margin: 0 4px;
@@ -305,7 +300,6 @@
 		font-weight: 500;
 		line-height: 16px;
 		color: #868686;
-
 
 		&:before {
 			content: '/';
@@ -353,7 +347,6 @@
 		bottom: 0;
 	}
 
-
 	&__edit {
 		// background: url("../images/goto-button.svg") no-repeat center;
 		width: 32px;
@@ -367,8 +360,9 @@
 		// background: url("../images/goto-button.svg") no-repeat center;
 		width: 32px;
 		height: 32px;
-		position: absolute;
-		right: 0;
+		// position: absolute;
+		// right: 0;
+		// background: url('../images/order-button-trash.svg') no-repeat 50%;
 	}
 
 	&__order {
@@ -387,4 +381,10 @@
 		margin-bottom: 16px;
 	}
 
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
 }
