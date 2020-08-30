@@ -24,6 +24,13 @@
 			img {}
 		}
 
+		.mobile-app__content & {
+			&__item {
+				width: 50%;
+				padding-right: 4px;
+			}
+		}
+
 		.main__item & {
 			&__item {
 				width: auto;
