@@ -18,20 +18,53 @@
 
 		.tabs-menu {
 			overflow-x: auto;
+			border-bottom: unset;
+			padding-bottom: 12px;
 		}
 
 		.tabs-menu__link {
+			border-bottom: unset;
+			height: 32px;
+			border-radius: 16px;
+			padding: 0 16px;
+			background: #0000000a;
+			display: flex;
+			align-items: center;
 			font-size: 16px;
-			font-weight: 400;
+			font-weight: 300;
 			line-height: 21px;
-			text-transform: uppercase;
-			letter-spacing: 0.6px;
-			padding-bottom: 4px;
+			text-align: center;
+			color: black;
+
+			&:not(:last-of-type) {
+				margin-right: 4px;
+			}
+
+			// text-transform: uppercase;
+			// letter-spacing: 0.6px;
+			// padding-bottom: 4px;
+			&:hover {
+				color: black;
+			}
 
 			&.active {
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 21px;
+				background: var(--blue);
+				color: #fff;
+			}
+
+			&.active,
+			&:hover {
+				// font-size: 18px;
+				// font-weight: 500;
+				// line-height: 28px;
+				text-decoration: none;
+				border-bottom: unset;
+			}
+
+			&.active,
+			&.active:hover {
+				cursor: default;
+				pointer-events: none;
 			}
 		}
 	}
@@ -45,6 +78,9 @@
 		&-slide {
 			border-radius: 16px;
 			border: solid 1px #f4f4f4;
+			display: flex;
+			align-items: baseline;
+			justify-content: center;
 		}
 
 		.swiper-pagination {
@@ -104,6 +140,10 @@
 			.swiper-pagination {
 				margin-top: 8px;
 			}
+
+			&-slide {
+				border: unset;
+			}
 		}
 	}
 
@@ -138,7 +178,7 @@
 
 		a {
 			color: #000;
-			border-bottom: 1px solid #007aff;
+			border-bottom: 1px dashed #007aff47;
 		}
 	}
 
@@ -222,7 +262,7 @@
 		&__desc {
 			width: auto;
 			flex-grow: 1;
-			min-width: 180px;
+			min-width: 186px;
 		}
 
 		&__card,
@@ -433,7 +473,7 @@
 	@media (min-width: 375px) {
 		.main {
 			&__pic {
-				flex-shrink: 0;
+				// flex-shrink: 0;
 			}
 
 			&__desc {

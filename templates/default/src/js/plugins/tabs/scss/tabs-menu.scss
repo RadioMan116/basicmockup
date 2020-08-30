@@ -18,7 +18,10 @@
 		line-height: 27px;
 		margin-right: 42px;
 		@include link($c: rgba(88, 88, 90, 0.1));
-		border-bottom: 2px solid transparent
+		border-bottom: 2px solid transparent;
+		height: 32px;
+		border-radius: 16px;
+		background: #979797;
 	}
 
 	&__link.active,
