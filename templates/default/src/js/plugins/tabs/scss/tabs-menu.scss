@@ -3,35 +3,48 @@
 	display: flex;
 	margin-bottom: 15px;
 	position: relative;
-	padding-bottom: 8px;
-	border-bottom: 1px solid #f2f2f2;
+	overflow-x: auto;
+	border-bottom: unset;
+	padding-bottom: 12px;
 
 	@media (min-width: 768px) {
 		// height: 32px;
 	}
 
 	&__link {
-		color: $black;
-		cursor: pointer;
-		font-size: 20px;
-		font-weight: 500;
-		line-height: 27px;
-		margin-right: 42px;
-		@include link($c: rgba(88, 88, 90, 0.1));
-		border-bottom: 2px solid transparent;
+		border-bottom: unset;
 		height: 32px;
 		border-radius: 16px;
-		background: #979797;
+		padding: 0 16px;
+		background: #0000000a;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		color: black;
+
+		&:not(:last-of-type) {
+			margin-right: 16px;
+		}
 	}
 
-	&__link.active,
 	&__link:hover {
-		color: var(--blue);
+		// color: var(--blue);
+		color: black;
 		// font-size: 18px;
 		// font-weight: 500;
 		// line-height: 28px;
 		text-decoration: none;
-		border-bottom: 2px solid var(--blue);
+		// border-bottom: 2px solid var(--blue);
+	}
+
+	&__link {
+		&.active {
+			background: var(--blue);
+			color: #fff;
+		}
 	}
 
 	&__link.active,
