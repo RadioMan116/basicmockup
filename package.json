@@ -60,7 +60,7 @@
 		"inputmask": "^5.0.3",
 		"jquery": "^3.4.1",
 		"jquery-match-height": "^0.7.2",
-		"lazysizes": "^4.1.8",
+		"lazysizes": "^5.2.1",
 		"nouislider": "^13.1.5",
 		"popper.js": "^1.16.0",
 		"sortablejs": "^1.10.2",
