@@ -1,6 +1,8 @@
 .mobile-app {
-	margin-top: 16px;
+	margin-top: 8px;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 
 	img {
 		max-width: 100%;
@@ -14,7 +16,7 @@
 	}
 
 	&__content {
-		margin-bottom: 16px;
+		margin-bottom: 6px;
 
 		.tabs-menu {
 			overflow-x: auto;
@@ -111,6 +113,7 @@
 			&-caption {
 				margin-bottom: 0;
 
+				// line-height: 2;
 				a {
 					margin-left: auto;
 				}
@@ -119,6 +122,8 @@
 			&-reset {
 				margin-left: auto;
 			}
+
+			&-subject {}
 		}
 
 		&__row {
@@ -239,10 +244,12 @@
 		&__item {
 			width: 100%;
 			flex-wrap: nowrap;
+			margin-bottom: 14px;
 		}
 
 		&__text {
 			flex-wrap: wrap;
+			margin-bottom: 16px;
 			// padding-right: 70px;
 		}
 
@@ -351,12 +358,12 @@
 		text-align: right;
 		display: flex;
 		justify-content: flex-end;
-		margin-top: 8px;
+		margin-top: 4px;
 		width: 100%;
 
 		span:not(:last-child):after {
 			content: '/';
-			margin: 0 2px;
+			margin: 0 4px;
 		}
 	}
 
@@ -364,11 +371,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 46px;
+		margin-top: 14px;
 		border-radius: 8px;
 		background: #ffffff;
 		box-shadow: 0px 4px 12px rgba(23, 29, 41, 0.08);
-		padding: 16px;
+		padding: 16px 16px 28px;
 
 		.popup__dish-caption {
 			text-align: center;
@@ -380,7 +387,7 @@
 		&-counter {
 			display: flex;
 			align-items: center;
-			width: 96px;
+			width: 125px;
 			height: 40px;
 			border-radius: 8px;
 			// border: 1px solid #ebebeb;
@@ -416,23 +423,26 @@
 			}
 		}
 
-		&__submit {
-			height: 40px;
-			border-radius: 4px;
-			background: #007aff;
-			width: 100%;
-			color: #ffffff;
-			font-size: 17px;
-			font-weight: 400;
-			line-height: 20px;
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border: none;
-			cursor: pointer;
-			margin-top: 24px;
-		}
+		&__submit {}
+	}
+
+	.order__submit,
+	&__back-menu {
+		height: 40px;
+		border-radius: 4px;
+		background: #007aff;
+		width: 100%;
+		color: #ffffff;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		cursor: pointer;
+		margin-top: 24px;
 	}
 
 	&__out {

@@ -378,7 +378,7 @@
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 18px;
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 	}
 
 	&__row {
@@ -386,5 +386,11 @@
 		justify-content: space-between;
 		width: 100%;
 		align-items: center;
+	}
+
+	@media (--phone) {
+		&__items {
+			padding-top: 0;
+		}
 	}
 }

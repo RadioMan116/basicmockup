@@ -32,6 +32,8 @@
 		}
 
 		.main__item & {
+			margin-bottom: 12px;
+
 			&__item {
 				width: auto;
 				margin-bottom: 8px;
@@ -44,13 +46,13 @@
 				min-width: 60px;
 
 				&:nth-child(even) {
-					margin: 0 1px;
+					margin: 0 1px 8px;
 				}
 
 				img {
 					width: 20px;
 					height: 20px;
-					margin-bottom: 5px;
+					margin-bottom: 1px;
 					margin-right: 0;
 				}
 			}

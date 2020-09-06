@@ -1,0 +1,121 @@
+<div class="mobile-app">
+	<div class="popup__row">
+		<div class="popup__dish-caption">
+			Заказ оформлен
+		</div>
+		<div class="popup__dish-subject">
+			Покажите QR-код этого заказа официанту
+		</div>
+		<!-- /.popup__caption -->
+	</div>
+	<!-- /.popup__row -->
+	<div class="mobile-app__content">
+		<div class="main__items">
+			{% for i in range(0, 2) %}
+			<div class="main__item">
+				<div class="main__pic">
+					<img src="images/item-pic.png" alt="">
+				</div>
+				<!-- /.main__pic -->
+				<div class="main__desc">
+					<div class="main__caption">Гуйнику Лемонграсс</div>
+					<!-- /.main__caption -->
+					<div class="main__consist">
+						Говядина, репчатый лук, чеснок, рис, ростки сои, "битые" огурцы, лемонграсс, перец чили,
+						соус "Устричный", кунжут
+					</div>
+					<!-- /.main__consist-->
+					<div class="icons">
+						<div class="icons__item">
+							<img src="images/iconsseafood.svg" alt="">
+							<span>
+								Морепродукты
+							</span>
+						</div>
+						<!-- /.icons__item -->
+						<div class="icons__item">
+							<img src="images/iconsvegenfood.svg" alt="">
+							<span>
+								Вегетарианское
+							</span>
+						</div>
+						<!-- /.icons__item -->
+						<div class="icons__item">
+							<img src="images/iconsrecom.svg" alt="">
+							<span>
+								Рекомендуем
+							</span>
+						</div>
+						<!-- /.icons__item -->
+					</div>
+					<!-- /.icons -->
+					<div class="main__row">
+						<div class="main__text">
+							<div class="main__price">
+								390 ₽
+							</div>
+							<!-- /.main__price -->
+							<div class="main__weight"> 260 гр.</div>
+							<!-- /.main__weight -->
+							<div class="main__calories">
+								624 кал.
+							</div>
+						</div>
+						<!-- /.main__text -->
+						<div class="main__text">
+							<div class="main__price">
+								2
+							</div>
+							<!-- /.main__price -->
+							<div class="main__weight"> порции</div>
+						</div>
+					</div>
+					<!-- /.main__row -->
+				</div>
+				<!-- /.main__desc -->
+			</div>
+			<!-- /.main__item -->
+			{% endfor %}
+		</div>
+		<!-- /.main__items -->
+	</div>
+	<!-- /.mobile-app__content -->
+	<div class="popup__row total">
+		<div class="popup__dish-caption">
+			Итого:
+		</div>
+		<!-- /.popup__caption -->
+		<div class="mobile-app__total">
+			610 рублей
+		</div>
+		<!-- /.mobile-app__total -->
+		<div class="mobile-app__composition">
+			<span>2 блюда</span>
+			<span>260 гр.</span>
+			<span>624 кал.</span>
+		</div>
+		<!-- /.mobile-app__composition -->
+	</div>
+	<div class="mobile-app__qr-code">
+		<div class="popup__dish-caption">
+			Покажите этот код официанту
+		</div>
+		<picture class="qr__img">
+			<source srcset="images/qr-code-3.png" media="(max-width: 812px)">
+			<img src="images/qr-code-3@2x.png" alt="" class="lazyload">
+		</picture>
+	</div>
+	<!-- /.mobile-app__qr-code -->
+	<div class="popup__row">
+		<a href="#" class="mobile-app__back-menu">
+			Вернуться в меню
+		</a>
+		<!-- /.mobile-app__back-menu -->
+	</div>
+	<!-- /.popup__row -->
+	<a href="#" class="footer__boss " data-ajax data-url="ajax/popup/boss/boss.html">
+		Жалоба руководству и шеф повару
+	</a>
+	<!-- /.footer__boss -->
+</div>
+<!-- /.mobile-app -->
