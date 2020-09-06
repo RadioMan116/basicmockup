@@ -123,7 +123,9 @@
 				margin-left: auto;
 			}
 
-			&-subject {}
+			&-subject {
+				width: 100%;
+			}
 		}
 
 		&__row {
@@ -267,12 +269,12 @@
 			height: auto;
 			margin-right: 11px;
 			// max-width: 140px;
-			min-width: 70px;
+			min-width: 60px;
 			flex-grow: 1;
 		}
 
 		&__desc {
-			width: auto;
+			width: 50%;
 			flex-grow: 1;
 			min-width: 186px;
 		}
@@ -495,7 +497,6 @@
 
 			&__desc {
 				// width: calc(100% - 86px);
-				width: 60%;
 			}
 
 			&__calories,
