@@ -24,9 +24,23 @@
 
 			var parents = document.querySelectorAll(this.options.parent);
 
+			var frames = $('[data-tabs]');
+
 			if (!parents.length) {
 				return false;
 			}
+
+			var frames = $('[data-tabs]');
+
+			let touchMove = false;
+
+			frames.on("touchmove", function() {
+				touchMove = true;
+			});
+
+			frames.on("touchstart", function() {
+				touchMove = false;
+			});
 
 			this.each(parents, function (index) {
 
@@ -35,6 +49,8 @@
 				var hasTabs = false;
 				tags.xsbuttons = [];
 				tags.tabs = [];
+
+
 
 				tags.buttons = this.querySelectorAll(obj.options.buttons);
 
@@ -54,9 +70,12 @@
 							tags.tabs[index].classList.add('active');
 							tags.xsbuttons[index].classList.add('active');
 							obj.triggerActive = true;
+
 						}
 
 						this.addEventListener(event, function () {
+
+							if (touchMove) return;
 
 							obj.each(tags.buttons, function (i) {
 
@@ -74,6 +93,7 @@
 
 						tags.xsbuttons[index].addEventListener(event, function () {
 
+							if (touchMove) return;
 							obj.each(tags.xsbuttons, function (i) {
 
 								this.classList.remove('active');
@@ -90,6 +110,7 @@
 
 						}, false);
 
+
 						this.addEventListener('click', function (e) {
 							e.preventDefault();
 						});
@@ -97,7 +118,11 @@
 					}
 
 				});
+				frames.on('touchend', function(e) {
+					if (touchMove) return;
 
+					frames.animate({ 'scrollLeft': e.target.offsetLeft }, 400);
+				});
 				if (!obj.triggerActive) {
 					if (hasTabs) {
 						tags.buttons[0].classList.add('active');

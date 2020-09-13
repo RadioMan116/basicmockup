@@ -1,6 +1,7 @@
+const { dragged } = require("sortablejs");
 new Tabs();
 window.globalPopup = new Popup();
-
+window.isMobile = window.matchMedia('(max-width: 812px)').matches;
 // DropdownMenu
 (() => {
 	const drop = document.querySelector('.js-main__dropdown');
@@ -27,20 +28,15 @@ window.globalPopup = new Popup();
 				lang.classList.toggle('active');
 			}), false);
 		})
-
 	}
 })();
 (() => {
-
-
-	$(document).on('click', '.popup__list', function (e) {
+	$(document).on('click', '.popup__list', function(e) {
 		const lang = document.querySelector('.popup__list');
 		lang.querySelectorAll("li").forEach(el => {
 			el.addEventListener('click', (() => {
 				lang.querySelector("li.active").classList.remove("active");
 				el.classList.add("active");
-
-
 			}), false);
 			if (lang.classList.contains('active')) {
 				lang.classList.remove('active');
@@ -49,30 +45,22 @@ window.globalPopup = new Popup();
 			}
 		})
 	});
-
-
 })();
-$('[data-ajax]').click(function (e) {
+$('[data-ajax]').click(function(e) {
 	e.preventDefault();
 	globalPopup.preloader(true);
-	fetch(this.dataset.url)
-		.then(response => {
-			if (!response.ok) {
-				globalPopup.preloader(false);
-				alert('Error!')
-				return;
-			}
-			response.text().then(data => {
-				globalPopup
-					.html(data)
-					.show()
-					.preloader(false);
-			});
-
+	fetch(this.dataset.url).then(response => {
+		if (!response.ok) {
+			globalPopup.preloader(false);
+			alert('Error!')
+			return;
+		}
+		response.text().then(data => {
+			globalPopup.html(data).show().preloader(false);
 		});
-
+	});
 });
-$(document).on('click', 'a.share', function (e) {
+$(document).on('click', 'a.share', function(e) {
 	event.preventDefault();
 	var copytext = $(this).attr('href');
 	var $temp = $("<input>");
@@ -81,11 +69,10 @@ $(document).on('click', 'a.share', function (e) {
 	document.execCommand("copy");
 	$temp.remove();
 	$(this).append('<span class="tooltip">Ссылка скопирована</span>');
-	setTimeout(function () {
+	setTimeout(function() {
 		$('.tooltip').remove()
 	}, 1500);
 });
-
 (() => {
 	let sortable = document.getElementById('sortable');
 	if (sortable) {
@@ -96,73 +83,50 @@ $(document).on('click', 'a.share', function (e) {
 		});
 	}
 })();
-
-
-$(window).on("load", function () {
+$(window).on("load", function() {
 	let paginationHover = $('.js-pagination-hover .swiper-pagination-bullet')
-	$(paginationHover).hover(function () {
+	$(paginationHover).hover(function() {
 		$(this).trigger("click");
 	});
 })
-
-
-
-
-
-
-
-window.initTooltipApp = function () {
-
+window.initTooltipApp = function() {
 	// tooltip
 	[...document.querySelectorAll('[data-tooltip]')].forEach($node => {
-
 		if ($node.getAttribute('aria-describedby')) {
 			return false;
 		}
-
 		var isContentHtml = $node.getAttribute('data-tooltip');
 		var htmlContent = '';
-
 		if (isContentHtml == 'html') {
-
 			htmlContent = $node.querySelector('[data-tooltip-content]').outerHTML;
-
 		} else {
-
 			var data = JSON.parse($node.getAttribute('data-tooltip'));
 			var html = [];
 			var target = '';
-
 			if (data.title) {
 				html.push(`<div class="tooltip-popper__title">${data.title}</div>`);
 			}
-
 			if (data.text) {
 				html.push(`<div class="tooltip-popper__text">${data.text}</div>`);
 			}
-
 			if (data.linkName) {
 				if (data.linkTarget) {
 					target = `target="${data.linkTarget}"`;
 				}
 				html.push(`<a href="${data.linkHref}" ${target} class="">${data.linkName}</a>`);
 			}
-
 			htmlContent = `
 					<div class="tooltip-popper">
 						${html.join('')}
 					</div>
 				`;
-
 		}
-
-		var setPosition = function (left, top) {
+		var setPosition = function(left, top) {
 			return {
 				left: left % 2 == 0 ? left : left + 1,
 				top: top % 2 == 0 ? top : top + 1
 			}
 		}
-
 		var tooltip = new Tooltip.default($node, {
 			placement: 'top', // or bottom, left, right, and variations
 			title: htmlContent,
@@ -171,7 +135,7 @@ window.initTooltipApp = function () {
 			popperOptions: {
 				positionFixed: true,
 				onCreate(_constructor, s, d) {
-					_constructor.instance.popper.querySelector('.tooltip-close').addEventListener('click', function () {
+					_constructor.instance.popper.querySelector('.tooltip-close').addEventListener('click', function() {
 						tooltip.hide()
 						_constructor.instance.reference.setAttribute('data-init', false);
 					});
@@ -188,9 +152,6 @@ window.initTooltipApp = function () {
 				}
 			}
 		});
-
 	});
-
 };
-
 initTooltipApp();
