@@ -1211,6 +1211,14 @@
 			width: 100%;
 		}
 	}
+	&__buttons{
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		// margin-bottom: 16px;
+		align-items: center;
+		width: 100%;
+	}
 
 	@media (max-width: 812px) {
 		&__table {
@@ -1243,10 +1251,10 @@
 			padding: 24px;
 		}
 
-		// &__row {
-		// 	&:last-child {
-		// 		margin-bottom: 0;
-		// 	}
-		// }
+		&__row {
+			&:last-child {
+				margin-bottom: 8;
+			}
+		}
 	}
 }
