@@ -1,0 +1,83 @@
+<div class="popup__title">Добавление пользователя</div>
+<!-- /.popup__title -->
+<div class="popup__content">
+	<form class="popup__form">
+		<div class="popup-user">
+			<div class="popup-user__left">
+				<div class="popup__pic">
+					<img src="images/file.svg" alt="" class="stub">
+				</div>
+				<!-- /.popup__pic -->
+				<div class="file">
+					<div class="file__footer">
+						<span class="file__button">Загрузить фото
+							<input class="file__input" type="file" accept="image/*" />
+						</span>
+					</div>
+					<div class="file__info">
+						необязательно
+					</div>
+					<!-- /.file__info -->
+				</div>
+			</div>
+			<!-- /.popup-user__left -->
+			<div class="popup-user__right">
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Фамилия
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="Иванов">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Имя
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="text" data-form-label class="popup__input" placeholder="Иван">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Тип учетной записи
+					</div>
+					<!-- /.popup__subtitle -->
+					<select class='popup__select'>
+						<option value="Официант" selected="">Официант</option>
+						<option value="Администратор">Администратор</option>
+						<option value="Смотрящий">Смотрящий</option>
+					</select>
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						Телефон
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
+				</div>
+				<!-- /.popup__row -->
+				<div class="popup__row">
+					<div class="popup__subtitle">
+						E-mail
+					</div>
+					<!-- /.popup__subtitle -->
+					<input type="email" data-form-label="" class="popup__input">
+				</div>
+				<div class="popup__row">
+					<a href="" class="popup__cancel">
+						Отменить
+					</a>
+					<input type="submit" class="popup__submit" value="Сохранить">
+				</div>
+			</div>
+			<!-- /.popup-user__right -->
+		</div>
+		<!-- /.popup-user -->
+	</form>
+	<script>
+		form();
+	</script>
+</div>
+<!-- /.popup__content -->

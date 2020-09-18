@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "head/head.njk" %}
+
+<body>
+
+	<div class="wrapper">
+
+		{% include "header/global/header.njk" %}
+
+		{% from "users/users.njk" import users%}
+
+		<div class="main">
+			<div class="main__inner">
+				{{
+					users(
+						active=true,
+						deactive=false,
+						button='Добавить пользователя'
+					)
+				}}
+			</div>
+		</div>
+		<!-- /.main -->
+		{% include "footer/global/footer.njk" %}
+
+	</div>
+	<!-- /.wrapper -->
+
+	{% include "connect/script.njk" %}
+
+</body>
+</html>

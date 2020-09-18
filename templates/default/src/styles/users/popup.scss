@@ -118,8 +118,8 @@
 	&__close {
 		display: none;
 		position: absolute;
-		top: 8px;
-		right: 8px;
+		top: 0px;
+		right: 0px;
 		width: 40px;
 		height: 40px;
 		cursor: pointer;
@@ -131,11 +131,12 @@
 			left: 50%;
 			margin: -1px 0 0 -8px;
 			top: 50%;
-			height: 2px;
-			width: 16px;
+			height: 3px;
+			width: 20px;
 			background: var(--blue);
 			content: '';
 			transform-origin: 50% 50%;
+			border-radius: 14%;
 		}
 
 		&:before {
@@ -267,7 +268,7 @@
 		border-radius: 4px;
 		border: solid 1px #c8c9cc;
 		background: #ffffff;
-		padding: 8px 12px;
+		padding: 10px 12px;
 		flex-grow: 1;
 		max-width: 100%;
 	}
@@ -352,6 +353,15 @@
 
 			svg {
 				margin-right: 8px;
+			}
+		}
+
+		&-user {
+			display: flex;
+			align-items: center;
+
+			svg {
+				margin-right: 9px;
 			}
 		}
 	}
@@ -682,6 +692,9 @@
 		cursor: pointer;
 		padding: 0 30px;
 		margin-right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		// margin-left: auto;
 	}
 
@@ -1221,6 +1234,179 @@
 		width: 100%;
 	}
 
+	.popup-user {
+		width: 500px;
+		display: flex;
+
+		// .popup-user__left
+		&__left {
+			width: 160px;
+			margin-right: 49px;
+			position: relative;
+		}
+
+		// .popup-user__right
+		&__right {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.popup {
+
+			// .popup__pic
+			&__pic {
+				width: 160px;
+				height: 160px;
+				border-radius: 100px;
+				border: dashed 1px #f4f4f4;
+				overflow: hidden;
+
+				&:hover {
+					.popup__delete-foto {
+						opacity: 1;
+					}
+				}
+			}
+
+			// .popup__row
+			&__row {
+				&:last-of-type {
+					margin-top: 16px;
+				}
+			}
+
+			// .popup__subtitle
+			&__subtitle {}
+
+			// .popup__input
+			&__input {}
+
+			// .popup__select
+			&__select {
+				border-radius: 4px;
+				// background-color: ;
+				background: url(../images/arrow-down-grey.svg) #ededee no-repeat 95%;
+			}
+
+			&__cancel {
+				width: auto;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+
+		.stub {}
+
+		.file {
+			position: relative;
+
+			// .file__footer
+			&__footer {}
+
+			// .file__button
+			&__button {
+				color: #007aff;
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 20px;
+				text-align: center;
+				width: 100%;
+			}
+
+			// .file__input
+			&__input {}
+
+			// .file__info
+			&__info {
+				color: #81858b;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 16px;
+				text-align: center;
+			}
+		}
+
+		.popup__delete-foto {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.29);
+			margin: 0;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			opacity: 0;
+			transition: 0.3s;
+
+			svg {
+				position: relative;
+				bottom: 20px;
+			}
+		}
+
+		.form__elem {
+			padding-left: 3px;
+
+			&-label {
+				padding: 2px 0 0 33px;
+			}
+		}
+	}
+
+	.delete-user {
+
+		// .delete-user__mini
+		&__mini {
+			display: flex;
+			align-items: center;
+			margin-bottom: 16px;
+		}
+
+		// .delete-user__pic
+		&__pic {
+			width: 64px;
+			height: 64px;
+			border-radius: 16px;
+			border: dashed 1px #f4f4f4;
+			overflow: hidden;
+			margin-right: 16px;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		// .delete-user__name
+		&__name {
+			display: flex;
+			flex-direction: column;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 21px;
+		}
+
+		.popup {
+			&__buttons {
+				justify-content: flex-end;
+			}
+
+			&__cancel {
+				width: auto;
+				margin-right: 32px;
+			}
+
+			&__submit {
+				padding: 0 25px;
+			}
+		}
+	}
+
+	.stub {}
+
 	@media (max-width: 812px) {
 		&__table {
 			display: table;
@@ -1236,7 +1422,7 @@
 			text-align: center;
 			// margin-bottom: 16px;
 			text-align: center;
-			max-width: 62%;
+			max-width: 75%;
 			margin: 0 auto 16px;
 		}
 
@@ -1256,6 +1442,14 @@
 			&:last-child {
 				margin-bottom: 8;
 			}
+		}
+
+		&__cancel {
+			width: auto;
+		}
+
+		.delete-user .popup__cancel {
+			margin-right: 24px;
 		}
 	}
 }

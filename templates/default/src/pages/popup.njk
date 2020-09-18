@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 {% include "head/head.njk" %}
 
 <body>
-
 	<div class="wrapper">
-
 		{% include "header/global/header.njk" %}
-
 		<ol>
 			<li>
 				<a href="#" data-ajax data-url="ajax/popup/adding-institution/adding-institution.html">
@@ -55,12 +51,25 @@
 					Технический попап
 				</a>
 			</li>
+			<li>
+				<a href="#" data-ajax data-url="ajax/popup/add-user/add-user.html">
+					Добавление пользователя
+				</a>
+			</li>
+			<li>
+				<a href="#" data-ajax data-url="ajax/popup/edit-user/edit-user.html">
+					Редактирование пользователя
+				</a>
+			</li>
+			<li>
+				<a href="#" data-ajax data-url="ajax/popup/delete-user/delete-user.html">
+					Удалить пользователя
+				</a>
+			</li>
 		</ol>
 		{% include "footer/global/footer.njk" %}
 	</div>
 	<!-- /.wrapper -->
-
 	{% include "connect/script.njk" %}
-
 </body>
 </html>
