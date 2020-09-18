@@ -30,7 +30,6 @@
 						<span class="file__button">Изменить фото
 							<input class="file__input" type="file" accept="image/*" />
 						</span>
-
 					</div>
 					<div class="file__info">
 						необязательно
@@ -45,7 +44,7 @@
 						Фамилия
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" data-form-label class="popup__input" placeholder="Иванов">
+					<input required type="text" data-form-label class="popup__input" placeholder="Иванов">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -53,7 +52,7 @@
 						Имя
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" data-form-label class="popup__input" placeholder="Иван">
+					<input required type="text" data-form-label class="popup__input" placeholder="Иван">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -73,7 +72,7 @@
 						Телефон
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
+					<input required type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -81,7 +80,7 @@
 						E-mail
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="email" data-form-label="" class="popup__input">
+					<input required type="email" data-form-label="" class="popup__input">
 				</div>
 				<div class="popup__row">
 					<a href="#" class="popup__delete-user">
@@ -115,7 +114,7 @@
 					<a href="" class="popup__cancel">
 						Отменить
 					</a>
-					<input type="submit" class="popup__submit" value="Сохранить">
+					<input type="submit" class="popup__submit" disabled value="Сохранить">
 				</div>
 			</div>
 			<!-- /.popup-user__right -->

@@ -27,7 +27,7 @@
 						Фамилия
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" data-form-label class="popup__input" placeholder="Иванов">
+					<input type="text" required data-form-label class="popup__input" placeholder="Иванов">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -35,7 +35,7 @@
 						Имя
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="text" data-form-label class="popup__input" placeholder="Иван">
+					<input type="text" required data-form-label class="popup__input" placeholder="Иван">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -43,7 +43,7 @@
 						Тип учетной записи
 					</div>
 					<!-- /.popup__subtitle -->
-					<select class='popup__select'>
+					<select disabled class='popup__select'>
 						<option value="Официант" selected="">Официант</option>
 						<option value="Администратор">Администратор</option>
 						<option value="Смотрящий">Смотрящий</option>
@@ -55,7 +55,8 @@
 						Телефон
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="tel" data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _">
+					<input type="tel" required data-form-label class="popup__input" placeholder="+7 _ _ _ – _ _ – _ _"
+						value="">
 				</div>
 				<!-- /.popup__row -->
 				<div class="popup__row">
@@ -63,13 +64,13 @@
 						E-mail
 					</div>
 					<!-- /.popup__subtitle -->
-					<input type="email" data-form-label="" class="popup__input">
+					<input type="email" required data-form-label="" class="popup__input">
 				</div>
 				<div class="popup__row">
 					<a href="" class="popup__cancel">
 						Отменить
 					</a>
-					<input type="submit" class="popup__submit" value="Сохранить">
+					<input type="submit" class="popup__submit" value="Сохранить" disabled='disabled'>
 				</div>
 			</div>
 			<!-- /.popup-user__right -->
