@@ -49,6 +49,8 @@ function checkForm() {
 	if (check) {
 		if ([...document.querySelectorAll('[data-form-label]')].every(elem => elem.classList.contains("form__input_full"))) {
 			check.querySelector('[type="submit"]').removeAttribute('disabled')
+		} else {
+			check.querySelector('[type="submit"]').setAttribute("disabled", "disabled");
 		}
 	}
 }
