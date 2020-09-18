@@ -7,12 +7,11 @@
 			}
 			$(this).blur(function() {
 				if (this.value) {
-					console.log(this.value)
 					$(this).addClass('form__input_full');
-					checkForm();
 				} else {
 					$(this).removeClass('form__input_full');
 				}
+				checkForm();
 			});
 		});
 		var phones = document.querySelectorAll('[type=tel]');
@@ -40,7 +39,6 @@ function mutationObserver(selectors, cb) {
 			childList: true,
 		};
 		observer.observe(element, config);
-		console.log(observer.observe(element, config))
 	});
 }
 
