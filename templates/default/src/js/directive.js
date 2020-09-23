@@ -7,8 +7,8 @@ zoom();
 /******************************************************************************/
 function zoom(classNames, settings) {
 	/* Settings */
-	classNames = (typeof (classNames) !== 'undefined' && Object.keys(classNames).length ? classNames : {});
-	settings = (typeof (settings) !== 'undefined' && Object.keys(settings).length ? settings : {});
+	classNames = (typeof (classNames) !== "undefined" && Object.keys(classNames).length ? classNames : {});
+	settings = (typeof (settings) !== "undefined" && Object.keys(settings).length ? settings : {});
 
 	var C_scaleDefault = settings["scaleDefault"] || 2; // Used on doubleclick, doubletap and resize
 	var C_scaleDifference = settings["scaleDifference"] || 0.5; // Used on wheel zoom
@@ -249,7 +249,7 @@ function zoom(classNames, settings) {
 		containerOffsetX = offset.left;
 		containerOffsetY = offset.top;
 		containerHeight = $container.clientHeight;
-		containerWidth = $container.clientWidth
+		containerWidth = $container.clientWidth;
 		elementHeight = $element.clientHeight;
 		elementWidth = $element.clientWidth;
 		initialOffsetX = parseFloat($element.getAttribute(_dataTranslateX));
@@ -573,7 +573,7 @@ function addClass($element, targetClass) {
 function disableScroll() {
 	if (window.addEventListener) // older FF
 	{
-		window.addEventListener('DOMMouseScroll', preventDefault, false);
+		window.addEventListener("DOMMouseScroll", preventDefault, false);
 	}
 
 	window.onwheel = preventDefault; // modern standard
@@ -586,7 +586,7 @@ function disableScroll() {
 /******************************************************************************/
 function enableScroll() {
 	if (window.removeEventListener) {
-		window.removeEventListener('DOMMouseScroll', preventDefault, false);
+		window.removeEventListener("DOMMouseScroll", preventDefault, false);
 	}
 
 	window.onmousewheel = document.onmousewheel = null;

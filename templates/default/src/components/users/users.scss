@@ -5,7 +5,7 @@
 		display: flex;
 		border-radius: 8px;
 		background: #ffffff;
-		box-shadow: 0px 4px 12px rgba(23, 29, 41, 0.08);
+		box-shadow: 0 4px 12px rgba(23, 29, 41, 0.08);
 		padding: 24px;
 
 		&:not(:last-of-type) {
@@ -25,17 +25,17 @@
 	&__desc {
 		display: flex;
 		flex-direction: column;
-		position: relative;
 		flex-grow: 1;
 		justify-content: flex-start;
+		position: relative;
 		padding-top: 14px;
 
 		.profile {
 
 			// .profile__edit
 			&__edit {
-				right: 9px;
 				top: 7px;
+				right: 9px;
 
 				svg {
 					margin-right: 13px;

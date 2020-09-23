@@ -1,18 +1,18 @@
 .login {
 	display: flex;
-	width: 100%;
-	height: auto;
 	flex-direction: column;
 	flex-grow: 1;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
 
 	&__form {
 		width: 408px;
+		padding: 32px 40px 40px;
 		border-radius: 8px;
 		background: $white;
-		box-shadow: 0px 4px 12px rgba(23, 29, 41, 0.08);
-		padding: 32px 40px 40px;
+		box-shadow: 0 4px 12px rgba(23, 29, 41, 0.08);
 	}
 
 	&__title {
@@ -21,9 +21,9 @@
 
 	&__header {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 24px;
-		align-items: center;
 	}
 
 	&__subtitle {
@@ -32,8 +32,7 @@
 		line-height: 27px;
 	}
 
-	&__come-in,
-	&__restore {
+	&__come-in, &__restore {
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 21px;
@@ -48,10 +47,10 @@
 	&__restore {}
 
 	&__row {
-		margin-bottom: 16px;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		margin-bottom: 16px;
 
 		&.margin {
 			margin-top: 17px;
@@ -78,22 +77,22 @@
 	}
 
 	&__input {
-		border-radius: 4px;
-		border: solid 1px #c8c9cc;
-		background: $white;
 		height: 40px;
+		border: solid 1px #c8c9cc;
+		padding: 0 12px;
+		border-radius: 4px;
+		background: $white;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 20px;
-		padding: 0 12px;
 	}
 
 	&__oferta {
+		width: 100%;
 		color: #81858b;
 		font-size: 12px;
 		font-weight: 400;
 		line-height: 16px;
-		width: 100%;
 		margin-top: 16px;
 
 		a {
@@ -106,17 +105,16 @@
 	}
 
 	form {
-		flex-direction: column;
 		display: flex;
+		flex-direction: column;
 		align-items: baseline;
 	}
 
 	&__footer {
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 	}
-
 }

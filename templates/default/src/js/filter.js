@@ -1,11 +1,11 @@
 var InitFilter = function () {
 
 	if (isProduction && typeof BXP.loadMore != undefined) {
-		if (BXP.loadMore == 'Y')
+		if (BXP.loadMore == "Y")
 			return false;
 	}
 
-	var $filter = document.querySelector('#js-filter');
+	var $filter = document.querySelector("#js-filter");
 	var $filterCheckboxForChangeForm;
 	var $filterForm;
 	var $filterHiddenBlock;
@@ -14,34 +14,34 @@ var InitFilter = function () {
 	var $filterBrandsBtnShow;
 	var $filterSlider;
 	var tooltip;
-	var isMobile = window.matchMedia('(max-width: 767px)').matches;
+	var isMobile = window.matchMedia("(max-width: 767px)").matches;
 
 	var createTooltip = function () {
 
-		let tooltip = document.createElement('div');
-		tooltip.classList.add('filter__tooltip');
-		tooltip.setAttribute('role', 'tooltip');
+		let tooltip = document.createElement("div");
+		tooltip.classList.add("filter__tooltip");
+		tooltip.setAttribute("role", "tooltip");
 		document.body.prepend(tooltip);
 
-		let tooltipClose = document.createElement('div');
-		tooltipClose.classList.add('filter__tooltipClose');
+		let tooltipClose = document.createElement("div");
+		tooltipClose.classList.add("filter__tooltipClose");
 		tooltip.append(tooltipClose);
 
-		let tooltipButton = document.createElement('span');
-		tooltipButton.innerHTML = 'Показать&nbsp;';
-		tooltipButton.classList.add('filter__tooltipButton');
+		let tooltipButton = document.createElement("span");
+		tooltipButton.innerHTML = "Показать&nbsp;";
+		tooltipButton.classList.add("filter__tooltipButton");
 		tooltip.append(tooltipButton);
 
-		let tooltipChange = document.createElement('span');
+		let tooltipChange = document.createElement("span");
 		tooltip.append(tooltipChange);
 
-		let arrow = document.createElement('div');
-		arrow.classList.add('tooltip-arrow');
-		arrow.setAttribute('data-popper-arrow', true);
+		let arrow = document.createElement("div");
+		arrow.classList.add("tooltip-arrow");
+		arrow.setAttribute("data-popper-arrow", true);
 		tooltip.append(arrow);
 
-		tooltipClose.addEventListener('click', () => {
-			tooltip.classList.remove('filter__tooltip_show');
+		tooltipClose.addEventListener("click", () => {
+			tooltip.classList.remove("filter__tooltip_show");
 		});
 
 		return {
@@ -55,16 +55,16 @@ var InitFilter = function () {
 				return arrow;
 			},
 			show() {
-				tooltip.classList.add('filter__tooltip_show');
+				tooltip.classList.add("filter__tooltip_show");
 			},
 			hide() {
-				tooltip.classList.remove('filter__tooltip_show');
+				tooltip.classList.remove("filter__tooltip_show");
 			},
 			setText(text) {
 				tooltipChange.innerHTML = text;
 			}
-		}
-	}
+		};
+	};
 
 	tooltip = createTooltip();
 
@@ -74,20 +74,20 @@ var InitFilter = function () {
 		return false;
 	}
 
-	$filterForm = $filter.querySelector('form');
-	$filterCheckboxForChangeForm = $filter.querySelector('#js-filter-hidden');
-	$filterHiddenBlock = $filter.querySelector('[data-filter-hidden]');
-	$filterButtonMore = $filter.querySelector('[data-filter-more]');
-	$filterBrands = $filter.querySelector('[data-filter-brands]');
-	$filterBrandsBtnShow = $filter.querySelector('[data-filter-brands-btn]');
-	$filterTooltips = $filter.querySelectorAll('[data-tooltip]');
+	$filterForm = $filter.querySelector("form");
+	$filterCheckboxForChangeForm = $filter.querySelector("#js-filter-hidden");
+	$filterHiddenBlock = $filter.querySelector("[data-filter-hidden]");
+	$filterButtonMore = $filter.querySelector("[data-filter-more]");
+	$filterBrands = $filter.querySelector("[data-filter-brands]");
+	$filterBrandsBtnShow = $filter.querySelector("[data-filter-brands-btn]");
+	$filterTooltips = $filter.querySelectorAll("[data-tooltip]");
 
 	if ($filterButtonMore) {
-		$filterButtonMore.addEventListener('click', function () {
-			this.classList.toggle('active');
-			$filterHiddenBlock.classList.toggle('active');
+		$filterButtonMore.addEventListener("click", function () {
+			this.classList.toggle("active");
+			$filterHiddenBlock.classList.toggle("active");
 
-			if (!this.classList.contains('active') && isMobile) {
+			if (!this.classList.contains("active") && isMobile) {
 				setTimeout(() => {
 					window.scrollTo({
 						top: $filter.offsetTop,
@@ -96,11 +96,11 @@ var InitFilter = function () {
 				}, 500);
 			}
 
-			let $elementFound = $filter.querySelector('[data-showResult-tooltip]');
+			let $elementFound = $filter.querySelector("[data-showResult-tooltip]");
 			if ($elementFound) {
 				virtualElement.getBoundingClientRect = generateGetBoundingClientRect($elementFound.getBoundingClientRect());
-				placementPopper = 'top';
-				instancePopper.scheduleUpdate()
+				placementPopper = "top";
+				instancePopper.scheduleUpdate();
 				instancePopper.update();
 			}
 		});
@@ -109,39 +109,39 @@ var InitFilter = function () {
 	// Добавляем класс для цветов
 
 	if ($filterBrandsBtnShow) {
-		$filterBrandsBtnShow.addEventListener('click', function () {
-			$filterBrands.classList.toggle('active');
+		$filterBrandsBtnShow.addEventListener("click", function () {
+			$filterBrands.classList.toggle("active");
 		});
 	}
 
 	// вызов попапов
-	$filterPopups = [...document.querySelectorAll('.enable[data-filter-popup]')];
+	$filterPopups = [...document.querySelectorAll(".enable[data-filter-popup]")];
 	$filterPopups.forEach(function (node) {
 
-		var $filterPopupsCall = node.querySelectorAll('[data-filter-popup-call]');
-		var $filterPopupsClose = node.querySelector('[data-filter-popup-close]');
-		var $filterPopupsValue = node.querySelector('[data-filter-value]');
+		var $filterPopupsCall = node.querySelectorAll("[data-filter-popup-call]");
+		var $filterPopupsClose = node.querySelector("[data-filter-popup-close]");
+		var $filterPopupsValue = node.querySelector("[data-filter-value]");
 		var $inputsCheckbox;
-		var emptyTitle = $(node).parents('[data-empty-title]').attr('data-empty-title');
+		var emptyTitle = $(node).parents("[data-empty-title]").attr("data-empty-title");
 
-		node.addEventListener('click', function (e) {
+		node.addEventListener("click", function (e) {
 			e.stopPropagation();
 		});
 
 		$filterPopupsCall.forEach(function (nodeCall) {
-			nodeCall.addEventListener('click', function (e) {
+			nodeCall.addEventListener("click", function (e) {
 				e.stopPropagation();
 				$filterPopups.forEach($node => {
 					if ($node !== node) {
-						$node.classList.remove('active');
+						$node.classList.remove("active");
 						tooltip.hide();
 					}
-				})
-				node.classList.toggle('active');
-				if (node.classList.contains('active')) {
+				});
+				node.classList.toggle("active");
+				if (node.classList.contains("active")) {
 					virtualElement.getBoundingClientRect = generateGetBoundingClientRect(node.getBoundingClientRect());
-					placementPopper = 'top';
-					instancePopper.scheduleUpdate()
+					placementPopper = "top";
+					instancePopper.scheduleUpdate();
 					instancePopper.update();
 				} else {
 					tooltip.hide();
@@ -149,38 +149,38 @@ var InitFilter = function () {
 			});
 		});
 
-		$filterPopupsClose.addEventListener('click', function (e) {
+		$filterPopupsClose.addEventListener("click", function (e) {
 			e.stopPropagation();
-			node.classList.remove('active');
+			node.classList.remove("active");
 			tooltip.hide();
 		});
 
 		if ($filterPopupsValue) {
-			$inputsCheckbox = [...node.querySelectorAll('input[type=checkbox]')];
+			$inputsCheckbox = [...node.querySelectorAll("input[type=checkbox]")];
 			let _filterPopupsProperty;
-			let filterPopupsProperty = '';
-			_filterPopupsProperty = $filterPopupsValue.getAttribute('data-property');
-			filterPopupsProperty = _filterPopupsProperty ? ' ' + _filterPopupsProperty : '';
+			let filterPopupsProperty = "";
+			_filterPopupsProperty = $filterPopupsValue.getAttribute("data-property");
+			filterPopupsProperty = _filterPopupsProperty ? " " + _filterPopupsProperty : "";
 
 			if ($inputsCheckbox.length) {
 				$inputsCheckbox.forEach((input) => {
 					let checkArray = [];
 					$inputsCheckbox.forEach((item) => {
 						if (item.checked) {
-							checkArray.push(`<span>${item.getAttribute('data-text')}</span>`);
+							checkArray.push(`<span>${item.getAttribute("data-text")}</span>`);
 						}
 					});
 
-					$filterPopupsValue.innerHTML = checkArray.length ? checkArray.join(', ') + filterPopupsProperty : emptyTitle;
-					input.addEventListener('change', function () {
+					$filterPopupsValue.innerHTML = checkArray.length ? checkArray.join(", ") + filterPopupsProperty : emptyTitle;
+					input.addEventListener("change", function () {
 						let checkArray = [];
 						$inputsCheckbox.forEach((item) => {
 							if (item.checked) {
-								checkArray.push(`<span>${item.getAttribute('data-text')}</span>`);
+								checkArray.push(`<span>${item.getAttribute("data-text")}</span>`);
 							}
 						});
 
-						$filterPopupsValue.innerHTML = checkArray.length ? checkArray.join(', ') + filterPopupsProperty : emptyTitle;
+						$filterPopupsValue.innerHTML = checkArray.length ? checkArray.join(", ") + filterPopupsProperty : emptyTitle;
 
 					});
 				});
@@ -190,12 +190,12 @@ var InitFilter = function () {
 	});
 
 	[...$filterTooltips].forEach($node => {
-		$node.addEventListener('click', () => {
+		$node.addEventListener("click", () => {
 			tooltip.hide();
 		});
 	});
 
-	const Popper = require('popper.js');
+	const Popper = require("popper.js");
 
 	function generateGetBoundingClientRect({
 		width = 0,
@@ -219,13 +219,13 @@ var InitFilter = function () {
 		getBoundingClientRect: generateGetBoundingClientRect({}),
 	};
 
-	let placementPopper = isMobile ? 'top' : 'right';
+	let placementPopper = isMobile ? "top" : "right";
 
 	const instancePopper = new Popper.default(virtualElement, tooltip.getTooltip(), {
-		placement: isMobile ? 'top' : 'right',
+		placement: isMobile ? "top" : "right",
 		modifiers: {
 			offset: {
-				offset: '0, 10px'
+				offset: "0, 10px"
 			}
 		},
 		eventsEnabled: false,
@@ -239,15 +239,15 @@ var InitFilter = function () {
 	const $formElements = $filterForm.elements;
 
 	Array.from($formElements).forEach($element => {
-		if ($element.type != 'submit' && $element.type != 'reset' && $element.id != 'filter-brands-switcher') {
-			['change', 'blur'].forEach(event => {
+		if ($element.type != "submit" && $element.type != "reset" && $element.id != "filter-brands-switcher") {
+			["change", "blur"].forEach(event => {
 				$element.addEventListener(event, () => {
 					virtualElement.getBoundingClientRect = generateGetBoundingClientRect($element.parentNode.getBoundingClientRect());
 					if (!isMobile) {
-						if ($element.type == 'number') {
-							placementPopper = 'top';
+						if ($element.type == "number") {
+							placementPopper = "top";
 						} else {
-							placementPopper = 'right';
+							placementPopper = "right";
 						}
 						instancePopper.scheduleUpdate();
 					}
@@ -257,45 +257,45 @@ var InitFilter = function () {
 		}
 	});
 
-	$filterSlider = [...$filter.querySelectorAll('[data-filter-slider]')];
+	$filterSlider = [...$filter.querySelectorAll("[data-filter-slider]")];
 
 	// инициализация слайдеров
-	import('nouislider').then((noUiSlider) => {
+	import("nouislider").then((noUiSlider) => {
 
 		$filterSlider.forEach(function (node) {
 
-			var $noUiSlider = node.querySelector('[data-nouislider]');
-			var emptyTitle = $(node).parents('[data-empty-title]').attr('data-empty-title');
-			var $priceParentElement = node.querySelector('[data-filter-setPrice]');
+			var $noUiSlider = node.querySelector("[data-nouislider]");
+			var emptyTitle = $(node).parents("[data-empty-title]").attr("data-empty-title");
+			var $priceParentElement = node.querySelector("[data-filter-setPrice]");
 
-			if (node.classList.contains('noUi-target')) {
+			if (node.classList.contains("noUi-target")) {
 				return false;
 			}
 
-			node.addEventListener('click', function (e) {
+			node.addEventListener("click", function (e) {
 				e.stopPropagation();
 			});
 
-			var $inputs = [...node.querySelectorAll('input')];
-			var $result = node.querySelector('[data-filter-value]');
-			var valStart = parseInt($noUiSlider.getAttribute('data-value-start'));
-			var valEnd = parseInt($noUiSlider.getAttribute('data-value-end'));
+			var $inputs = [...node.querySelectorAll("input")];
+			var $result = node.querySelector("[data-filter-value]");
+			var valStart = parseInt($noUiSlider.getAttribute("data-value-start"));
+			var valEnd = parseInt($noUiSlider.getAttribute("data-value-end"));
 			var resStart = valStart;
 			var resEnd = valEnd;
-			var min = parseInt($noUiSlider.getAttribute('data-min'));
-			var max = parseInt($noUiSlider.getAttribute('data-max'));
-			var property = '';
+			var min = parseInt($noUiSlider.getAttribute("data-min"));
+			var max = parseInt($noUiSlider.getAttribute("data-max"));
+			var property = "";
 			var isEqualLVal = min == valStart ? true : false;
 			var isEqualRVal = max == valEnd ? true : false;
 
 			if ($result) {
-				property = $result.getAttribute('data-property');
-				$result.innerHTML = isEqualLVal && isEqualRVal ? emptyTitle : `<b>${valStart} - ${resEnd} ${property}</b>`
+				property = $result.getAttribute("data-property");
+				$result.innerHTML = isEqualLVal && isEqualRVal ? emptyTitle : `<b>${valStart} - ${resEnd} ${property}</b>`;
 			}
 
 			$inputs.forEach(function (input, index) {
 
-				input.addEventListener('blur', function () {
+				input.addEventListener("blur", function () {
 
 					if (index == 0) {
 
@@ -346,47 +346,47 @@ var InitFilter = function () {
 				],
 				connect: true,
 				range: {
-					'min': min,
-					'max': max
+					"min": min,
+					"max": max
 				}
 			});
 
-			$noUiSlider.noUiSlider.on('slide', function (values) {
+			$noUiSlider.noUiSlider.on("slide", function (values) {
 				resStart = Math.round(values[0]);
 				resEnd = Math.round(values[1]);
 				$inputs[0].value = resStart;
 				$inputs[1].value = resEnd;
 				if ($result) {
-					$result.innerHTML = `<b>${resStart}-${resEnd} ${property}</b>`
+					$result.innerHTML = `<b>${resStart}-${resEnd} ${property}</b>`;
 				}
 			});
 
-			$noUiSlider.noUiSlider.on('end', function (values) {
+			$noUiSlider.noUiSlider.on("end", function (values) {
 				if (resStart == min && resEnd == max) {
 					if ($result) {
 						$result.innerHTML = emptyTitle;
 					}
 				}
 				$filterCheckboxForChangeForm.click();
-				var $parent = $noUiSlider.closest('[data-filter-popup]');
+				var $parent = $noUiSlider.closest("[data-filter-popup]");
 				if ($parent)
-					$parent.classList.add('active');
+					$parent.classList.add("active");
 
 				virtualElement.getBoundingClientRect = generateGetBoundingClientRect($inputs[0].parentNode.getBoundingClientRect());
-				placementPopper = 'top';
-				instancePopper.scheduleUpdate()
+				placementPopper = "top";
+				instancePopper.scheduleUpdate();
 				instancePopper.update();
 
 			});
 
 			if ($priceParentElement) {
 
-				[...$priceParentElement.querySelectorAll('span')].forEach($node => {
+				[...$priceParentElement.querySelectorAll("span")].forEach($node => {
 
-					$node.addEventListener('click', function () {
+					$node.addEventListener("click", function () {
 
-						let startValue = this.getAttribute('data-value-start');
-						let endValue = this.getAttribute('data-value-end');
+						let startValue = this.getAttribute("data-value-start");
+						let endValue = this.getAttribute("data-value-end");
 						$noUiSlider.noUiSlider.set([startValue, null]);
 						$noUiSlider.noUiSlider.set([null, endValue]);
 
@@ -398,17 +398,17 @@ var InitFilter = function () {
 						}
 
 						// change form event
-						let eventChange = new Event('change');
+						let eventChange = new Event("change");
 						$filterForm.dispatchEvent(eventChange);
 
 						virtualElement.getBoundingClientRect = generateGetBoundingClientRect($inputs[0].parentNode.getBoundingClientRect());
-						placementPopper = 'top';
-						instancePopper.scheduleUpdate()
+						placementPopper = "top";
+						instancePopper.scheduleUpdate();
 						instancePopper.update();
 
-					})
+					});
 
-				})
+				});
 
 			}
 
@@ -416,41 +416,41 @@ var InitFilter = function () {
 	});
 
 	// удаление активных классов в фильтре и скрытие попапов
-	document.addEventListener('click', function () {
+	document.addEventListener("click", function () {
 		$filterPopups.forEach(function (node) {
-			node.classList.remove('active');
+			node.classList.remove("active");
 		});
 	});
 
 	// раскрытие фильтра в мобилке
-	[...document.querySelectorAll('[data-toggle-filter]')].forEach(function (node) {
-		node.addEventListener('click', function () {
-			[...document.querySelectorAll('[data-toggle-filter]')].forEach($nodeLocal => {
+	[...document.querySelectorAll("[data-toggle-filter]")].forEach(function (node) {
+		node.addEventListener("click", function () {
+			[...document.querySelectorAll("[data-toggle-filter]")].forEach($nodeLocal => {
 				if (node !== $nodeLocal) {
-					$nodeLocal.classList.remove('active');
+					$nodeLocal.classList.remove("active");
 				}
 			});
-			this.classList.toggle('active');
-			$filter.classList.toggle('active');
-		})
+			this.classList.toggle("active");
+			$filter.classList.toggle("active");
+		});
 	});
 
 	var form = $($filterForm),
-		formAction = form.attr('action'),
-		formSubmit = form.find('[data-submit]'),
-		formError = form.find('[data-error]'),
-		formElementsFound = form.find('[data-elements-found]');
+		formAction = form.attr("action"),
+		formSubmit = form.find("[data-submit]"),
+		formError = form.find("[data-error]"),
+		formElementsFound = form.find("[data-elements-found]");
 
 	// Сабмит формы по клику на кнопку ПОКАЗАТЬ в тултипе
-	tooltip.getButton().addEventListener('click', (e) => {
+	tooltip.getButton().addEventListener("click", (e) => {
 		formSubmit.click();
 	});
 
 	// убираем тултип при сабмите формы
 	$(document).ajaxComplete(function (event, xhr, settings) {
-		if (typeof settings.extCompleteActions == 'object') {
+		if (typeof settings.extCompleteActions == "object") {
 			for (key in settings.extCompleteActions) {
-				if (settings.extCompleteActions[key] == 'catalog') {
+				if (settings.extCompleteActions[key] == "catalog") {
 					tooltip.hide();
 				}
 			}
@@ -458,102 +458,102 @@ var InitFilter = function () {
 	});
 
 	form.find("[type='reset']").click(function () {
-		document.location.href = formAction + '?reset=Y';
+		document.location.href = formAction + "?reset=Y";
 		return false;
 	});
 
-	formSubmit.addClass('js-disabled').attr('disabled', 'disabled');
+	formSubmit.addClass("js-disabled").attr("disabled", "disabled");
 
 	function UpdateFilterForm() {
 
 		if (!isProduction) {
 			// layout preview version
-			console.log('change form');
+			console.log("change form");
 			return false;
 		}
 
-		if (!formSubmit.hasClass('js-disabled')) {
-			formSubmit.addClass('js-disabled').attr('disabled', 'disabled');
+		if (!formSubmit.hasClass("js-disabled")) {
+			formSubmit.addClass("js-disabled").attr("disabled", "disabled");
 		}
 
-		['min', 'max'].forEach(function (type) {
-			form.find('input[data-' + type + ']').each(function () {
+		["min", "max"].forEach(function (type) {
+			form.find("input[data-" + type + "]").each(function () {
 				var limit = parseInt($(this).attr(type)),
 					val = parseInt($(this).val()),
-					name = $(this).attr('data-name');
+					name = $(this).attr("data-name");
 
 				if (val == limit)
-					$(this).removeAttr('name');
+					$(this).removeAttr("name");
 				else
-					$(this).attr('name', name);
+					$(this).attr("name", name);
 			});
 		});
 
 		$.ajax({
 			global: false,
-			type: 'GET',
-			dataType: 'json',
+			type: "GET",
+			dataType: "json",
 			url: formAction,
-			data: form.serialize() + '&FORM_UPDATE=Y',
+			data: form.serialize() + "&FORM_UPDATE=Y",
 			success: function (r) {
-				formError.html('');
+				formError.html("");
 
-				form.find('[data-brand-id]').removeClass('disable');
+				form.find("[data-brand-id]").removeClass("disable");
 				if (r.disabledBrands.length) {
 					for (var key in r.disabledBrands) {
 						var val = r.disabledBrands[key];
-						form.find("[data-brand-id='" + val + "']").addClass('disable');
+						form.find("[data-brand-id='" + val + "']").addClass("disable");
 					}
 				}
 
-				form.find(':disabled').removeAttr('disabled');
+				form.find(":disabled").removeAttr("disabled");
 				if (r.disabledItems.length) {
 					for (var key in r.disabledItems) {
 						var val = r.disabledItems[key];
-						$('#js-filter-item-' + val).attr('disabled', 'disabled');
+						$("#js-filter-item-" + val).attr("disabled", "disabled");
 					}
 				}
 
 				formElementsFound.html(r.elementsFoundPrint);
-				tooltip.setText(r.elementsFoundPrint.replace('Найдено', ''));
+				tooltip.setText(r.elementsFoundPrint.replace("Найдено", ""));
 				if (parseInt(r.elementsFound) > 0) {
-					tooltip.getTooltip().classList.remove('filter__tooltip_null');
+					tooltip.getTooltip().classList.remove("filter__tooltip_null");
 				} else {
-					tooltip.getTooltip().classList.add('filter__tooltip_null');
+					tooltip.getTooltip().classList.add("filter__tooltip_null");
 				}
 				tooltip.show();
 
 				if (parseInt(r.elementsFound) > 0) {
-					if (!formSubmit.is(':visible'))
+					if (!formSubmit.is(":visible"))
 						formSubmit.show();
 
-					formSubmit.removeClass('js-disabled').removeAttr('disabled');
+					formSubmit.removeClass("js-disabled").removeAttr("disabled");
 				} else {
 					formSubmit.hide();
 				}
 			},
 			error: function (jqXHR, textStatus, errorThrown) {
-				formError.html('Возникла ошибка, попробуйте обновить страницу.');
+				formError.html("Возникла ошибка, попробуйте обновить страницу.");
 			}
 		});
 
 		return false;
 	}
 
-	form.find('[data-brand-id]').click(function () {
+	form.find("[data-brand-id]").click(function () {
 		var link = $(this);
-		if (link.hasClass('disable'))
+		if (link.hasClass("disable"))
 			return false;
 
-		if (link.hasClass('active')) {
-			link.removeClass('active').next('input').remove();
+		if (link.hasClass("active")) {
+			link.removeClass("active").next("input").remove();
 		} else {
-			link.addClass('active').after('<input type="hidden" name="' + link.attr('data-name') + '" value="' + link.attr('data-brand-code') + '" data-brand-input />');
+			link.addClass("active").after("<input type=\"hidden\" name=\"" + link.attr("data-name") + "\" value=\"" + link.attr("data-brand-code") + "\" data-brand-input />");
 		}
 
 		virtualElement.getBoundingClientRect = generateGetBoundingClientRect(this.getBoundingClientRect());
-		placementPopper = 'top';
-		instancePopper.scheduleUpdate()
+		placementPopper = "top";
+		instancePopper.scheduleUpdate();
 		instancePopper.update();
 
 		return UpdateFilterForm();
@@ -563,7 +563,7 @@ var InitFilter = function () {
 		UpdateFilterForm();
 	});
 
-}
+};
 
 window.InitFilter = InitFilter;
 

@@ -11,7 +11,6 @@
 		&__dropdown {
 			left: -24px;
 			margin-left: 0;
-
 		}
 
 
@@ -25,8 +24,8 @@
 
 		&__desc {
 			flex-direction: row;
-			justify-content: unset;
 			align-items: center;
+			justify-content: unset;
 		}
 
 
@@ -55,10 +54,10 @@
 
 
 		&__item {
-			width: 928px;
-			max-width: 100%;
 			flex-wrap: nowrap;
 			align-items: center;
+			width: 928px;
+			max-width: 100%;
 
 			&.sortable-ghost {
 				opacity: 0.5;

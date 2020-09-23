@@ -1,6 +1,12 @@
 .log-out {
 	padding-left: 33px;
-	background: url('../images/icon-log_out.svg') no-repeat 0 center;
+	background: url("../images/icon-log_out.svg") no-repeat 0 center;
+
+	@media (--phone) {
+		.mobile & {
+			display: none;
+		}
+	}
 
 	&__link {
 		font-size: 16px;
@@ -13,11 +19,5 @@
 		&:active {}
 
 		&:focus {}
-	}
-
-	@media (--phone) {
-		.mobile & {
-			display: none;
-		}
 	}
 }

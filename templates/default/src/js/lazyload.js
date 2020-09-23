@@ -1,1 +1,1 @@
-require('lazysizes');  
+require("lazysizes");
