@@ -17,7 +17,7 @@
 		var phones = document.querySelectorAll("[type=tel]");
 		[].forEach.call(phones, (node) => {
 			Inputmask("+7(999) 999-99-99", {
-				clearIncomplete: true,
+				// clearIncomplete: true,
 				// numericInput: true
 				oncomplete: function () {
 					$(this).removeClass("BadPols");
@@ -29,8 +29,8 @@
 		});
 		var email = document.querySelectorAll("[type=\"email\"]");
 		[].forEach.call(email, (node) => {
-			node.setAttribute("type","text");
-			Inputmask("email",{
+			node.setAttribute("type", "text");
+			Inputmask("email", {
 				oncomplete: function () {
 					$(this).removeClass("BadPols");
 				},
@@ -67,7 +67,9 @@ function mutationObserver(selectors, cb) {
 function checkForm() {
 	let check = document.querySelector(".popup-user");
 	if (check) {
-		if ([...document.querySelectorAll("[data-form-label]")].every(elem => elem.classList.contains("form__input_full"))) {
+		let inputCheck = [...document.querySelectorAll("[data-form-label]")];
+
+		if (inputCheck.every(elem => elem.classList.contains("form__input_full")) && !inputCheck.some(elem => elem.classList.contains("BadPols"))) {
 			check.querySelector("[type=\"submit\"]").removeAttribute("disabled");
 		} else {
 			check.querySelector("[type=\"submit\"]").setAttribute("disabled", "disabled");

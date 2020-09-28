@@ -15,10 +15,10 @@
 	background: rgba(0, 0, 0, 0.54);
 
 	@media (max-width: 812px) {
-
 		.delete-user .popup__cancel {
 			margin-right: 24px;
 		}
+
 		&__table {
 			display: table;
 			width: 100%;
@@ -58,11 +58,11 @@
 		&__cancel {
 			width: auto;
 		}
+
 		&__content {
-
-
 			&.free-call {
 				max-width: 330px;
+
 				.popup {
 					&__title {
 						font-family: CoolveticaRg;
@@ -73,6 +73,7 @@
 					}
 				}
 			}
+
 			&.technical {
 				max-width: 295px;
 			}
@@ -153,7 +154,7 @@
 			&__select {
 				border-radius: 4px;
 				// background-color: ;
-				background: url(../images/arrow-down-grey.svg) #ededee no-repeat 95%;
+				// background: url(../images/arrow-down-grey.svg) #ededee no-repeat 95%;
 			}
 
 			&__cancel {
@@ -238,7 +239,6 @@
 	}
 
 	.delete-user {
-
 		.popup {
 			&__buttons {
 				justify-content: flex-end;
@@ -357,7 +357,8 @@
 			transform: rotate(45deg);
 		}
 
-		&:before, &:after {
+		&:before,
+		&:after {
 			content: "";
 			position: absolute;
 			top: 50%;
@@ -438,6 +439,7 @@
 
 		&.free-call {
 			max-width: 330px;
+
 			.popup {
 				&__title {
 					font-family: CoolveticaRg;
@@ -448,12 +450,14 @@
 				}
 			}
 		}
+
 		&.technical {
 			max-width: 330px;
 		}
 	}
 
-	&__left, &__right {
+	&__left,
+	&__right {
 		display: flex;
 		// flex-direction: column;
 		flex-wrap: wrap;
@@ -691,7 +695,8 @@
 		margin-bottom: 16px;
 	}
 
-	&__pic, &__logo {
+	&__pic,
+	&__logo {
 		position: relative;
 		overflow: hidden;
 		border: solid 1px #f4f4f4;
@@ -963,7 +968,8 @@
 				margin-bottom: 8px;
 			}
 
-			th, td {
+			th,
+			td {
 				padding-right: 8px;
 				padding-bottom: 8px;
 			}
@@ -1078,7 +1084,8 @@
 				transform: rotate(45deg);
 			}
 
-			&:after, &:before {
+			&:after,
+			&:before {
 				content: "";
 				position: absolute;
 				top: 50%;
@@ -1380,14 +1387,16 @@
 		width: 100%;
 	}
 
-	&_iphone, &_iphone body {
+	&_iphone,
+	&_iphone body {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 	}
 
-	&_ie10, &_ie9 {
+	&_ie10,
+	&_ie9 {
 		display: none;
 	}
 
@@ -1403,7 +1412,8 @@
 		pointer-events: auto;
 	}
 
-	&_ie10.popup_active, &_ie9.popup_active {
+	&_ie10.popup_active,
+	&_ie9.popup_active {
 		display: block;
 	}
 
@@ -1467,9 +1477,17 @@
 				background: rgb(255, 255, 255);
 			}
 		}
+
 		&.BadPols {
-			border-color: #007aff;
 			background: #ff3b301f;
+		}
+
+		&:focus {
+			border-color: #007aff;
+		}
+
+		&:not([type="submit"])[disabled] {
+			background: #ededee;
 		}
 	}
 
@@ -1486,6 +1504,10 @@
 		border-radius: 4px;
 		-webkit-appearance: none;
 		appearance: none;
-		background: url("../images/FormBasic-Field.svg") #ffffff no-repeat 98% center;
+		background: url("../images/FormBasic-Field.svg") #ffffff no-repeat 96% center;
+
+		&[disabled] {
+			background: url(../images/arrow-down-grey.svg) #ededee no-repeat 96%;
+		}
 	}
 }

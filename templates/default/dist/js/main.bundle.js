@@ -24088,7 +24088,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var phones = document.querySelectorAll("[type=tel]");
     [].forEach.call(phones, function (node) {
       Inputmask("+7(999) 999-99-99", {
-        clearIncomplete: true,
+        // clearIncomplete: true,
         // numericInput: true
         oncomplete: function oncomplete() {
           $(this).removeClass("BadPols");
@@ -24135,8 +24135,12 @@ function checkForm() {
   var check = document.querySelector(".popup-user");
 
   if (check) {
-    if (_toConsumableArray(document.querySelectorAll("[data-form-label]")).every(function (elem) {
+    var inputCheck = _toConsumableArray(document.querySelectorAll("[data-form-label]"));
+
+    if (inputCheck.every(function (elem) {
       return elem.classList.contains("form__input_full");
+    }) && !inputCheck.some(function (elem) {
+      return elem.classList.contains("BadPols");
     })) {
       check.querySelector("[type=\"submit\"]").removeAttribute("disabled");
     } else {
