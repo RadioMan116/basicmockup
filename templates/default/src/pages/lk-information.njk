@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head/head.njk" %}
+
+<body class="mobile">
+	<div class="wrapper">
+		<div class="header">
+			<div class="header__inner">
+				<div class="header__row">
+					<div class="header__col">
+						<div class="logo">
+							{# <a href="/" class="logo__link">QSushi</a> #}
+							<a href="/" class="logo__link">
+								<picture>
+									<source media="(max-width: 812px)" srcset="images/Slice.png">
+									<img alt="" class="lazyload" src="images/Slice.png">
+								</picture>
+							</a>
+						</div>
+						<!-- /.logo -->
+					</div>
+					<!-- /.header__col -->
+					<div class="header__col header__col_center">
+						<div class="log-out lk-out">
+							<a href="" class="log-out__link">
+								Выйти
+							</a>
+							<!-- /.log-out__link -->
+						</div>
+					</div>
+					<!-- /.header__col -->
+				</div>
+				<!-- /.header__row -->
+			</div>
+			<!-- /.header__inner -->
+		</div>
+		{% include "lk-information/lk-information.njk" %}
+		{% include "footer/global/footer.njk" %}
+	</div>
+	<!-- /.wrapper -->
+	{% include "connect/script.njk" %}
+</body>
+</html>

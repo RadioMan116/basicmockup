@@ -229,16 +229,17 @@
 
 
 		&[type="date"] {
-			&::-webkit-calendar-picker-indicator {
-				display: none;
-			}
+			// &::-webkit-calendar-picker-indicator {
+			// 	display: none;
+			// }
 
-			&:after {
-				content: "";
-				width: 24px;
-				height: 24px;
-				background: url("../images/Iconscalendar.svg");
-			}
+			// &:after {
+			// 	content: "";
+			// 	width: 24px;
+			// 	height: 24px;
+			// 	background: url("../images/Iconscalendar.svg");
+			// }
+			&::-webkit-calendar-picker-indicator { background: url(../images/Iconscalendar.svg) }
 		}
 	}
 
