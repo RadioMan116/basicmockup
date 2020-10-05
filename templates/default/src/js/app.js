@@ -155,3 +155,7 @@ window.initTooltipApp = function () {
 	});
 };
 initTooltipApp();
+
+$(document).on("click", "[data-toggle-class]", function (e) {
+	$(this).toggleClass('active');
+});

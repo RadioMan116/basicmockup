@@ -382,7 +382,8 @@
 			transform: rotate(45deg);
 		}
 
-		&:before, &:after {
+		&:before,
+		&:after {
 			content: "";
 			position: absolute;
 			top: 50%;
@@ -480,7 +481,8 @@
 		}
 	}
 
-	&__left, &__right {
+	&__left,
+	&__right {
 		display: flex;
 		// flex-direction: column;
 		flex-wrap: wrap;
@@ -718,7 +720,8 @@
 		margin-bottom: 16px;
 	}
 
-	&__pic, &__logo {
+	&__pic,
+	&__logo {
 		position: relative;
 		overflow: hidden;
 		border: solid 1px #f4f4f4;
@@ -990,7 +993,8 @@
 				margin-bottom: 8px;
 			}
 
-			th, td {
+			th,
+			td {
 				padding-right: 8px;
 				padding-bottom: 8px;
 			}
@@ -1105,7 +1109,8 @@
 				transform: rotate(45deg);
 			}
 
-			&:after, &:before {
+			&:after,
+			&:before {
 				content: "";
 				position: absolute;
 				top: 50%;
@@ -1432,6 +1437,7 @@
 				}
 			}
 		}
+
 		.popup__cancel {
 			width: 123px;
 		}
@@ -1464,14 +1470,16 @@
 		flex-wrap: nowrap;
 	}
 
-	&_iphone, &_iphone body {
+	&_iphone,
+	&_iphone body {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 	}
 
-	&_ie10, &_ie9 {
+	&_ie10,
+	&_ie9 {
 		display: none;
 	}
 
@@ -1487,7 +1495,8 @@
 		pointer-events: auto;
 	}
 
-	&_ie10.popup_active, &_ie9.popup_active {
+	&_ie10.popup_active,
+	&_ie9.popup_active {
 		display: block;
 	}
 
@@ -1582,6 +1591,95 @@
 
 		&[disabled] {
 			background: url(../images/arrow-down-grey.svg) #ededee no-repeat 96%;
+		}
+	}
+
+	.password {
+		.popup__excerpt {
+			max-width: 330px;
+		}
+	}
+
+	&__trigger {
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 18px;
+		margin-bottom: 14px;
+		display: flex;
+		justify-content: space-between;
+
+		svg {
+			transform: rotate(-180deg);
+			transition: transform 400ms;
+		}
+
+		&.active {
+			svg {
+				transform: unset;
+			}
+
+			+.popup__show {
+				max-height: 0;
+				overflow: hidden;
+			}
+		}
+	}
+
+	&__show {
+		max-height: 1500px;
+		overflow: hidden;
+		transition: max-height 400ms;
+	}
+
+	&__tips {
+		max-width: 375px;
+
+		&-footer {
+			display: flex;
+			background: #f6f6f7;
+			margin: 0 -24px -24px;
+			padding: 0 24px 0 7px;
+			margin-top: 41px;
+			align-items: center;
+		}
+
+		&-text {
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 18px;
+			margin-bottom: 16px;
+			margin-top: 16px;
+
+			b {
+				display: block;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 18px;
+			}
+		}
+
+		&-pic {
+			margin-right: 10px;
+			margin-top: -28px;
+		}
+
+		&-button {
+			padding: 0 4px;
+			margin-bottom: 16px;
+		}
+
+		.popup {
+			&__submit {
+				width: 100%;
+			}
+			&__answer{
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 20px;
+				text-align: center;
+				margin-left: 24px;
+			}
 		}
 	}
 }
