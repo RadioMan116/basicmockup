@@ -1395,6 +1395,9 @@
 		p {
 			margin-bottom: 0;
 		}
+		&.small{
+			max-width: 330px;
+		}
 	}
 
 	&__boss {
@@ -1594,11 +1597,7 @@
 		}
 	}
 
-	.password {
-		.popup__excerpt {
-			max-width: 330px;
-		}
-	}
+
 
 	&__trigger {
 		cursor: pointer;
@@ -1680,6 +1679,7 @@
 				text-align: center;
 				margin-left: 24px;
 			}
+
 		}
 	}
 }
