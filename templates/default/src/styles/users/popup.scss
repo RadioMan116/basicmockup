@@ -344,6 +344,7 @@
 		position: relative;
 		text-align: left;
 		pointer-events: auto;
+		overflow: hidden;
 	}
 
 	&__ajax {
