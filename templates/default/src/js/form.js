@@ -18,7 +18,7 @@
 		var phones = document.querySelectorAll("[type=tel]");
 		[].forEach.call(phones, (node) => {
 			Inputmask("+7(999) 999-99-99", {
-				// clearIncomplete: true,
+				clearIncomplete: true,
 				// numericInput: true
 				oncomplete: function () {
 					$(this).removeClass("BadPols");
@@ -26,10 +26,14 @@
 				},
 				onincomplete: function () {
 					$(this).addClass("BadPols");
-					$(".landing-call__submit").attr("disabled","disabled");
+					$(".landing-call__submit").attr("disabled", "disabled");
 				},
+
 			}).mask(node);
+
+
 		});
+
 		var email = document.querySelectorAll("[type=\"email\"]");
 		[].forEach.call(email, (node) => {
 			node.setAttribute("type", "text");
