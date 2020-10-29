@@ -48,7 +48,8 @@
 
 				&:focus {}
 
-				&:hover, &.active {
+				&:hover,
+				&.active {
 					color: #f5a623;
 				}
 
@@ -75,7 +76,8 @@
 		}
 	}
 
-	&-left, &-right {
+	&-left,
+	&-right {
 		width: 50%;
 	}
 
@@ -132,8 +134,8 @@
 
 		.landing-left {
 			text-align: center;
-			// padding-left: 40px;
 
+			// padding-left: 40px;
 			img {
 				max-width: 535px;
 				max-height: 608px;
@@ -224,8 +226,6 @@
 		max-width: 1240px;
 		margin: 0 auto 129px;
 
-
-
 		.landing-right {
 			padding-left: 51px;
 			padding-top: 16px;
@@ -292,7 +292,6 @@
 		.landing-text {
 			margin-bottom: 14px;
 		}
-
 
 		ol {
 			max-width: 470px;
@@ -456,7 +455,6 @@
 			display: flex;
 			align-items: center;
 			position: relative;
-
 			margin-bottom: 16px;
 			color: #ffffff;
 
@@ -506,7 +504,6 @@
 		.landing-left {
 			width: calc(50% + 11px);
 			text-align: right;
-
 
 			img {
 				width: 640px;
@@ -625,7 +622,6 @@
 			width: 400px;
 			margin: 0 auto;
 
-
 			&__name {
 				color: #81858b;
 				font-size: 15px;
@@ -648,6 +644,9 @@
 				padding-bottom: 16px;
 				border-bottom: 2px solid #f5a623;
 				margin-bottom: 24px;
+				&.BadPols {
+					background: rgba(255,59,48,.12157);
+				}
 			}
 
 			&__submit {
@@ -667,6 +666,11 @@
 				&:hover {
 					opacity: 0.9;
 				}
+
+				&[disabled] {
+					opacity: 0.5;
+					pointer-events: none;
+				}
 			}
 
 			form {
@@ -683,7 +687,8 @@
 	@media (--phone) {
 		margin-top: -64px;
 
-		.landing-left, .landing-right {
+		.landing-left,
+		.landing-right {
 			width: 100%;
 		}
 
@@ -731,7 +736,6 @@
 					}
 				}
 			}
-
 
 			&__registration {
 				display: none;
@@ -957,10 +961,10 @@
 
 				&-slide {
 					padding-top: 50px;
+
 					// max-height: 0;
 					// opacity: 0;
 					// transition: max-height .300ms, opacity .300ms;
-
 					&-active {
 						// max-height: unset;
 						// opacity: 1;
@@ -1041,9 +1045,12 @@
 			.landing-left {
 				img {
 					width: auto;
-					max-width: 100%;
+					max-width: calc(100% + 108px);
 					height: auto;
-					max-height: 100%;
+					max-height: calc(100% + 60px);
+					margin-bottom: -40px;
+					margin-top: -20px;
+					margin-left: -51px;
 				}
 			}
 		}

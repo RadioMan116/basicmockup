@@ -10,6 +10,7 @@
 					$(this).addClass("form__input_full");
 				} else {
 					$(this).removeClass("form__input_full");
+
 				}
 				checkForm();
 			});
@@ -21,9 +22,11 @@
 				// numericInput: true
 				oncomplete: function () {
 					$(this).removeClass("BadPols");
+					$(".landing-call__submit").removeAttr("disabled");
 				},
 				onincomplete: function () {
 					$(this).addClass("BadPols");
+					$(".landing-call__submit").attr("disabled","disabled");
 				},
 			}).mask(node);
 		});
