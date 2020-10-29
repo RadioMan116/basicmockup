@@ -22,11 +22,11 @@
 				// numericInput: true
 				oncomplete: function () {
 					$(this).removeClass("BadPols");
-					$(".landing-call__submit").removeAttr("disabled");
+					// $(".landing-call__submit").removeAttr("disabled");
 				},
 				onincomplete: function () {
 					$(this).addClass("BadPols");
-					$(".landing-call__submit").attr("disabled", "disabled");
+					// $(".landing-call__submit").attr("disabled", "disabled");
 				},
 
 			}).mask(node);
